@@ -1,95 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Day 12 - First Machine Learning Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/style.css" />
-     <script>
+  <title>Day 12 - First Machine Learning Model</title>
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script>
     if (sessionStorage.getItem("allowedDay") !== "12") {
       window.location.href = "../index.html";
     }
   </script>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <!-- Navbar -->
+<body>
+  <div class="container">
+    <!-- Navbar -->
 
-      <nav class="navbar">
-        <a href="../index.html"> Home </a>
+    <nav class="navbar">
+      <a href="../index.html"> Home </a>
 
-        <a href="day-10.html"> Day 10 </a>
+      <a href="day-10.html"> Day 10 </a>
 
-        <a href="day-11.html"> Day 11 </a>
+      <a href="day-11.html"> Day 11 </a>
 
-        <a href="day-12.html"> Day 12 </a>
-      </nav>
+      <a href="day-12.html"> Day 12 </a>
+    </nav>
 
-      <header>
-        <h1>🤖 Day 12 - First Machine Learning Model</h1>
+    <header>
+      <h1>🤖 Day 12 - First Machine Learning Model</h1>
 
-        <p>Building First ML Model Using Scikit-Learn and Linear Regression</p>
-      </header>
+      <p>Building First ML Model Using Scikit-Learn and Linear Regression</p>
+    </header>
 
-      <section class="card">
-        <h2>Topics Covered</h2>
+    <section class="card">
+      <h2>Topics Covered</h2>
 
-        <ul>
-          <li>Introduction to Scikit-Learn</li>
+      <ul>
+        <li>Introduction to Scikit-Learn</li>
 
-          <li>Linear Regression</li>
+        <li>Linear Regression</li>
 
-          <li>Model Training</li>
+        <li>Model Training</li>
 
-          <li>Model Prediction</li>
+        <li>Model Prediction</li>
 
-          <li>Model Evaluation</li>
+        <li>Model Evaluation</li>
 
-          <li>Study Hours vs Marks Prediction</li>
+        <li>Study Hours vs Marks Prediction</li>
 
-          <li>End-to-End Machine Learning Workflow</li>
-        </ul>
-      </section>
+        <li>End-to-End Machine Learning Workflow</li>
+      </ul>
+    </section>
 
-      <section class="card">
-        <h2>1. Introduction to Scikit-Learn</h2>
+    <section class="card">
+      <h2>1. Introduction to Scikit-Learn</h2>
 
-        <p>
-          Scikit-Learn is a Python library used for Machine Learning. It
-          provides ready-to-use algorithms for training models.
-        </p>
+      <p>
+        Scikit-Learn is a Python library used for Machine Learning. It
+        provides ready-to-use algorithms for training models.
+      </p>
 
-        <h3>Features</h3>
+      <h3>Features</h3>
 
-        <ul>
-          <li>Machine Learning Algorithms</li>
+      <ul>
+        <li>Machine Learning Algorithms</li>
 
-          <li>Data Preprocessing</li>
+        <li>Data Preprocessing</li>
 
-          <li>Model Evaluation</li>
+        <li>Model Evaluation</li>
 
-          <li>Train-Test Split</li>
+        <li>Train-Test Split</li>
 
-          <li>Prediction Tools</li>
-        </ul>
+        <li>Prediction Tools</li>
+      </ul>
 
-        <pre>
+      <pre>
 
 import sklearn
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>2. Machine Learning Model Flow</h2>
+    <section class="card">
+      <h2>2. Machine Learning Model Flow</h2>
 
-        <pre>
+      <pre>
 
 
 Dataset
@@ -132,33 +132,32 @@ Evaluation
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>3. What is Linear Regression?</h2>
+    <section class="card">
+      <h2>3. What is Linear Regression?</h2>
 
-        <p>
-          Linear Regression is a supervised learning algorithm used to predict
-          continuous numerical values.
-        </p>
+      <p>
+        Linear Regression is a supervised learning algorithm used to predict
+        continuous numerical values.
+      </p>
 
-        <h3>Examples</h3>
+      <h3>Examples</h3>
 
-        <ul>
-          <li>House Price Prediction</li>
+      <ul>
+        <li>House Price Prediction</li>
 
-          <li>Sales Prediction</li>
+        <li>Sales Prediction</li>
 
-          <li>Salary Prediction</li>
+        <li>Salary Prediction</li>
 
-          <li>Marks Prediction</li>
-        </ul>
+        <li>Marks Prediction</li>
+      </ul>
 
-        <h3>Formula</h3>
+      <h3>Formula</h3>
 
-        <pre>
+      <pre>
 
 
 y = mx + c
@@ -173,14 +172,13 @@ m = Slope
 c = Intercept
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>4. Import Required Libraries</h2>
+    <section class="card">
+      <h2>4. Import Required Libraries</h2>
 
-        <pre>
+      <pre>
 
 
 import pandas as pd
@@ -196,14 +194,13 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>5. Creating Dataset</h2>
+    <section class="card">
+      <h2>5. Creating Dataset</h2>
 
-        <pre>
+      <pre>
 
 
 import pandas as pd
@@ -249,12 +246,11 @@ print(df)
 
 
 
-</pre
-        >
+</pre>
 
-        Output:
+      Output:
 
-        <pre>
+      <pre>
 
 
 Hours  Marks
@@ -272,16 +268,15 @@ Hours  Marks
 6      80
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>6. Selecting Features and Labels</h2>
+    <section class="card">
+      <h2>6. Selecting Features and Labels</h2>
 
-        <p>Features are inputs and labels are outputs.</p>
+      <p>Features are inputs and labels are outputs.</p>
 
-        <pre>
+      <pre>
 
 
 X = df[
@@ -295,14 +290,13 @@ y = df[
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>7. Train Test Split</h2>
+    <section class="card">
+      <h2>7. Train Test Split</h2>
 
-        <pre>
+      <pre>
 
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -319,16 +313,15 @@ random_state=42
 
 
 
-</pre
-        >
+</pre>
 
-        <p>80% data is used for training and 20% for testing.</p>
-      </section>
+      <p>80% data is used for training and 20% for testing.</p>
+    </section>
 
-      <section class="card">
-        <h2>8. Creating Linear Regression Model</h2>
+    <section class="card">
+      <h2>8. Creating Linear Regression Model</h2>
 
-        <pre>
+      <pre>
 
 
 model = LinearRegression()
@@ -345,16 +338,15 @@ y_train
 
 
 
-</pre
-        >
+</pre>
 
-        <p>fit() method learns patterns from training data.</p>
-      </section>
+      <p>fit() method learns patterns from training data.</p>
+    </section>
 
-      <section class="card">
-        <h2>9. Making Predictions</h2>
+    <section class="card">
+      <h2>9. Making Predictions</h2>
 
-        <pre>
+      <pre>
 
 
 prediction = model.predict(
@@ -371,31 +363,29 @@ print(prediction)
 
 
 
-</pre
-        >
+</pre>
 
-        Output:
+      Output:
 
-        <pre>
+      <pre>
 
 
 [90]
 
 
-</pre
-        >
+</pre>
 
-        <p>The model predicts marks for 7 study hours.</p>
-      </section>
+      <p>The model predicts marks for 7 study hours.</p>
+    </section>
 
-      <section class="card">
-        <h2>10. Model Evaluation</h2>
+    <section class="card">
+      <h2>10. Model Evaluation</h2>
 
-        <p>Evaluation checks how accurate the model is.</p>
+      <p>Evaluation checks how accurate the model is.</p>
 
-        <h3>Mean Squared Error</h3>
+      <h3>Mean Squared Error</h3>
 
-        <pre>
+      <pre>
 
 
 mse = mean_squared_error(
@@ -412,12 +402,11 @@ print(mse)
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>R2 Score</h3>
+      <h3>R2 Score</h3>
 
-        <pre>
+      <pre>
 
 
 score = r2_score(
@@ -434,14 +423,13 @@ print(score)
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>11. Complete ML Program</h2>
+    <section class="card">
+      <h2>11. Complete ML Program</h2>
 
-        <pre>
+      <pre>
 
 
 import pandas as pd
@@ -526,40 +514,39 @@ print(result)
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>12. Mini Project - Study Hours vs Marks Prediction</h2>
+    <section class="card">
+      <h2>12. Mini Project - Study Hours vs Marks Prediction</h2>
 
-        <h3>Problem Statement</h3>
+      <h3>Problem Statement</h3>
 
-        <p>Create a model that predicts marks based on study hours.</p>
+      <p>Create a model that predicts marks based on study hours.</p>
 
-        <h3>Steps</h3>
+      <h3>Steps</h3>
 
-        <ol>
-          <li>Collect student data</li>
+      <ol>
+        <li>Collect student data</li>
 
-          <li>Clean dataset</li>
+        <li>Clean dataset</li>
 
-          <li>Create features</li>
+        <li>Create features</li>
 
-          <li>Split dataset</li>
+        <li>Split dataset</li>
 
-          <li>Train regression model</li>
+        <li>Train regression model</li>
 
-          <li>Predict marks</li>
+        <li>Predict marks</li>
 
-          <li>Evaluate result</li>
-        </ol>
-      </section>
+        <li>Evaluate result</li>
+      </ol>
+    </section>
 
-      <section class="card">
-        <h2>13. End-to-End Machine Learning Workflow</h2>
+    <section class="card">
+      <h2>13. End-to-End Machine Learning Workflow</h2>
 
-        <pre>
+      <pre>
 
 
 1. Import Libraries
@@ -593,29 +580,29 @@ print(result)
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <section class="card">
-        <h2>Day 12 Practice Tasks</h2>
+    <section class="card">
+      <h2>Day 12 Practice Tasks</h2>
 
-        <ol>
-          <li>Create salary prediction model</li>
+      <ol>
+        <li>Create salary prediction model</li>
 
-          <li>Create house price prediction model</li>
+        <li>Create house price prediction model</li>
 
-          <li>Use Linear Regression</li>
+        <li>Use Linear Regression</li>
 
-          <li>Calculate R2 score</li>
+        <li>Calculate R2 score</li>
 
-          <li>Predict new values</li>
+        <li>Predict new values</li>
 
-          <li>Create complete ML pipeline</li>
-        </ol>
-      </section>
+        <li>Create complete ML pipeline</li>
+      </ol>
+    </section>
 
-      <footer>Python Learning Notes 🚀</footer>
-    </div>
-  </body>
+    <footer>Python Learning Notes 🚀</footer>
+  </div>
+</body>
+
 </html>
