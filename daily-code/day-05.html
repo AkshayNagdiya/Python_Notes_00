@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 05 - Object Oriented Programming</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>🏗️ Day 05 - Object Oriented Programming</h1>
+
+        <p>Classes, Objects, Inheritance and OOP Concepts</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Classes and Objects</li>
+
+          <li>Constructors</li>
+
+          <li>self Keyword</li>
+
+          <li>Encapsulation</li>
+
+          <li>Inheritance</li>
+
+          <li>Polymorphism</li>
+
+          <li>Abstraction</li>
+        </ul>
+      </section>
+
+      <!-- OOP Intro -->
+
+      <section class="card">
+        <h2>1. What is OOP?</h2>
+
+        <p>
+          Object Oriented Programming is a programming approach based on objects
+          and classes.
+        </p>
+
+        <h3>Main Concepts</h3>
+
+        <ul>
+          <li>Class</li>
+
+          <li>Object</li>
+
+          <li>Encapsulation</li>
+
+          <li>Inheritance</li>
+
+          <li>Polymorphism</li>
+
+          <li>Abstraction</li>
+        </ul>
+      </section>
+
+      <!-- Class Object -->
+
+      <section class="card">
+        <h2>2. Classes and Objects</h2>
+
+        <p>
+          A class is a blueprint for creating objects. An object is an instance
+          of a class.
+        </p>
+
+        <h3>Creating Class</h3>
+
+        <pre>
+
+class Student:
+
+
+    name = "Alex"
+
+    age = 20
+
+
+
+student1 = Student()
+
+
+
+print(student1.name)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Alex
+
+</pre
+        >
+      </section>
+
+      <!-- Constructor -->
+
+      <section class="card">
+        <h2>3. Constructors</h2>
+
+        <p>
+          Constructor is a special method that runs automatically when object is
+          created.
+        </p>
+
+        <pre>
+
+
+class Student:
+
+
+    def __init__(self,name,age):
+
+        self.name = name
+
+        self.age = age
+
+
+
+
+student = Student(
+"Alex",
+20
+)
+
+
+
+print(student.name)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Alex
+
+</pre
+        >
+      </section>
+
+      <!-- Self -->
+
+      <section class="card">
+        <h2>4. self Keyword</h2>
+
+        <p>self represents the current object of the class.</p>
+
+        <pre>
+
+
+class Car:
+
+
+    def show(self):
+
+        print("This is car")
+
+
+
+c = Car()
+
+
+c.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Encapsulation -->
+
+      <section class="card">
+        <h2>5. Encapsulation</h2>
+
+        <p>
+          Encapsulation means wrapping data and methods together inside a class.
+        </p>
+
+        <pre>
+
+
+class Account:
+
+
+    def __init__(self,balance):
+
+        self.__balance = balance
+
+
+
+    def show_balance(self):
+
+        print(self.__balance)
+
+
+
+
+acc = Account(5000)
+
+
+
+acc.show_balance()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Inheritance -->
+
+      <section class="card">
+        <h2>6. Inheritance</h2>
+
+        <p>Inheritance allows one class to use properties of another class.</p>
+
+        <pre>
+
+
+class Animal:
+
+
+    def sound(self):
+
+        print("Animal Sound")
+
+
+
+
+class Dog(Animal):
+
+    pass
+
+
+
+
+d = Dog()
+
+
+d.sound()
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Animal Sound
+
+</pre
+        >
+      </section>
+
+      <!-- Polymorphism -->
+
+      <section class="card">
+        <h2>7. Polymorphism</h2>
+
+        <p>Polymorphism means same method name with different behavior.</p>
+
+        <pre>
+
+
+class Cat:
+
+
+    def sound(self):
+
+        print("Meow")
+
+
+
+
+class Dog:
+
+
+    def sound(self):
+
+        print("Bark")
+
+
+
+
+animals = [
+Cat(),
+Dog()
+]
+
+
+
+for animal in animals:
+
+    animal.sound()
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Meow
+
+Bark
+
+</pre
+        >
+      </section>
+
+      <!-- Abstraction -->
+
+      <section class="card">
+        <h2>8. Abstraction</h2>
+
+        <p>
+          Abstraction hides implementation details and shows only required
+          information.
+        </p>
+
+        <pre>
+
+
+from abc import ABC, abstractmethod
+
+
+
+class Shape(ABC):
+
+
+    @abstractmethod
+
+    def area(self):
+
+        pass
+
+
+
+
+class Circle(Shape):
+
+
+    def area(self):
+
+        print("Circle Area")
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Employee Management System</h3>
+
+        <pre>
+
+
+class Employee:
+
+
+    def __init__(self,name,salary):
+
+        self.name = name
+
+        self.salary = salary
+
+
+
+    def display(self):
+
+        print(
+        self.name,
+        self.salary
+        )
+
+
+
+
+emp = Employee(
+"Alex",
+50000
+)
+
+
+
+emp.display()
+
+
+
+</pre
+        >
+
+        <h3>2. Banking Application</h3>
+
+        <pre>
+
+
+class BankAccount:
+
+
+    def __init__(self,balance):
+
+        self.balance = balance
+
+
+
+    def deposit(self,amount):
+
+        self.balance += amount
+
+
+
+    def withdraw(self,amount):
+
+        self.balance -= amount
+
+
+
+account = BankAccount(1000)
+
+
+
+account.deposit(500)
+
+
+
+account.withdraw(200)
+
+
+
+print(account.balance)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+1300
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 05 Practice Tasks</h2>
+
+        <ol>
+          <li>Create Student class</li>
+
+          <li>Create Employee management system</li>
+
+          <li>Create Bank Account class</li>
+
+          <li>Implement inheritance example</li>
+
+          <li>Create polymorphism example</li>
+
+          <li>Create abstract class example</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

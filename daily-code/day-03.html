@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 03 - Functions & Modular Programming</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>🚀 Day 03 - Functions & Modular Programming</h1>
+
+        <p>Creating Reusable Code Using Functions</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>User Defined Functions</li>
+
+          <li>Creating Functions</li>
+
+          <li>Calling Functions</li>
+
+          <li>Parameters and Arguments</li>
+
+          <li>Return Values</li>
+
+          <li>Scope of Variables</li>
+
+          <li>Modular Programming Basics</li>
+        </ul>
+      </section>
+
+      <!-- Function Intro -->
+
+      <section class="card">
+        <h2>1. What is Function?</h2>
+
+        <p>
+          A function is a reusable block of code that performs a specific task.
+        </p>
+
+        <h3>Why use Functions?</h3>
+
+        <ul>
+          <li>Avoid repeating code</li>
+
+          <li>Make code clean</li>
+
+          <li>Easy debugging</li>
+
+          <li>Better project structure</li>
+        </ul>
+      </section>
+
+      <!-- Creating Function -->
+
+      <section class="card">
+        <h2>2. Creating a Function</h2>
+
+        <p>Functions are created using the <b>def</b> keyword.</p>
+
+        <pre>
+
+def greet():
+
+    print("Hello Python")
+
+
+greet()
+
+</pre
+        >
+
+        <h3>Output</h3>
+
+        <pre>
+
+Hello Python
+
+</pre
+        >
+      </section>
+
+      <!-- Parameters -->
+
+      <section class="card">
+        <h2>3. Parameters and Arguments</h2>
+
+        <p>
+          Parameters are values received by a function. Arguments are values
+          passed when calling a function.
+        </p>
+
+        <pre>
+
+
+def welcome(name):
+
+    print(
+    "Welcome",
+    name
+    )
+
+
+
+welcome("Alex")
+
+
+</pre
+        >
+
+        <h3>Output</h3>
+
+        <pre>
+
+Welcome Alex
+
+</pre
+        >
+      </section>
+
+      <!-- Multiple Parameters -->
+
+      <section class="card">
+        <h2>4. Multiple Parameters</h2>
+
+        <pre>
+
+
+def add(a,b):
+
+    result = a + b
+
+    print(result)
+
+
+
+add(10,20)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+30
+
+</pre
+        >
+      </section>
+
+      <!-- Return -->
+
+      <section class="card">
+        <h2>5. Return Values</h2>
+
+        <p>return sends a value back from a function.</p>
+
+        <pre>
+
+
+def square(number):
+
+    return number * number
+
+
+
+result = square(5)
+
+
+
+print(result)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+25
+
+</pre
+        >
+      </section>
+
+      <!-- Scope -->
+
+      <section class="card">
+        <h2>6. Variable Scope</h2>
+
+        <h3>Local Variable</h3>
+
+        <pre>
+
+
+def test():
+
+    x = 10
+
+    print(x)
+
+
+
+test()
+
+
+
+</pre
+        >
+
+        <p>Variable created inside function is local.</p>
+
+        <h3>Global Variable</h3>
+
+        <pre>
+
+
+x = 100
+
+
+
+def show():
+
+    print(x)
+
+
+
+show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Modular Programming -->
+
+      <section class="card">
+        <h2>7. Modular Programming</h2>
+
+        <p>
+          Modular programming means dividing a large program into smaller
+          reusable parts.
+        </p>
+
+        <h3>Example Structure</h3>
+
+        <pre>
+
+
+project/
+
+
+    main.py
+
+    calculator.py
+
+    users.py
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Area Calculator</h3>
+
+        <pre>
+
+
+def area(length,width):
+
+    return length * width
+
+
+
+l = float(
+input("Length: ")
+)
+
+
+w = float(
+input("Width: ")
+)
+
+
+
+print(
+area(l,w)
+)
+
+
+
+</pre
+        >
+
+        <h3>2. Factorial Calculator</h3>
+
+        <pre>
+
+
+def factorial(n):
+
+    result = 1
+
+
+    for i in range(1,n+1):
+
+        result *= i
+
+
+    return result
+
+
+
+
+num = int(
+input("Enter number: ")
+)
+
+
+
+print(
+factorial(num)
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+120
+
+</pre
+        >
+
+        <h3>3. Menu Driven Program</h3>
+
+        <pre>
+
+
+def add(a,b):
+
+    return a+b
+
+
+
+def subtract(a,b):
+
+    return a-b
+
+
+
+print("1.Add")
+
+print("2.Subtract")
+
+
+
+choice = int(
+input("Choose: ")
+)
+
+
+
+a = 10
+
+b = 5
+
+
+
+if choice == 1:
+
+    print(
+    add(a,b)
+    )
+
+
+elif choice == 2:
+
+    print(
+    subtract(a,b)
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 03 Practice Tasks</h2>
+
+        <ol>
+          <li>Create calculator using functions</li>
+
+          <li>Create function to check even/odd</li>
+
+          <li>Create function to find maximum number</li>
+
+          <li>Create temperature converter function</li>
+
+          <li>Create simple banking menu program</li>
+
+          <li>Create student result calculator</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

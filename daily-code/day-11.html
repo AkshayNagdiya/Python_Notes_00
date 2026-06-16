@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 11 - Machine Learning Fundamentals</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-09.html"> Day 09 </a>
+
+        <a href="day-10.html"> Day 10 </a>
+
+        <a href="day-11.html"> Day 11 </a>
+      </nav>
+
+      <header>
+        <h1>🤖 Day 11 - Machine Learning Fundamentals</h1>
+
+        <p>Introduction to AI, ML Concepts and Machine Learning Workflow</p>
+      </header>
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to Machine Learning</li>
+
+          <li>AI vs Machine Learning vs Deep Learning</li>
+
+          <li>Types of Machine Learning</li>
+
+          <li>Supervised Learning</li>
+
+          <li>Unsupervised Learning</li>
+
+          <li>Reinforcement Learning</li>
+
+          <li>Machine Learning Workflow</li>
+
+          <li>Train-Test Split</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>1. What is Machine Learning?</h2>
+
+        <p>
+          Machine Learning is a branch of Artificial Intelligence where
+          computers learn patterns from data and make predictions without being
+          directly programmed.
+        </p>
+
+        <h3>Example</h3>
+
+        <pre>
+
+Input:
+
+Previous house prices
+
+
+Learning:
+
+Find price patterns
+
+
+Output:
+
+Predict new house price
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>2. Artificial Intelligence vs Machine Learning vs Deep Learning</h2>
+
+        <table>
+          <tr>
+            <th>Concept</th>
+
+            <th>Meaning</th>
+          </tr>
+
+          <tr>
+            <td>Artificial Intelligence</td>
+
+            <td>Making machines intelligent</td>
+          </tr>
+
+          <tr>
+            <td>Machine Learning</td>
+
+            <td>Learning from data</td>
+          </tr>
+
+          <tr>
+            <td>Deep Learning</td>
+
+            <td>Uses neural networks for complex tasks</td>
+          </tr>
+        </table>
+
+        <pre>
+
+
+AI
+
+|
+
+|-- Machine Learning
+
+        |
+
+        |-- Deep Learning
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>3. Types of Machine Learning</h2>
+
+        <ul>
+          <li>Supervised Learning</li>
+
+          <li>Unsupervised Learning</li>
+
+          <li>Reinforcement Learning</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Supervised Learning</h2>
+
+        <p>
+          Supervised learning uses labeled data where the correct output is
+          already known.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+          <li>Email Spam Detection</li>
+
+          <li>House Price Prediction</li>
+
+          <li>Disease Prediction</li>
+        </ul>
+
+        <h3>Types</h3>
+
+        <table>
+          <tr>
+            <th>Type</th>
+
+            <th>Used For</th>
+          </tr>
+
+          <tr>
+            <td>Regression</td>
+
+            <td>Predict numerical values</td>
+          </tr>
+
+          <tr>
+            <td>Classification</td>
+
+            <td>Predict categories</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>5. Unsupervised Learning</h2>
+
+        <p>
+          Unsupervised learning finds hidden patterns from data without labels.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+          <li>Customer Segmentation</li>
+
+          <li>Grouping Similar Products</li>
+
+          <li>Market Analysis</li>
+        </ul>
+
+        <h3>Common Algorithms</h3>
+
+        <pre>
+
+K-Means Clustering
+
+PCA
+
+Association Rules
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>6. Reinforcement Learning</h2>
+
+        <p>
+          Reinforcement learning learns by trial and error using rewards and
+          penalties.
+        </p>
+
+        <h3>Components</h3>
+
+        <ul>
+          <li>Agent</li>
+
+          <li>Environment</li>
+
+          <li>Action</li>
+
+          <li>Reward</li>
+        </ul>
+
+        <h3>Example</h3>
+
+        <pre>
+
+Game AI
+
+Agent:
+
+Player
+
+
+Action:
+
+Move
+
+
+Reward:
+
+Score
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>7. Machine Learning Workflow</h2>
+
+        <ol>
+          <li>Collect Data</li>
+
+          <li>Clean Data</li>
+
+          <li>Explore Data</li>
+
+          <li>Prepare Features</li>
+
+          <li>Split Data</li>
+
+          <li>Train Model</li>
+
+          <li>Evaluate Model</li>
+
+          <li>Deploy Model</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>8. Dataset Example</h2>
+
+        <pre>
+
+
+Data:
+
+
+Hours Studied | Marks
+
+
+2             | 40
+
+5             | 70
+
+8             | 90
+
+
+
+Goal:
+
+
+Predict marks
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>9. Train Test Split</h2>
+
+        <p>
+          Train-test split divides data into training data and testing data.
+        </p>
+
+        <ul>
+          <li>Training Data → Used to learn</li>
+
+          <li>Testing Data → Used to check performance</li>
+        </ul>
+
+        <pre>
+
+
+from sklearn.model_selection import train_test_split
+
+
+
+X_train, X_test, y_train, y_test = train_test_split(
+
+X,
+
+y,
+
+test_size=0.2
+
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>10. Features and Labels</h2>
+
+        <p>Features are input values and labels are output values.</p>
+
+        <pre>
+
+
+Example:
+
+
+House Size  -> Feature
+
+
+House Price -> Label
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>11. Machine Learning Project Structure</h2>
+
+        <pre>
+
+
+project/
+
+
+|
+
+|-- dataset.csv
+
+
+|-- preprocessing.py
+
+
+|-- model.py
+
+
+|-- train.py
+
+
+|-- predict.py
+
+
+|-- result.py
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Understanding Dataset</h3>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+data = pd.read_csv(
+"data.csv"
+)
+
+
+
+print(data.head())
+
+
+
+</pre
+        >
+
+        <h3>2. Train Test Split Example</h3>
+
+        <pre>
+
+
+from sklearn.model_selection import train_test_split
+
+
+
+X_train, X_test = train_test_split(
+
+data,
+
+test_size=0.2
+
+)
+
+
+
+</pre
+        >
+
+        <h3>3. ML Workflow Practice</h3>
+
+        <pre>
+
+
+1. Load Dataset
+
+2. Clean Data
+
+3. Analyze Data
+
+4. Split Data
+
+5. Train Model
+
+6. Test Prediction
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>Day 11 Practice Tasks</h2>
+
+        <ol>
+          <li>Explain AI, ML and Deep Learning difference</li>
+
+          <li>Identify supervised and unsupervised problems</li>
+
+          <li>Create ML workflow diagram</li>
+
+          <li>Load sample dataset</li>
+
+          <li>Perform train-test split</li>
+
+          <li>Find features and labels</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 01 - Python Fundamentals</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🐍 Day 01 - Python Fundamentals</h1>
+      <p>Programming Logic, Python Basics and Core Concepts</p>
+    </header>
+
+    <!-- Introduction -->
+
+    <!-- <div class="card">
+        <h2>1. Introduction to Programming</h2>
+        <p>
+          Programming is the process of writing instructions that a computer
+          follows to perform a task.
+        </p>
+        <h3>What is a Program?</h3>
+        <p>
+          A program is a set of instructions written in a programming language.
+        </p>
+        <h3>Programming Language</h3>
+        <p>A programming language is a way to communicate with computers.</p>
+        <h3>Compiler vs Interpreter</h3>
+
+        <table>
+          <tr>
+            <th>Compiler</th>
+            <th>Interpreter</th>
+          </tr>
+
+          <tr>
+            <td>Converts complete code at once</td>
+            <td>Executes code line by line</td>
+          </tr>
+
+          <tr>
+            <td>Example: C, C++</td>
+            <td>Example: Python</td>
+          </tr>
+        </table>
+
+        <h3>Problem Solving Steps</h3>
+
+        <ol class="ol">
+          <li>Understand the problem</li>
+
+          <li>Create logic</li>
+
+          <li>Write algorithm</li>
+
+          <li>Create program</li>
+
+          <li>Test output</li>
+        </ol>
+      </div> -->
+    
+      <!-- Introduction -->
+
+    <div class="card">
+      <h2>1. Introduction to Programming</h2>
+
+      <h3>What is Programming?</h3>
+
+      <p>
+        Programming is the process of creating instructions that tell a
+        computer how to perform a specific task. A programmer writes these
+        instructions using a programming language.
+      </p>
+
+      <h3>Real Life Example</h3>
+
+      <p>Think about a recipe. A recipe contains steps:</p>
+
+      <ol class="ol">
+        <li>Take ingredients</li>
+
+        <li>Mix them</li>
+
+        <li>Cook them</li>
+
+        <li>Serve food</li>
+      </ol>
+
+      <p>
+        A computer program works in the same way. It follows instructions step
+        by step.
+      </p>
+
+      <h3>What is a Program?</h3>
+
+      <p>
+        A program is a collection of instructions written to solve a problem
+        or perform a task.
+      </p>
+      <pre>
+
+      Example:
+      
+      Task:
+      Add two numbers
+      
+      
+      Program:
+      
+      Take first number
+      Take second number
+      Add numbers
+      Display result
+      
+      
+      </pre>
+
+      <h3>Why Do We Need Programming?</h3>
+
+      <ul class="ol">
+        <li>Automate repetitive tasks</li>
+
+        <li>Create websites and applications</li>
+
+        <li>Analyze data</li>
+
+        <li>Build games and software</li>
+
+        <li>Control machines</li>
+      </ul>
+
+      <h3>Programming Language</h3>
+
+      <p>
+        A programming language is a method used to communicate instructions to
+        a computer.
+      </p>
+
+      <p>Examples:</p>
+
+      <ul class="ol">
+        <li>Python</li>
+
+        <li>Java</li>
+
+        <li>C++</li>
+
+        <li>JavaScript</li>
+      </ul>
+
+      <h3>How Computer Understands Code</h3>
+
+      <p>
+        Computers understand machine language (0 and 1). Programming languages
+        need to be converted into machine instructions.
+      </p>
+
+      <h3>Compiler vs Interpreter</h3>
+
+      <table>
+        <tr>
+          <th>Compiler</th>
+
+          <th>Interpreter</th>
+        </tr>
+
+        <tr>
+          <td>Translates complete program before execution</td>
+
+          <td>Translates and executes line by line</td>
+        </tr>
+
+        <tr>
+          <td>Faster after compilation</td>
+
+          <td>Easy debugging</td>
+        </tr>
+
+        <tr>
+          <td>Example: C, C++</td>
+
+          <td>Example: Python</td>
+        </tr>
+      </table>
+
+      <h3>Problem Solving Steps</h3>
+
+      <ol class="ol">
+        <li>Understand the problem</li>
+
+        <li>Identify inputs and outputs</li>
+
+        <li>Create logic</li>
+
+        <li>Write algorithm</li>
+
+        <li>Create flowchart (optional)</li>
+
+        <li>Write code</li>
+
+        <li>Test program</li>
+
+        <li>Fix errors</li>
+      </ol>
+
+      <h3>Example Problem</h3>
+
+      <p>Problem: Find the sum of two numbers</p>
+
+      <pre>
+
+      Step 1:
+      Input two numbers
+      
+      
+      Step 2:
+      Add numbers
+      
+      
+      Step 3:
+      Display result
+      
+      
+      </pre>
+
+      <h3>Programming Logic</h3>
+
+      <p>
+        Programming logic means creating a sequence of steps to solve a
+        problem. Good logic helps create efficient programs.
+      </p>
+    </div>
+
+
+    <!-- Python -->
+
+    <!-- Python -->
+    <div class="card">
+      <h2>
+        2. What is Python?
+      </h2>
+      <p>
+        Python is a high-level, interpreted, general-purpose programming language.
+        It is designed to be easy to read and write.
+      </p>
+      <h3>
+        Why Python?
+      </h3>
+      <ul class="ul">
+        <li>
+          Simple and beginner friendly syntax
+        </li>
+        <li>
+          Less code compared to many languages
+        </li>
+        <li>
+          Large community support
+        </li>
+        <li>
+          Thousands of built-in and external libraries
+        </li>
+        <li>
+          Used in real-world applications
+        </li>
+      </ul>
+      <h3>
+        History of Python
+      </h3>
+      <p>
+        Python was created by Guido van Rossum and released in 1991.
+        The goal was to create a language that is simple, readable and powerful.
+      </p>
+      <h3>
+        Features of Python
+      </h3>
+      <ul class="ul">
+        <li>
+          Easy to Learn
+        </li>
+        <li>
+          Readable Code
+        </li>
+        <li>
+          Interpreted Language
+        </li>
+        <li>
+          Object Oriented Programming Support
+        </li>
+        <li>
+          Platform Independent
+        </li>
+        <li>
+          Open Source
+        </li>
+        <li>
+          Dynamic Typing
+        </li>
+        <li>
+          Large Standard Library
+        </li>
+      </ul>
+      <h3>
+        Applications of Python
+      </h3>
+      <table>
+        <tr>
+          <th>
+            Field
+          </th>
+          <th>
+            Uses
+          </th>
+        </tr>
+        <tr>
+          <td>
+            Web Development
+          </td>
+          <td>
+            Websites and APIs
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Data Science
+          </td>
+          <td>
+            Data analysis and visualization
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Artificial Intelligence
+          </td>
+          <td>
+            Machine Learning and Deep Learning
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Automation
+          </td>
+          <td>
+            Task automation and scripts
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Game Development
+          </td>
+          <td>
+            Creating games
+          </td>
+        </tr>
+      </table>
+      <h3>
+        How Python Works?
+      </h3>
+      <pre>
+          Python Code
+          
+                ↓
+          
+          Python Interpreter
+          
+                ↓
+          
+          Machine Instructions
+          
+                ↓
+          
+          Output
+        
+          </pre>
+      <h3>
+        First Python Program
+      </h3>
+      <pre>
+          print("Hello Python")
+          </pre>
+
+      <h3>
+        Output
+      </h3>
+
+      <pre>
+
+          Hello Python
+          
+          </pre>
+
+
+
+
+      <h3>
+        Explanation</h3>
+
+
+      <ul class="ul">
+
+
+        <li>
+          print() is a built-in Python function
+        </li>
+
+
+        <li>
+          It displays information on screen
+        </li>
+
+
+        <li>
+          Text is written inside quotes
+        </li>
+
+
+      </ul>
+
+
+
+
+
+
+
+      <h3>
+        Simple Calculation Example
+      </h3>
+
+
+
+      <pre>
+
+
+          a = 10
+          
+          b = 20
+          
+          
+          print(a + b)
+          
+          
+          
+          </pre>
+
+
+
+
+      Output:
+
+
+      <pre>
+
+    30
+    
+    </pre>
+
+
+
+
+
+
+      <h3>
+        Python File Extension
+      </h3>
+
+
+      <p>
+
+        Python programs are saved with <b>.py</b> extension.
+
+      </p>
+
+
+
+      <pre>
+
+    example.py
+    
+    </pre>
+
+
+
+
+
+      <h3>
+        Running Python Program
+      </h3>
+
+
+
+      <pre>
+
+    python example.py
+    
+    
+    </pre>
+
+
+
+    </div>
+
+    <!-- Setup -->
+
+    <div class="card">
+      <h2>3. Python Installation & Environment Setup</h2>
+
+      <h3>Check Python Version</h3>
+
+      <pre>
+
+      python --version
+      
+      </pre>
+
+      <h3>Running Python File</h3>
+
+      <pre>
+
+python filename.py
+
+</pre>
+
+      <h3>Interactive Mode</h3>
+
+      <pre>
+
+>>> print("Hello")
+
+</pre>
+
+      <h3>Script Mode</h3>
+
+      <p>Writing code inside a .py file and executing it.</p>
+    </div>
+
+    <!-- Variables -->
+
+    <div class="card">
+      <h2>4. Variables</h2>
+
+      <p>Variables store data values.</p>
+
+      <pre>
+
+name = "Python"
+
+age = 25
+
+price = 99.5
+
+</pre>
+
+      <h3>Variable Rules</h3>
+
+      <ul class="ol">
+        <li>Cannot start with number</li>
+
+        <li>No spaces allowed</li>
+
+        <li>Case sensitive</li>
+
+        <li>Use meaningful names</li>
+      </ul>
+
+      <h3>Multiple Assignment</h3>
+
+      <pre>
+
+a,b,c = 10,20,30
+
+</pre>
+
+      <h3>Dynamic Typing</h3>
+
+      <pre>
+
+x = 10
+
+x = "Python"
+
+</pre>
+    </div>
+
+    <!-- Data Types -->
+
+    <div class="card">
+      <h2>5. Data Types</h2>
+
+      <table>
+        <tr>
+          <th>Type</th>
+
+          <th>Example</th>
+        </tr>
+
+        <tr>
+          <td>int</td>
+          <td>10</td>
+        </tr>
+
+        <tr>
+          <td>float</td>
+          <td>10.5</td>
+        </tr>
+
+        <tr>
+          <td>string</td>
+          <td>"Python"</td>
+        </tr>
+
+        <tr>
+          <td>boolean</td>
+          <td>True</td>
+        </tr>
+
+        <tr>
+          <td>list</td>
+          <td>[1,2,3]</td>
+        </tr>
+
+        <tr>
+          <td>tuple</td>
+          <td>(1,2)</td>
+        </tr>
+
+        <tr>
+          <td>set</td>
+          <td>{1,2}</td>
+        </tr>
+
+        <tr>
+          <td>dictionary</td>
+          <td>{"name":"Alex"}</td>
+        </tr>
+      </table>
+
+      <h3>Checking Type</h3>
+
+      <pre>
+
+x = 10
+
+print(type(x))
+
+</pre>
+
+      <h3>Type Conversion</h3>
+
+      <pre>
+
+x="100"
+
+y=int(x)
+
+print(y)
+
+</pre>
+    </div>
+
+    <!-- Input Output -->
+
+    <div class="card">
+      <h2>6. Input / Output</h2>
+
+      <h3>Output</h3>
+
+      <pre>
+
+print("Welcome")
+
+</pre>
+
+      <h3>User Input</h3>
+
+      <pre>
+
+name=input("Enter name:")
+
+print(name)
+
+</pre>
+
+      <h3>Formatted Output</h3>
+
+      <pre>
+
+name="Alex"
+
+age=20
+
+
+print(
+f"My name is {name} and age is {age}"
+)
+
+</pre>
+    </div>
+
+    <!-- Operators -->
+
+    <div class="card">
+      <h2>7. Operators</h2>
+
+      <h3>Arithmetic</h3>
+
+      <pre>
+
++
+-
+*
+/
+%
+
+</pre>
+
+      <h3>Comparison</h3>
+
+      <pre>
+
+>
+<
+==
+!=
+
+</pre>
+
+      <h3>Logical</h3>
+
+      <pre>
+
+and
+
+or
+
+not
+
+</pre>
+
+      <h3>Assignment</h3>
+
+      <pre>
+
+x = 10
+
+x += 5
+
+</pre>
+
+      <h3>Membership</h3>
+
+      <pre>
+
+"a" in "apple"
+
+</pre>
+
+      <h3>Identity</h3>
+
+      <pre>
+
+x is y
+
+</pre>
+    </div>
+
+    <!-- Strings -->
+
+    <div class="card">
+      <h2>8. Strings</h2>
+
+      <p>Strings are collections of characters.</p>
+
+      <pre>
+
+text="Python"
+
+</pre>
+
+      <h3>Concatenation</h3>
+
+      <pre>
+
+a="Hello"
+
+b="World"
+
+
+print(a+b)
+
+</pre>
+
+      <h3>String Methods</h3>
+
+      <pre>
+
+text.upper()
+
+text.lower()
+
+text.replace()
+
+</pre>
+
+      <h3>Escape Characters</h3>
+
+      <pre>
+
+print("Hello\nPython")
+
+</pre>
+    </div>
+
+    <!-- Indexing -->
+
+    <div class="card">
+      <h2>9. Indexing & Slicing</h2>
+
+      <h3>Positive Index</h3>
+
+      <pre>
+
+word="Python"
+
+print(word[0])
+
+</pre>
+
+      Output:
+
+      <pre>
+P
+</pre>
+
+      <h3>Negative Index</h3>
+
+      <pre>
+
+print(word[-1])
+
+</pre>
+
+      Output:
+
+      <pre>
+n
+</pre>
+
+      <h3>Slicing</h3>
+
+      <pre>
+
+word[0:3]
+
+</pre>
+
+      Output:
+
+      <pre>
+Pyt
+</pre>
+
+      <h3>Step Slicing</h3>
+
+      <pre>
+
+word[0:6:2]
+
+</pre>
+
+      <h3>Reverse</h3>
+
+      <pre>
+
+word[::-1]
+
+</pre>
+    </div>
+
+    <!-- Practical -->
+
+    <div class="card">
+      <h2>10. Practical Programs</h2>
+
+      <h3>Calculator</h3>
+
+      <pre>
+
+a=float(input("Enter first number:"))
+
+b=float(input("Enter second number:"))
+
+
+print(a+b)
+
+print(a-b)
+
+print(a*b)
+
+print(a/b)
+
+</pre>
+
+      <h3>Student Information</h3>
+
+      <pre>
+
+name=input("Name:")
+
+age=input("Age:")
+
+course=input("Course:")
+
+
+print(name)
+
+print(age)
+
+print(course)
+
+</pre>
+
+      <h3>String Exercise</h3>
+
+      <pre>
+
+text=input("Enter text:")
+
+
+print(text.upper())
+
+print(text.lower())
+
+print(len(text))
+
+print(text[::-1])
+
+</pre>
+    </div>
+
+    <!-- Practice -->
+
+    <div class="card">
+      <h2>Day 01 Practice Tasks</h2>
+
+      <ol class="ol">
+        <li>Create calculator</li>
+
+        <li>Create temperature converter</li>
+
+        <li>Create area calculator</li>
+
+        <li>Check even or odd</li>
+
+        <li>Reverse string</li>
+
+        <li>Count characters</li>
+
+        <li>Create student profile program</li>
+      </ol>
+    </div>
+
+    <footer>Python Learning Notes 🚀</footer>
+  </div>
+</body>
+
+</html>

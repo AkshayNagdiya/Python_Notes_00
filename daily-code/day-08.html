@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 08 - Pandas Data Analysis</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+
+        <a href="day-06.html"> Day 06 </a>
+
+        <a href="day-07.html"> Day 07 </a>
+
+        <a href="day-08.html"> Day 08 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>📊 Day 08 - Pandas for Data Analysis</h1>
+
+        <p>Data Handling, Cleaning and Analysis Using Pandas</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to Pandas</li>
+
+          <li>Series</li>
+
+          <li>DataFrame</li>
+
+          <li>Data Importing</li>
+
+          <li>Data Cleaning</li>
+
+          <li>Missing Value Handling</li>
+
+          <li>Filtering and Sorting</li>
+
+          <li>Group By Operations</li>
+        </ul>
+      </section>
+
+      <!-- Pandas -->
+
+      <section class="card">
+        <h2>1. What is Pandas?</h2>
+
+        <p>
+          Pandas is a Python library used for data analysis and data
+          manipulation.
+        </p>
+
+        <h3>Why Pandas?</h3>
+
+        <ul>
+          <li>Handle large datasets</li>
+
+          <li>Clean data easily</li>
+
+          <li>Analyze information</li>
+
+          <li>Prepare data for Machine Learning</li>
+        </ul>
+
+        <pre>
+
+
+import pandas as pd
+
+
+</pre
+        >
+      </section>
+
+      <!-- Series -->
+
+      <section class="card">
+        <h2>2. Pandas Series</h2>
+
+        <p>Series is a one dimensional labeled data structure.</p>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+numbers = pd.Series(
+[10,20,30,40]
+)
+
+
+
+print(numbers)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+0    10
+1    20
+2    30
+3    40
+
+</pre
+        >
+      </section>
+
+      <!-- DataFrame -->
+
+      <section class="card">
+        <h2>3. DataFrame</h2>
+
+        <p>DataFrame is a two dimensional table structure.</p>
+
+        <pre>
+
+
+data = {
+
+
+"Name":[
+"Alex",
+"John",
+"Mike"
+],
+
+
+"Age":[
+20,
+21,
+22
+]
+
+
+}
+
+
+
+df = pd.DataFrame(data)
+
+
+
+print(df)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Name   Age
+
+Alex   20
+
+John   21
+
+Mike   22
+
+
+</pre
+        >
+      </section>
+
+      <!-- Import -->
+
+      <section class="card">
+        <h2>4. Data Importing</h2>
+
+        <h3>CSV File</h3>
+
+        <pre>
+
+
+df = pd.read_csv(
+"students.csv"
+)
+
+
+
+print(df)
+
+
+
+</pre
+        >
+
+        <h3>Excel File</h3>
+
+        <pre>
+
+
+df = pd.read_excel(
+"data.xlsx"
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Data Information -->
+
+      <section class="card">
+        <h2>5. Understanding Data</h2>
+
+        <pre>
+
+
+df.head()
+
+
+
+df.tail()
+
+
+
+df.info()
+
+
+
+df.describe()
+
+
+
+</pre
+        >
+
+        <p>These functions help understand dataset structure.</p>
+      </section>
+
+      <!-- Cleaning -->
+
+      <section class="card">
+        <h2>6. Data Cleaning</h2>
+
+        <p>Data cleaning means fixing incorrect or incomplete data.</p>
+
+        <h3>Check Missing Values</h3>
+
+        <pre>
+
+
+df.isnull()
+
+
+
+</pre
+        >
+
+        <h3>Remove Missing Data</h3>
+
+        <pre>
+
+
+df.dropna()
+
+
+
+</pre
+        >
+
+        <h3>Fill Missing Data</h3>
+
+        <pre>
+
+
+df.fillna(0)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Filtering -->
+
+      <section class="card">
+        <h2>7. Filtering Data</h2>
+
+        <pre>
+
+
+students = df[
+df["Age"] > 20
+]
+
+
+
+print(students)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Students having age greater than 20
+
+</pre
+        >
+      </section>
+
+      <!-- Sorting -->
+
+      <section class="card">
+        <h2>8. Sorting Data</h2>
+
+        <pre>
+
+
+df.sort_values(
+"Age"
+)
+
+
+
+</pre
+        >
+
+        <p>Sorts data according to column values.</p>
+      </section>
+
+      <!-- Group By -->
+
+      <section class="card">
+        <h2>9. Group By Operations</h2>
+
+        <p>GroupBy is used to group data and perform calculations.</p>
+
+        <pre>
+
+
+data = {
+
+
+"Department":[
+"IT",
+"IT",
+"HR"
+],
+
+
+"Salary":[
+50000,
+60000,
+40000
+]
+
+
+}
+
+
+
+df = pd.DataFrame(data)
+
+
+
+result = df.groupby(
+"Department"
+).sum()
+
+
+
+print(result)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Sales Dataset Analysis</h3>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+sales = pd.read_csv(
+"sales.csv"
+)
+
+
+
+print(
+sales.head()
+)
+
+
+
+print(
+sales.describe()
+)
+
+
+
+print(
+sales.groupby(
+"Product"
+)["Amount"].sum()
+)
+
+
+
+</pre
+        >
+
+        <h3>2. Student Dataset Analysis</h3>
+
+        <pre>
+
+
+students = {
+
+
+"Name":[
+"A",
+"B",
+"C"
+],
+
+
+"Marks":[
+80,
+90,
+70
+]
+
+
+}
+
+
+
+df = pd.DataFrame(
+students
+)
+
+
+
+print(
+df
+)
+
+
+
+print(
+df["Marks"].mean()
+)
+
+
+
+</pre
+        >
+
+        <h3>3. Missing Value Handling</h3>
+
+        <pre>
+
+
+df.fillna(
+0
+)
+
+
+
+</pre
+        >
+
+        <h3>4. Filtering and Sorting</h3>
+
+        <pre>
+
+
+df[
+df["Marks"] > 75
+]
+
+
+
+df.sort_values(
+"Marks"
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 08 Practice Tasks</h2>
+
+        <ol>
+          <li>Create a DataFrame</li>
+
+          <li>Import CSV file</li>
+
+          <li>Find missing values</li>
+
+          <li>Clean dataset</li>
+
+          <li>Filter records</li>
+
+          <li>Sort data</li>
+
+          <li>Use groupby operation</li>
+
+          <li>Analyze sales dataset</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

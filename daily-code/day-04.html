@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 04 - Python Data Structures</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>🗂️ Day 04 - Python Data Structures</h1>
+
+        <p>Lists, Tuples, Sets, Dictionaries and Data Management</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Lists</li>
+
+          <li>Tuples</li>
+
+          <li>Sets</li>
+
+          <li>Dictionaries</li>
+
+          <li>Comprehensions</li>
+
+          <li>Nested Data Structures</li>
+        </ul>
+      </section>
+
+      <!-- Lists -->
+
+      <section class="card">
+        <h2>1. Lists</h2>
+
+        <p>
+          A list is a collection that stores multiple values in a single
+          variable.
+        </p>
+
+        <h3>Creating List</h3>
+
+        <pre>
+
+numbers = [10,20,30,40]
+
+
+print(numbers)
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[10,20,30,40]
+
+</pre
+        >
+
+        <h3>Access List Items</h3>
+
+        <pre>
+
+numbers = [10,20,30]
+
+
+print(numbers[0])
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+10
+
+</pre
+        >
+
+        <h3>List Methods</h3>
+
+        <pre>
+
+numbers.append(50)
+
+numbers.remove(20)
+
+numbers.sort()
+
+</pre
+        >
+      </section>
+
+      <!-- Tuple -->
+
+      <section class="card">
+        <h2>2. Tuples</h2>
+
+        <p>Tuple is an ordered collection that cannot be changed.</p>
+
+        <pre>
+
+
+data = (
+"Python",
+"Java",
+"C++"
+)
+
+
+
+print(data)
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+('Python','Java','C++')
+
+</pre
+        >
+
+        <h3>Tuple Access</h3>
+
+        <pre>
+
+print(data[0])
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Python
+
+</pre
+        >
+      </section>
+
+      <!-- Sets -->
+
+      <section class="card">
+        <h2>3. Sets</h2>
+
+        <p>Set stores unique values and does not allow duplicates.</p>
+
+        <pre>
+
+
+numbers = {
+
+1,2,3,3,4
+
+}
+
+
+print(numbers)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+{1,2,3,4}
+
+</pre
+        >
+
+        <h3>Set Methods</h3>
+
+        <pre>
+
+add()
+
+remove()
+
+union()
+
+intersection()
+
+
+</pre
+        >
+      </section>
+
+      <!-- Dictionary -->
+
+      <section class="card">
+        <h2>4. Dictionaries</h2>
+
+        <p>Dictionary stores data in key-value pairs.</p>
+
+        <pre>
+
+
+student = {
+
+
+"name":"Alex",
+
+"age":20,
+
+"course":"Python"
+
+
+}
+
+
+
+print(student)
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+{
+'name':'Alex',
+'age':20,
+'course':'Python'
+}
+
+</pre
+        >
+
+        <h3>Access Values</h3>
+
+        <pre>
+
+
+print(student["name"])
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Alex
+
+</pre
+        >
+      </section>
+
+      <!-- Comprehension -->
+
+      <section class="card">
+        <h2>5. Comprehensions</h2>
+
+        <p>Comprehension provides a shorter way to create collections.</p>
+
+        <h3>List Comprehension</h3>
+
+        <pre>
+
+
+numbers = [
+
+x for x in range(5)
+
+]
+
+
+print(numbers)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[0,1,2,3,4]
+
+</pre
+        >
+
+        <h3>Condition Example</h3>
+
+        <pre>
+
+
+even = [
+
+x for x in range(10)
+
+if x % 2 == 0
+
+]
+
+
+print(even)
+
+
+</pre
+        >
+      </section>
+
+      <!-- Nested -->
+
+      <section class="card">
+        <h2>6. Nested Data Structures</h2>
+
+        <p>
+          A data structure inside another data structure is called nested data
+          structure.
+        </p>
+
+        <pre>
+
+
+students = [
+
+
+    {
+
+    "name":"Alex",
+
+    "marks":[80,90,85]
+
+    },
+
+
+    {
+
+    "name":"John",
+
+    "marks":[70,75,80]
+
+    }
+
+
+]
+
+
+
+print(students)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Contact Management System</h3>
+
+        <pre>
+
+
+contacts = {}
+
+
+
+name = input(
+"Enter Name: "
+)
+
+
+
+phone = input(
+"Enter Phone: "
+)
+
+
+
+
+contacts[name] = phone
+
+
+
+print(contacts)
+
+
+
+</pre
+        >
+
+        <h3>2. Student Record Management System</h3>
+
+        <pre>
+
+
+students = []
+
+
+
+student = {
+
+
+"name":"Alex",
+
+"age":20,
+
+"marks":90
+
+
+}
+
+
+
+students.append(student)
+
+
+
+print(students)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 04 Practice Tasks</h2>
+
+        <ol>
+          <li>Create list of numbers and find maximum</li>
+
+          <li>Remove duplicate values using set</li>
+
+          <li>Create dictionary of products</li>
+
+          <li>Create phone book application</li>
+
+          <li>Create student database</li>
+
+          <li>Use list comprehension for squares</li>
+
+          <li>Create nested employee records</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

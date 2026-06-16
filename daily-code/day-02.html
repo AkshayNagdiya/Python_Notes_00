@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 02 - Control Statements & Loops</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+
+      <header>
+        <h1>🔥 Day 02 - Control Statements & Loops</h1>
+
+        <p>Decision Making, Conditions and Loop Logic</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Conditional Statements</li>
+
+          <li>if Statement</li>
+
+          <li>if else Statement</li>
+
+          <li>if elif else</li>
+
+          <li>Nested Conditions</li>
+
+          <li>For Loop</li>
+
+          <li>Range Function</li>
+
+          <li>Loop Control Statements</li>
+        </ul>
+      </section>
+
+      <!-- Conditional -->
+
+      <section class="card">
+        <h2>1. Conditional Statements</h2>
+
+        <p>Conditional statements are used to make decisions in a program.</p>
+
+        <h3>if Statement</h3>
+
+        <pre>
+
+age = 20
+
+
+if age >= 18:
+
+    print("You can vote")
+
+
+</pre
+        >
+
+        <h3>Output</h3>
+
+        <pre>
+
+You can vote
+
+</pre
+        >
+      </section>
+
+      <!-- if else -->
+
+      <section class="card">
+        <h2>2. if else Statement</h2>
+
+        <p>if else executes different blocks based on condition.</p>
+
+        <pre>
+
+number = 10
+
+
+if number % 2 == 0:
+
+    print("Even Number")
+
+
+else:
+
+    print("Odd Number")
+
+
+</pre
+        >
+
+        <h3>Output</h3>
+
+        <pre>
+
+Even Number
+
+</pre
+        >
+      </section>
+
+      <!-- elif -->
+
+      <section class="card">
+        <h2>3. if elif else Statement</h2>
+
+        <p>Used when multiple conditions are required.</p>
+
+        <pre>
+
+
+marks = 75
+
+
+
+if marks >= 90:
+
+    print("Grade A")
+
+
+elif marks >= 60:
+
+    print("Grade B")
+
+
+else:
+
+    print("Fail")
+
+
+</pre
+        >
+
+        <h3>Output</h3>
+
+        <pre>
+
+Grade B
+
+</pre
+        >
+      </section>
+
+      <!-- Nested -->
+
+      <section class="card">
+        <h2>4. Nested Conditions</h2>
+
+        <p>A condition inside another condition is called nested condition.</p>
+
+        <pre>
+
+
+age = 20
+
+
+if age >= 18:
+
+
+    if age <= 60:
+
+        print("Eligible")
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Eligible
+
+</pre
+        >
+      </section>
+
+      <!-- Loops -->
+
+      <section class="card">
+        <h2>5. Loops</h2>
+
+        <p>Loops are used to repeat a block of code multiple times.</p>
+
+        <h3>For Loop</h3>
+
+        <pre>
+
+
+for i in range(5):
+
+    print(i)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+0
+1
+2
+3
+4
+
+</pre
+        >
+      </section>
+
+      <!-- Range -->
+
+      <section class="card">
+        <h2>6. Range Function</h2>
+
+        <pre>
+
+
+range(start, stop, step)
+
+
+</pre
+        >
+
+        Example:
+
+        <pre>
+
+
+for i in range(1,6):
+
+    print(i)
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+1
+2
+3
+4
+5
+
+</pre
+        >
+      </section>
+
+      <!-- Loop Control -->
+
+      <section class="card">
+        <h2>7. Loop Control Statements</h2>
+
+        <h3>break</h3>
+
+        <pre>
+
+
+for i in range(10):
+
+    if i == 5:
+
+        break
+
+    print(i)
+
+
+
+</pre
+        >
+
+        <h3>continue</h3>
+
+        <pre>
+
+
+for i in range(5):
+
+    if i == 2:
+
+        continue
+
+    print(i)
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Number Guessing Game</h3>
+
+        <pre>
+
+
+secret = 7
+
+
+guess = int(
+input("Guess number: ")
+)
+
+
+
+if guess == secret:
+
+    print("Correct Guess")
+
+
+else:
+
+    print("Wrong Guess")
+
+
+
+</pre
+        >
+
+        <h3>2. Multiplication Table Generator</h3>
+
+        <pre>
+
+
+number = int(
+input("Enter number: ")
+)
+
+
+
+for i in range(1,11):
+
+    print(
+    number,
+    "x",
+    i,
+    "=",
+    number*i
+    )
+
+
+
+</pre
+        >
+
+        <h3>3. Pattern Printing Program</h3>
+
+        <pre>
+
+
+for i in range(1,6):
+
+    print("*" * i)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+*
+**
+***
+****
+*****
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 02 Practice Tasks</h2>
+
+        <ol>
+          <li>Create login system using if else</li>
+
+          <li>Check positive or negative number</li>
+
+          <li>Find largest among three numbers</li>
+
+          <li>Print numbers from 1 to 100</li>
+
+          <li>Create multiplication table</li>
+
+          <li>Create star patterns</li>
+
+          <li>Create simple calculator using conditions</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

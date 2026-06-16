@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 10 - Data Visualization</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+
+        <a href="day-06.html"> Day 06 </a>
+
+        <a href="day-07.html"> Day 07 </a>
+
+        <a href="day-08.html"> Day 08 </a>
+
+        <a href="day-09.html"> Day 09 </a>
+
+        <a href="day-10.html"> Day 10 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>📈 Day 10 - Data Visualization</h1>
+
+        <p>Creating Charts and Visual Insights Using Matplotlib and Seaborn</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to Data Visualization</li>
+
+          <li>Matplotlib Library</li>
+
+          <li>Line Charts</li>
+
+          <li>Bar Charts</li>
+
+          <li>Pie Charts</li>
+
+          <li>Seaborn Library</li>
+
+          <li>Heatmaps</li>
+
+          <li>Box Plots</li>
+
+          <li>Histograms</li>
+
+          <li>Scatter Plots</li>
+
+          <li>Distribution Plots</li>
+        </ul>
+      </section>
+
+      <!-- Introduction -->
+
+      <section class="card">
+        <h2>1. What is Data Visualization?</h2>
+
+        <p>
+          Data visualization is the process of representing data using charts
+          and graphs to understand patterns easily.
+        </p>
+
+        <h3>Why Visualization?</h3>
+
+        <ul>
+          <li>Find hidden patterns</li>
+
+          <li>Compare values</li>
+
+          <li>Understand trends</li>
+
+          <li>Make better decisions</li>
+        </ul>
+      </section>
+
+      <!-- Libraries -->
+
+      <section class="card">
+        <h2>2. Visualization Libraries</h2>
+
+        <table>
+          <tr>
+            <th>Library</th>
+
+            <th>Use</th>
+          </tr>
+
+          <tr>
+            <td>Matplotlib</td>
+
+            <td>Basic and customizable charts</td>
+          </tr>
+
+          <tr>
+            <td>Seaborn</td>
+
+            <td>Advanced statistical visualization</td>
+          </tr>
+        </table>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+
+
+</pre
+        >
+      </section>
+
+      <!-- Line Chart -->
+
+      <section class="card">
+        <h2>3. Line Chart</h2>
+
+        <p>Line chart shows changes or trends over time.</p>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+
+
+months = [
+"Jan",
+"Feb",
+"Mar",
+"Apr"
+]
+
+
+sales = [
+100,
+200,
+150,
+300
+]
+
+
+
+plt.plot(
+months,
+sales
+)
+
+
+
+plt.title(
+"Monthly Sales"
+)
+
+
+plt.xlabel(
+"Month"
+)
+
+
+plt.ylabel(
+"Sales"
+)
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Bar -->
+
+      <section class="card">
+        <h2>4. Bar Chart</h2>
+
+        <p>Bar chart compares different categories.</p>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+
+
+products = [
+"Mobile",
+"Laptop",
+"Tablet"
+]
+
+
+price = [
+500,
+1000,
+700
+]
+
+
+
+plt.bar(
+products,
+price
+)
+
+
+
+plt.title(
+"Product Price"
+)
+
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Pie -->
+
+      <section class="card">
+        <h2>5. Pie Chart</h2>
+
+        <p>Pie chart represents percentage distribution.</p>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+
+
+values = [
+40,
+30,
+20,
+10
+]
+
+
+labels = [
+"Python",
+"Java",
+"C++",
+"JS"
+]
+
+
+
+plt.pie(
+values,
+labels=labels,
+autopct="%1.1f%%"
+)
+
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Histogram -->
+
+      <section class="card">
+        <h2>6. Histogram</h2>
+
+        <p>Histogram shows frequency distribution of data.</p>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+
+
+marks = [
+40,
+50,
+60,
+70,
+80,
+90
+]
+
+
+
+plt.hist(
+marks
+)
+
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Scatter -->
+
+      <section class="card">
+        <h2>7. Scatter Plot</h2>
+
+        <p>Scatter plot shows relationship between two variables.</p>
+
+        <pre>
+
+
+import matplotlib.pyplot as plt
+
+
+
+height = [
+150,
+160,
+170,
+180
+]
+
+
+weight = [
+50,
+60,
+70,
+80
+]
+
+
+
+plt.scatter(
+height,
+weight
+)
+
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Seaborn -->
+
+      <section class="card">
+        <h2>8. Seaborn Visualization</h2>
+
+        <p>Seaborn provides beautiful statistical charts.</p>
+
+        <pre>
+
+
+import seaborn as sns
+
+import matplotlib.pyplot as plt
+
+
+
+data = sns.load_dataset(
+"iris"
+)
+
+
+
+sns.scatterplot(
+x="sepal_length",
+y="petal_length",
+data=data
+)
+
+
+
+plt.show()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Heatmap -->
+
+      <section class="card">
+        <h2>9. Heatmap</h2>
+
+        <p>Heatmap displays correlation using colors.</p>
+
+        <pre>
+
+
+import seaborn as sns
+
+
+
+sns.heatmap(
+data.corr(),
+annot=True
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Box Plot -->
+
+      <section class="card">
+        <h2>10. Box Plot</h2>
+
+        <p>Box plot helps find spread and outliers.</p>
+
+        <pre>
+
+
+sns.boxplot(
+data=data
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Distribution -->
+
+      <section class="card">
+        <h2>11. Distribution Plot</h2>
+
+        <pre>
+
+
+sns.histplot(
+data["sepal_length"],
+kde=True
+)
+
+
+
+</pre
+        >
+
+        <p>Shows data distribution with density curve.</p>
+      </section>
+
+      <!-- Dashboard -->
+
+      <section class="card">
+        <h2>12. Dashboard Creation</h2>
+
+        <p>A dashboard combines multiple visualizations into one view.</p>
+
+        <h3>Dashboard Elements</h3>
+
+        <ul>
+          <li>Important metrics</li>
+
+          <li>Charts</li>
+
+          <li>Filters</li>
+
+          <li>Reports</li>
+        </ul>
+
+        <pre>
+
+
+Dashboard:
+
+Total Sales
+
+Average Revenue
+
+Top Product
+
+Monthly Trend
+
+Customer Analysis
+
+
+</pre
+        >
+      </section>
+
+      <!-- Project -->
+
+      <section class="card">
+        <h2>Practical Project</h2>
+
+        <h3>Data Visualization Project</h3>
+
+        <pre>
+
+
+Steps:
+
+
+1. Load dataset
+
+
+2. Clean data
+
+
+3. Analyze data
+
+
+4. Create charts
+
+
+5. Generate insights
+
+
+6. Build dashboard
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 10 Practice Tasks</h2>
+
+        <ol>
+          <li>Create line chart</li>
+
+          <li>Create bar chart</li>
+
+          <li>Create pie chart</li>
+
+          <li>Create histogram</li>
+
+          <li>Create scatter plot</li>
+
+          <li>Create heatmap</li>
+
+          <li>Detect outliers using box plot</li>
+
+          <li>Create mini dashboard</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

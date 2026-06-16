@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 06 - File Handling & Exception Handling</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+
+        <a href="day-06.html"> Day 06 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>📁 Day 06 - File Handling & Exception Handling</h1>
+
+        <p>Working with Files, Data Storage and Error Management</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>File Operations</li>
+
+          <li>Reading Files</li>
+
+          <li>Writing Files</li>
+
+          <li>Append Mode</li>
+
+          <li>CSV File Handling</li>
+
+          <li>JSON File Handling</li>
+
+          <li>Exception Handling</li>
+
+          <li>Custom Exceptions</li>
+        </ul>
+      </section>
+
+      <!-- File Handling -->
+
+      <section class="card">
+        <h2>1. File Handling</h2>
+
+        <p>File handling is used to create, read, update and delete files.</p>
+
+        <h3>Opening File</h3>
+
+        <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+
+print(file.read())
+
+
+file.close()
+
+
+</pre
+        >
+      </section>
+
+      <!-- Modes -->
+
+      <section class="card">
+        <h2>2. File Modes</h2>
+
+        <table>
+          <tr>
+            <th>Mode</th>
+
+            <th>Purpose</th>
+          </tr>
+
+          <tr>
+            <td>r</td>
+
+            <td>Read file</td>
+          </tr>
+
+          <tr>
+            <td>w</td>
+
+            <td>Write file</td>
+          </tr>
+
+          <tr>
+            <td>a</td>
+
+            <td>Append data</td>
+          </tr>
+
+          <tr>
+            <td>x</td>
+
+            <td>Create file</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Read Write -->
+
+      <section class="card">
+        <h2>3. Reading and Writing Files</h2>
+
+        <h3>Write File</h3>
+
+        <pre>
+
+
+file = open(
+"notes.txt",
+"w"
+)
+
+
+
+file.write(
+"Python File Handling"
+)
+
+
+
+file.close()
+
+
+
+</pre
+        >
+
+        <h3>Read File</h3>
+
+        <pre>
+
+
+file = open(
+"notes.txt",
+"r"
+)
+
+
+
+data = file.read()
+
+
+
+print(data)
+
+
+
+file.close()
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+Python File Handling
+
+</pre
+        >
+      </section>
+
+      <!-- With -->
+
+      <section class="card">
+        <h2>4. Using with Statement</h2>
+
+        <p>with automatically closes the file after operation.</p>
+
+        <pre>
+
+
+with open(
+"data.txt",
+"r"
+) as file:
+
+
+    print(
+    file.read()
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- CSV -->
+
+      <section class="card">
+        <h2>5. CSV File Handling</h2>
+
+        <p>CSV stores data in table format.</p>
+
+        <pre>
+
+
+import csv
+
+
+
+with open(
+"students.csv",
+"w"
+) as file:
+
+
+    writer = csv.writer(file)
+
+
+
+    writer.writerow(
+    [
+    "Name",
+    "Age"
+    ]
+    )
+
+
+</pre
+        >
+
+        <h3>Reading CSV</h3>
+
+        <pre>
+
+
+import csv
+
+
+
+with open(
+"students.csv"
+) as file:
+
+
+    data = csv.reader(file)
+
+
+
+    for row in data:
+
+        print(row)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- JSON -->
+
+      <section class="card">
+        <h2>6. JSON File Handling</h2>
+
+        <p>JSON is commonly used for storing and transferring data.</p>
+
+        <pre>
+
+
+import json
+
+
+
+student = {
+
+
+"name":"Alex",
+
+"age":20
+
+}
+
+
+
+with open(
+"student.json",
+"w"
+) as file:
+
+
+    json.dump(
+    student,
+    file
+    )
+
+
+
+</pre
+        >
+
+        <h3>Reading JSON</h3>
+
+        <pre>
+
+
+with open(
+"student.json",
+"r"
+) as file:
+
+
+    data = json.load(file)
+
+
+
+print(data)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Exception -->
+
+      <section class="card">
+        <h2>7. Exception Handling</h2>
+
+        <p>Exception handling prevents program crashes.</p>
+
+        <pre>
+
+
+try:
+
+
+    number = int(
+    input("Enter number: ")
+    )
+
+
+    print(number)
+
+
+
+except:
+
+
+    print(
+    "Invalid Input"
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Try Except Else Finally -->
+
+      <section class="card">
+        <h2>8. try except finally</h2>
+
+        <pre>
+
+
+try:
+
+
+    x = 10 / 2
+
+
+
+except ZeroDivisionError:
+
+
+    print(
+    "Cannot divide"
+    )
+
+
+
+finally:
+
+
+    print(
+    "Program Finished"
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Custom Exception -->
+
+      <section class="card">
+        <h2>9. Custom Exceptions</h2>
+
+        <p>Creating your own error using Exception class.</p>
+
+        <pre>
+
+
+class AgeError(Exception):
+
+    pass
+
+
+
+
+age = int(
+input("Age: ")
+)
+
+
+
+if age < 18:
+
+
+    raise AgeError(
+    "Not Allowed"
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Student Data Storage System</h3>
+
+        <pre>
+
+
+import json
+
+
+
+students = []
+
+
+
+student = {
+
+
+"name":"Alex",
+
+"marks":90
+
+
+}
+
+
+
+students.append(student)
+
+
+
+with open(
+"students.json",
+"w"
+) as file:
+
+
+    json.dump(
+    students,
+    file
+    )
+
+
+
+</pre
+        >
+
+        <h3>2. CSV Reader Application</h3>
+
+        <pre>
+
+
+import csv
+
+
+
+with open(
+"students.csv"
+) as file:
+
+
+    reader = csv.reader(file)
+
+
+
+    for row in reader:
+
+        print(row)
+
+
+
+</pre
+        >
+
+        <h3>3. Error Handling Example</h3>
+
+        <pre>
+
+
+try:
+
+
+    a = int(
+    input("Number: ")
+    )
+
+
+    print(
+    100/a
+    )
+
+
+
+except ValueError:
+
+
+    print(
+    "Enter number only"
+    )
+
+
+
+except ZeroDivisionError:
+
+
+    print(
+    "Cannot divide by zero"
+    )
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 06 Practice Tasks</h2>
+
+        <ol>
+          <li>Create text file manager</li>
+
+          <li>Create contact storage using JSON</li>
+
+          <li>Create CSV student report</li>
+
+          <li>Handle invalid inputs</li>
+
+          <li>Create custom age exception</li>
+
+          <li>Build simple file based database</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

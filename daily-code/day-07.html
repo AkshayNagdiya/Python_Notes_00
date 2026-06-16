@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 07 - NumPy Scientific Computing</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+
+        <a href="day-06.html"> Day 06 </a>
+
+        <a href="day-07.html"> Day 07 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>🔢 Day 07 - NumPy Scientific Computing</h1>
+
+        <p>Arrays, Mathematical Operations and Numerical Analysis</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to NumPy</li>
+
+          <li>Arrays</li>
+
+          <li>Array Operations</li>
+
+          <li>Indexing and Slicing</li>
+
+          <li>Reshaping Arrays</li>
+
+          <li>Mathematical Operations</li>
+
+          <li>Statistical Functions</li>
+        </ul>
+      </section>
+
+      <!-- NumPy -->
+
+      <section class="card">
+        <h2>1. What is NumPy?</h2>
+
+        <p>
+          NumPy (Numerical Python) is a Python library used for scientific
+          computing and working with numerical data.
+        </p>
+
+        <h3>Why NumPy?</h3>
+
+        <ul>
+          <li>Fast calculations</li>
+
+          <li>Works with large data</li>
+
+          <li>Supports mathematical operations</li>
+
+          <li>Used in Data Science and AI</li>
+        </ul>
+
+        <pre>
+
+
+import numpy as np
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Arrays -->
+
+      <section class="card">
+        <h2>2. NumPy Arrays</h2>
+
+        <p>Array is a collection of elements stored in a single structure.</p>
+
+        <h3>Creating Array</h3>
+
+        <pre>
+
+
+import numpy as np
+
+
+
+numbers = np.array(
+[10,20,30,40]
+)
+
+
+
+print(numbers)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[10 20 30 40]
+
+</pre
+        >
+      </section>
+
+      <!-- Array Types -->
+
+      <section class="card">
+        <h2>3. Creating Different Arrays</h2>
+
+        <h3>Zeros Array</h3>
+
+        <pre>
+
+
+np.zeros(5)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[0. 0. 0. 0. 0.]
+
+</pre
+        >
+
+        <h3>Ones Array</h3>
+
+        <pre>
+
+
+np.ones(5)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[1. 1. 1. 1. 1.]
+
+</pre
+        >
+
+        <h3>Range Array</h3>
+
+        <pre>
+
+
+np.arange(
+1,
+10
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[1 2 3 4 5 6 7 8 9]
+
+</pre
+        >
+      </section>
+
+      <!-- Dimensions -->
+
+      <section class="card">
+        <h2>4. Array Dimensions</h2>
+
+        <pre>
+
+
+import numpy as np
+
+
+
+a = np.array(
+[
+[1,2,3],
+[4,5,6]
+]
+)
+
+
+
+print(
+a.ndim
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+2
+
+</pre
+        >
+      </section>
+
+      <!-- Indexing -->
+
+      <section class="card">
+        <h2>5. Indexing and Slicing</h2>
+
+        <pre>
+
+
+numbers = np.array(
+[10,20,30,40]
+)
+
+
+
+print(
+numbers[0]
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+10
+
+</pre
+        >
+
+        <h3>Slicing</h3>
+
+        <pre>
+
+
+print(
+numbers[1:3]
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[20 30]
+
+</pre
+        >
+      </section>
+
+      <!-- Operations -->
+
+      <section class="card">
+        <h2>6. Array Operations</h2>
+
+        <pre>
+
+
+a = np.array(
+[10,20,30]
+)
+
+
+
+b = np.array(
+[1,2,3]
+)
+
+
+
+
+print(
+a+b
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[11 22 33]
+
+</pre
+        >
+
+        <h3>Multiplication</h3>
+
+        <pre>
+
+
+print(
+a*b
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[10 40 90]
+
+</pre
+        >
+      </section>
+
+      <!-- Matrix -->
+
+      <section class="card">
+        <h2>7. Matrix Operations</h2>
+
+        <pre>
+
+
+a = np.array(
+[
+[1,2],
+[3,4]
+]
+)
+
+
+
+b = np.array(
+[
+[5,6],
+[7,8]
+]
+)
+
+
+
+
+print(
+a+b
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[[ 6  8]
+ [10 12]]
+
+</pre
+        >
+      </section>
+
+      <!-- Reshape -->
+
+      <section class="card">
+        <h2>8. Reshaping Arrays</h2>
+
+        <p>Changing the shape of array without changing data.</p>
+
+        <pre>
+
+
+numbers = np.array(
+[1,2,3,4,5,6]
+)
+
+
+
+new_array = numbers.reshape(
+2,
+3
+)
+
+
+
+print(new_array)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+[
+[1 2 3]
+[4 5 6]
+]
+
+</pre
+        >
+      </section>
+
+      <!-- Mathematical -->
+
+      <section class="card">
+        <h2>9. Mathematical Operations</h2>
+
+        <pre>
+
+
+numbers = np.array(
+[1,2,3,4]
+)
+
+
+
+print(
+np.sum(numbers)
+)
+
+
+
+print(
+np.max(numbers)
+)
+
+
+
+print(
+np.min(numbers)
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+10
+
+4
+
+1
+
+</pre
+        >
+      </section>
+
+      <!-- Statistics -->
+
+      <section class="card">
+        <h2>10. Statistical Functions</h2>
+
+        <pre>
+
+
+data = np.array(
+[10,20,30,40]
+)
+
+
+
+print(
+np.mean(data)
+)
+
+
+
+print(
+np.median(data)
+)
+
+
+
+print(
+np.std(data)
+)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+25
+
+25
+
+11.18
+
+</pre
+        >
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. Matrix Addition</h3>
+
+        <pre>
+
+
+import numpy as np
+
+
+
+matrix1 = np.array(
+[
+[1,2],
+[3,4]
+]
+)
+
+
+
+matrix2 = np.array(
+[
+[5,6],
+[7,8]
+]
+)
+
+
+
+
+result = matrix1 + matrix2
+
+
+
+print(result)
+
+
+
+</pre
+        >
+
+        <h3>2. Numerical Analysis</h3>
+
+        <pre>
+
+
+numbers = np.array(
+[5,10,15,20]
+)
+
+
+
+print(
+np.mean(numbers)
+)
+
+
+
+print(
+np.sum(numbers)
+)
+
+
+
+</pre
+        >
+
+        <h3>3. Reshape Exercise</h3>
+
+        <pre>
+
+
+data = np.arange(12)
+
+
+
+print(
+data.reshape(3,4)
+)
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 07 Practice Tasks</h2>
+
+        <ol>
+          <li>Create one dimensional array</li>
+
+          <li>Create two dimensional matrix</li>
+
+          <li>Perform addition and multiplication</li>
+
+          <li>Find average of numbers</li>
+
+          <li>Find maximum and minimum value</li>
+
+          <li>Reshape array into matrix</li>
+
+          <li>Perform slicing operations</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

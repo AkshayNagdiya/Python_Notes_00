@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 12 - First Machine Learning Model</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-10.html"> Day 10 </a>
+
+        <a href="day-11.html"> Day 11 </a>
+
+        <a href="day-12.html"> Day 12 </a>
+      </nav>
+
+      <header>
+        <h1>🤖 Day 12 - First Machine Learning Model</h1>
+
+        <p>Building First ML Model Using Scikit-Learn and Linear Regression</p>
+      </header>
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to Scikit-Learn</li>
+
+          <li>Linear Regression</li>
+
+          <li>Model Training</li>
+
+          <li>Model Prediction</li>
+
+          <li>Model Evaluation</li>
+
+          <li>Study Hours vs Marks Prediction</li>
+
+          <li>End-to-End Machine Learning Workflow</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>1. Introduction to Scikit-Learn</h2>
+
+        <p>
+          Scikit-Learn is a Python library used for Machine Learning. It
+          provides ready-to-use algorithms for training models.
+        </p>
+
+        <h3>Features</h3>
+
+        <ul>
+          <li>Machine Learning Algorithms</li>
+
+          <li>Data Preprocessing</li>
+
+          <li>Model Evaluation</li>
+
+          <li>Train-Test Split</li>
+
+          <li>Prediction Tools</li>
+        </ul>
+
+        <pre>
+
+import sklearn
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>2. Machine Learning Model Flow</h2>
+
+        <pre>
+
+
+Dataset
+
+   |
+
+   ↓
+
+Data Cleaning
+
+   |
+
+   ↓
+
+Feature Selection
+
+   |
+
+   ↓
+
+Train Test Split
+
+   |
+
+   ↓
+
+Model Training
+
+   |
+
+   ↓
+
+Prediction
+
+   |
+
+   ↓
+
+Evaluation
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>3. What is Linear Regression?</h2>
+
+        <p>
+          Linear Regression is a supervised learning algorithm used to predict
+          continuous numerical values.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+          <li>House Price Prediction</li>
+
+          <li>Sales Prediction</li>
+
+          <li>Salary Prediction</li>
+
+          <li>Marks Prediction</li>
+        </ul>
+
+        <h3>Formula</h3>
+
+        <pre>
+
+
+y = mx + c
+
+
+y = Output
+
+x = Input
+
+m = Slope
+
+c = Intercept
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>4. Import Required Libraries</h2>
+
+        <pre>
+
+
+import pandas as pd
+
+
+from sklearn.model_selection import train_test_split
+
+
+from sklearn.linear_model import LinearRegression
+
+
+from sklearn.metrics import mean_squared_error, r2_score
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>5. Creating Dataset</h2>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+data = {
+
+
+"Hours":[
+
+1,
+2,
+3,
+4,
+5,
+6
+
+],
+
+
+"Marks":[
+
+35,
+40,
+50,
+60,
+70,
+80
+
+]
+
+
+}
+
+
+
+df = pd.DataFrame(data)
+
+
+
+print(df)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+
+Hours  Marks
+
+1      35
+
+2      40
+
+3      50
+
+4      60
+
+5      70
+
+6      80
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>6. Selecting Features and Labels</h2>
+
+        <p>Features are inputs and labels are outputs.</p>
+
+        <pre>
+
+
+X = df[
+["Hours"]
+]
+
+
+y = df[
+"Marks"
+]
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>7. Train Test Split</h2>
+
+        <pre>
+
+
+X_train, X_test, y_train, y_test = train_test_split(
+
+X,
+
+y,
+
+test_size=0.2,
+
+random_state=42
+
+)
+
+
+
+</pre
+        >
+
+        <p>80% data is used for training and 20% for testing.</p>
+      </section>
+
+      <section class="card">
+        <h2>8. Creating Linear Regression Model</h2>
+
+        <pre>
+
+
+model = LinearRegression()
+
+
+
+model.fit(
+
+X_train,
+
+y_train
+
+)
+
+
+
+</pre
+        >
+
+        <p>fit() method learns patterns from training data.</p>
+      </section>
+
+      <section class="card">
+        <h2>9. Making Predictions</h2>
+
+        <pre>
+
+
+prediction = model.predict(
+
+[
+[7]
+]
+
+)
+
+
+
+print(prediction)
+
+
+
+</pre
+        >
+
+        Output:
+
+        <pre>
+
+
+[90]
+
+
+</pre
+        >
+
+        <p>The model predicts marks for 7 study hours.</p>
+      </section>
+
+      <section class="card">
+        <h2>10. Model Evaluation</h2>
+
+        <p>Evaluation checks how accurate the model is.</p>
+
+        <h3>Mean Squared Error</h3>
+
+        <pre>
+
+
+mse = mean_squared_error(
+
+y_test,
+
+prediction
+
+)
+
+
+
+print(mse)
+
+
+
+</pre
+        >
+
+        <h3>R2 Score</h3>
+
+        <pre>
+
+
+score = r2_score(
+
+y_test,
+
+prediction
+
+)
+
+
+
+print(score)
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>11. Complete ML Program</h2>
+
+        <pre>
+
+
+import pandas as pd
+
+
+from sklearn.model_selection import train_test_split
+
+
+from sklearn.linear_model import LinearRegression
+
+
+
+
+data = {
+
+
+"Hours":[1,2,3,4,5],
+
+
+"Marks":[40,45,55,65,75]
+
+
+}
+
+
+
+
+df = pd.DataFrame(data)
+
+
+
+X = df[
+["Hours"]
+]
+
+
+y = df[
+"Marks"
+]
+
+
+
+X_train,X_test,y_train,y_test = train_test_split(
+
+X,
+
+y,
+
+test_size=0.2
+
+)
+
+
+
+
+model = LinearRegression()
+
+
+
+model.fit(
+
+X_train,
+
+y_train
+
+)
+
+
+
+
+result = model.predict(
+
+[
+[6]
+]
+
+)
+
+
+
+print(result)
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>12. Mini Project - Study Hours vs Marks Prediction</h2>
+
+        <h3>Problem Statement</h3>
+
+        <p>Create a model that predicts marks based on study hours.</p>
+
+        <h3>Steps</h3>
+
+        <ol>
+          <li>Collect student data</li>
+
+          <li>Clean dataset</li>
+
+          <li>Create features</li>
+
+          <li>Split dataset</li>
+
+          <li>Train regression model</li>
+
+          <li>Predict marks</li>
+
+          <li>Evaluate result</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>13. End-to-End Machine Learning Workflow</h2>
+
+        <pre>
+
+
+1. Import Libraries
+
+
+2. Load Dataset
+
+
+3. Explore Data
+
+
+4. Clean Data
+
+
+5. Select Features
+
+
+6. Split Data
+
+
+7. Train Model
+
+
+8. Predict
+
+
+9. Evaluate
+
+
+10. Deploy
+
+
+
+</pre
+        >
+      </section>
+
+      <section class="card">
+        <h2>Day 12 Practice Tasks</h2>
+
+        <ol>
+          <li>Create salary prediction model</li>
+
+          <li>Create house price prediction model</li>
+
+          <li>Use Linear Regression</li>
+
+          <li>Calculate R2 score</li>
+
+          <li>Predict new values</li>
+
+          <li>Create complete ML pipeline</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>

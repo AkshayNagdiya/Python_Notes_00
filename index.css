@@ -1,0 +1,230 @@
+/* =========================
+   Global Reset
+========================= */
+
+:root {
+  --primary: #607456;
+  --secondary: #9cb080;
+  --accent: #ba6a4c;
+  --bg: #dccb9e;
+  --text: #1f2937;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* =========================
+   Top Day Navbar
+========================= */
+
+.navbar {
+  background: var(--secondary);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  box-shadow: 0 5px 15px var(--secondary);
+}
+
+.navbar a {
+  text-decoration: none;
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #af661e;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Section Title
+========================= */
+
+.section-title {
+  margin: 30px 0 15px;
+  color: #1e40af;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-left: 5px solid var(--secondary);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px #ddd;
+  transition: 0.3s;
+  margin-bottom: 25px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #2563eb;
+
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #555;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn {
+  display: inline-block;
+
+  background: var(--accent);
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+
+/* =========================
+   Code Blocks
+========================= */
+
+pre {
+  background: #111827;
+
+  color: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  overflow: auto;
+
+  margin: 15px 0;
+}
+
+code {
+  font-family: Consolas, monospace;
+}
+
+/* =========================
+   Tables
+========================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: white;
+
+  margin: 20px 0;
+}
+
+th {
+  background: var(--primary);
+
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+
+  padding: 12px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  margin-top: 40px;
+
+  text-align: center;
+
+  color: #777;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+}

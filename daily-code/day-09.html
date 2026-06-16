@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day 09 - Exploratory Data Analysis</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <a href="../index.html"> Home </a>
+
+        <a href="day-01.html"> Day 01 </a>
+
+        <a href="day-02.html"> Day 02 </a>
+
+        <a href="day-03.html"> Day 03 </a>
+
+        <a href="day-04.html"> Day 04 </a>
+
+        <a href="day-05.html"> Day 05 </a>
+
+        <a href="day-06.html"> Day 06 </a>
+
+        <a href="day-07.html"> Day 07 </a>
+
+        <a href="day-08.html"> Day 08 </a>
+
+        <a href="day-09.html"> Day 09 </a>
+      </nav>
+
+      <!-- Header -->
+
+      <header>
+        <h1>🔍 Day 09 - Exploratory Data Analysis (EDA)</h1>
+
+        <p>Understanding Data, Finding Patterns and Generating Insights</p>
+      </header>
+
+      <!-- Topics -->
+
+      <section class="card">
+        <h2>Topics Covered</h2>
+
+        <ul>
+          <li>Introduction to EDA</li>
+
+          <li>Descriptive Statistics</li>
+
+          <li>Correlation Analysis</li>
+
+          <li>Outlier Detection</li>
+
+          <li>Data Distribution Analysis</li>
+
+          <li>Insight Generation</li>
+
+          <li>Data Storytelling</li>
+        </ul>
+      </section>
+
+      <!-- EDA -->
+
+      <section class="card">
+        <h2>1. What is EDA?</h2>
+
+        <p>
+          Exploratory Data Analysis is the process of analyzing datasets to
+          discover patterns, relationships and useful information.
+        </p>
+
+        <h3>Goals of EDA</h3>
+
+        <ul>
+          <li>Understand data structure</li>
+
+          <li>Find missing values</li>
+
+          <li>Detect unusual values</li>
+
+          <li>Discover relationships</li>
+
+          <li>Prepare data for machine learning</li>
+        </ul>
+      </section>
+
+      <!-- Dataset -->
+
+      <section class="card">
+        <h2>2. Loading Dataset</h2>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+data = pd.read_csv(
+"sales.csv"
+)
+
+
+
+print(data.head())
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Statistics -->
+
+      <section class="card">
+        <h2>3. Descriptive Statistics</h2>
+
+        <p>
+          Descriptive statistics summarize important information about data.
+        </p>
+
+        <h3>describe()</h3>
+
+        <pre>
+
+
+data.describe()
+
+
+
+</pre
+        >
+
+        Output Example:
+
+        <pre>
+
+count
+
+mean
+
+std
+
+min
+
+max
+
+
+</pre
+        >
+
+        <h3>Mean</h3>
+
+        <pre>
+
+
+data["Price"].mean()
+
+
+
+</pre
+        >
+
+        <h3>Median</h3>
+
+        <pre>
+
+
+data["Price"].median()
+
+
+
+</pre
+        >
+
+        <h3>Standard Deviation</h3>
+
+        <pre>
+
+
+data["Price"].std()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Data Information -->
+
+      <section class="card">
+        <h2>4. Understanding Dataset</h2>
+
+        <pre>
+
+
+data.shape
+
+
+
+data.info()
+
+
+
+data.columns
+
+
+
+</pre
+        >
+
+        <p>These methods show dataset size, columns and data types.</p>
+      </section>
+
+      <!-- Correlation -->
+
+      <section class="card">
+        <h2>5. Correlation Analysis</h2>
+
+        <p>Correlation shows relationship between two variables.</p>
+
+        <pre>
+
+
+data.corr()
+
+
+
+</pre
+        >
+
+        <h3>Example</h3>
+
+        <pre>
+
+
+Height   Weight
+
+
+170       70
+
+180       80
+
+190       90
+
+
+
+</pre
+        >
+
+        <p>Both values increase together, so they have positive correlation.</p>
+      </section>
+
+      <!-- Heatmap -->
+
+      <section class="card">
+        <h2>6. Correlation Visualization</h2>
+
+        <pre>
+
+
+import seaborn as sns
+
+
+
+sns.heatmap(
+data.corr(),
+annot=True
+)
+
+
+
+</pre
+        >
+
+        <p>Heatmap helps visualize relationships between columns.</p>
+      </section>
+
+      <!-- Outliers -->
+
+      <section class="card">
+        <h2>7. Outlier Detection</h2>
+
+        <p>Outliers are values that are very different from normal data.</p>
+
+        <h3>Using IQR Method</h3>
+
+        <pre>
+
+
+Q1 = data["Salary"].quantile(
+0.25
+)
+
+
+Q3 = data["Salary"].quantile(
+0.75
+)
+
+
+
+IQR = Q3 - Q1
+
+
+
+</pre
+        >
+
+        <pre>
+
+
+lower = Q1 - 1.5 * IQR
+
+
+upper = Q3 + 1.5 * IQR
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Distribution -->
+
+      <section class="card">
+        <h2>8. Data Distribution</h2>
+
+        <p>Distribution shows how values are spread in data.</p>
+
+        <h3>Histogram</h3>
+
+        <pre>
+
+
+data["Age"].hist()
+
+
+
+</pre
+        >
+
+        <h3>Box Plot</h3>
+
+        <pre>
+
+
+data.boxplot()
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Insight -->
+
+      <section class="card">
+        <h2>9. Insight Generation</h2>
+
+        <p>Insights are useful conclusions obtained from data analysis.</p>
+
+        <h3>Example</h3>
+
+        <ul>
+          <li>Most sales come from Product A</li>
+
+          <li>Average customer age is 28</li>
+
+          <li>High salary group has higher spending</li>
+
+          <li>Some values are unusual</li>
+        </ul>
+      </section>
+
+      <!-- Storytelling -->
+
+      <section class="card">
+        <h2>10. Data Storytelling</h2>
+
+        <p>
+          Data storytelling means explaining data findings in a simple
+          understandable way.
+        </p>
+
+        <h3>Steps</h3>
+
+        <ol>
+          <li>Understand the audience</li>
+
+          <li>Find important patterns</li>
+
+          <li>Create visual explanation</li>
+
+          <li>Give recommendations</li>
+        </ol>
+      </section>
+
+      <!-- Practical -->
+
+      <section class="card">
+        <h2>Practical Activities</h2>
+
+        <h3>1. EDA on Real Dataset</h3>
+
+        <pre>
+
+
+import pandas as pd
+
+
+
+df = pd.read_csv(
+"dataset.csv"
+)
+
+
+
+print(
+df.head()
+)
+
+
+
+print(
+df.describe()
+)
+
+
+
+print(
+df.isnull().sum()
+)
+
+
+
+</pre
+        >
+
+        <h3>2. Correlation Analysis</h3>
+
+        <pre>
+
+
+correlation = df.corr()
+
+
+print(
+correlation
+)
+
+
+
+</pre
+        >
+
+        <h3>3. Finding Outliers</h3>
+
+        <pre>
+
+
+df.boxplot()
+
+
+
+</pre
+        >
+
+        <h3>4. Generate Report</h3>
+
+        <pre>
+
+
+Report:
+
+1. Total Records
+
+2. Average Value
+
+3. Highest Value
+
+4. Missing Data
+
+5. Important Findings
+
+
+
+</pre
+        >
+      </section>
+
+      <!-- Practice -->
+
+      <section class="card">
+        <h2>Day 09 Practice Tasks</h2>
+
+        <ol>
+          <li>Analyze a sales dataset</li>
+
+          <li>Find average and maximum values</li>
+
+          <li>Create correlation matrix</li>
+
+          <li>Detect outliers</li>
+
+          <li>Create data distribution charts</li>
+
+          <li>Write data insights report</li>
+
+          <li>Explain findings using storytelling</li>
+        </ol>
+      </section>
+
+      <footer>Python Learning Notes 🚀</footer>
+    </div>
+  </body>
+</html>
