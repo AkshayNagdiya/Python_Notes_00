@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Output - Python Notes</title>
+
+    <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="fundamentals.html">Fundamentals</a>
+            <a href="variables.html">Variables</a>
+            <a href="input-output.html">Input/Output</a>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <h1>⌨️ Input / Output in Python</h1>
+            <p>Learn how to take input, display output, and format results</p>
+        </header>
+
+        <!-- Output -->
+        <div class="card">
+            <h2>1. Output using print()</h2>
+            <p>
+                The <b>print()</b> function is used to display output on the screen.
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+print("Hello World")
+      </pre>
+
+            <h3>Output</h3>
+            <pre>
+Hello World
+      </pre>
+        </div>
+
+        <!-- Input -->
+        <div class="card">
+            <h2>2. Input using input()</h2>
+            <p>
+                The <b>input()</b> function is used to take input from the user.
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+name = input("Enter your name: ")
+print(name)
+      </pre>
+
+            <h3>Explanation</h3>
+            <ul>
+                <li>User enters value from keyboard</li>
+                <li>Value is stored as string</li>
+                <li>Then printed using print()</li>
+            </ul>
+        </div>
+
+        <!-- Type Conversion -->
+        <div class="card">
+            <h2>3. Type Conversion in Input</h2>
+
+            <p>
+                By default, input is always string. We convert it when needed.
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+age = int(input("Enter age: "))
+print(age)
+      </pre>
+        </div>
+
+        <!-- Formatting -->
+        <div class="card">
+            <h2>4. Output Formatting</h2>
+
+            <h3>Using f-string (Best Method)</h3>
+
+            <pre>
+name = "Akshay"
+age = 20
+
+print(f"My name is {name} and I am {age} years old")
+      </pre>
+
+            <h3>Output</h3>
+            <pre>
+My name is Akshay and I am 20 years old
+      </pre>
+        </div>
+
+        <!-- Multiple Inputs -->
+        <div class="card">
+            <h2>5. Multiple Inputs</h2>
+
+            <pre>
+a, b = input("Enter two numbers: ").split()
+print(a)
+print(b)
+      </pre>
+
+            <h3>Converted to integers</h3>
+
+            <pre>
+a, b = map(int, input("Enter numbers: ").split())
+print(a + b)
+      </pre>
+        </div>
+
+        <!-- Summary -->
+        <div class="card">
+            <h2>📌 Quick Summary</h2>
+
+            <ul>
+                <li>print() → shows output</li>
+                <li>input() → takes input from user</li>
+                <li>input is always string</li>
+                <li>use int() or float() for conversion</li>
+                <li>f-string is best for formatting</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Python Notes | Input & Output Section | Akshay Nagdiya</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

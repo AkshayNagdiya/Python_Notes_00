@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings - Python Notes</title>
+
+    <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="fundamentals.html">Fundamentals</a>
+            <a href="variables.html">Variables</a>
+            <a href="input-output.html">Input/Output</a>
+            <a href="operators.html">Operators</a>
+            <a href="strings.html">Strings</a>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <h1>🔤 Strings in Python</h1>
+            <p>Indexing, slicing, and string methods explained simply</p>
+        </header>
+
+        <!-- Introduction -->
+        <div class="card">
+            <h2>1. What is a String?</h2>
+            <p>
+                A string is a sequence of characters enclosed in quotes.
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+name = "Python"
+message = 'Hello World'
+      </pre>
+        </div>
+
+        <!-- Indexing -->
+        <div class="card">
+            <h2>2. String Indexing</h2>
+            <p>
+                Each character in a string has an index (position).
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+word = "Python"
+
+print(word[0])   # P
+print(word[1])   # y
+print(word[2])   # t
+      </pre>
+
+            <h3>Negative Indexing</h3>
+            <pre>
+print(word[-1])   # n (last character)
+print(word[-2])   # o
+      </pre>
+        </div>
+
+        <!-- Slicing -->
+        <div class="card">
+            <h2>3. String Slicing</h2>
+            <p>Used to extract a part of a string.</p>
+
+            <h3>Syntax</h3>
+            <pre>
+string[start:end:step]
+      </pre>
+
+            <h3>Example</h3>
+            <pre>
+word = "Python"
+
+print(word[0:3])   # Pyt
+print(word[2:5])   # tho
+print(word[:4])    # Pyth
+print(word[::2])   # Pto
+      </pre>
+        </div>
+
+        <!-- Methods -->
+        <div class="card">
+            <h2>4. String Methods</h2>
+
+            <h3>Common Methods</h3>
+            <pre>
+text = "python programming"
+
+print(text.upper())      # PYTHON PROGRAMMING
+print(text.lower())      # python programming
+print(text.title())      # Python Programming
+print(text.strip())      # remove spaces
+print(text.replace("python", "java"))
+print(len(text))         # length of string
+      </pre>
+        </div>
+
+        <!-- Advanced -->
+        <div class="card">
+            <h2>5. Useful String Operations</h2>
+
+            <h3>Concatenation</h3>
+            <pre>
+a = "Hello"
+b = "World"
+
+print(a + " " + b)
+      </pre>
+
+            <h3>Check substring</h3>
+            <pre>
+text = "Python is easy"
+
+print("Python" in text)   # True
+      </pre>
+        </div>
+
+        <!-- Summary -->
+        <div class="card">
+            <h2>📌 Quick Summary</h2>
+
+            <ul>
+                <li>Strings are sequence of characters</li>
+                <li>Indexing starts from 0</li>
+                <li>Negative indexing starts from end</li>
+                <li>Slicing extracts part of string</li>
+                <li>Methods help modify strings</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Python Notes | Strings Section 🚀</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

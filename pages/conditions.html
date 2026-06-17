@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions - Python Notes</title>
+
+    <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="fundamentals.html">Fundamentals</a>
+            <a href="variables.html">Variables</a>
+            <a href="input-output.html">Input/Output</a>
+            <a href="operators.html">Operators</a>
+            <a href="strings.html">Strings</a>
+            <a href="conditions.html">Conditions</a>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <h1>🔀 Conditional Statements</h1>
+            <p>if, else, elif and match case in Python</p>
+        </header>
+
+        <!-- IF -->
+        <div class="card">
+            <h2>1. if Statement</h2>
+
+            <p>
+                The <b>if</b> statement is used to check a condition. If it is true, the block runs.
+            </p>
+
+            <h3>Example</h3>
+            <pre>
+age = 18
+
+if age >= 18:
+    print("You are eligible to vote")
+      </pre>
+        </div>
+
+        <!-- IF ELSE -->
+        <div class="card">
+            <h2>2. if - else Statement</h2>
+
+            <p>If condition is false, else block runs.</p>
+
+            <h3>Example</h3>
+            <pre>
+age = 16
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+      </pre>
+        </div>
+
+        <!-- ELIF -->
+        <div class="card">
+            <h2>3. if - elif - else</h2>
+
+            <p>Used when multiple conditions are required.</p>
+
+            <h3>Example</h3>
+            <pre>
+marks = 75
+
+if marks >= 90:
+    print("A Grade")
+elif marks >= 75:
+    print("B Grade")
+elif marks >= 50:
+    print("C Grade")
+else:
+    print("Fail")
+      </pre>
+        </div>
+
+        <!-- Nested -->
+        <div class="card">
+            <h2>4. Nested Conditions</h2>
+
+            <p>Conditions inside conditions.</p>
+
+            <h3>Example</h3>
+            <pre>
+age = 20
+country = "India"
+
+if age >= 18:
+    if country == "India":
+        print("Eligible in India")
+      </pre>
+        </div>
+
+        <!-- Match Case -->
+        <div class="card">
+            <h2>5. Match Case (Python 3.10+)</h2>
+
+            <p>Used as an alternative to multiple if-elif conditions.</p>
+
+            <h3>Example</h3>
+            <pre>
+day = 2
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case _:
+        print("Invalid Day")
+      </pre>
+        </div>
+
+        <!-- Summary -->
+        <div class="card">
+            <h2>📌 Quick Summary</h2>
+
+            <ul>
+                <li>if → checks condition</li>
+                <li>else → runs if condition is false</li>
+                <li>elif → multiple conditions</li>
+                <li>nested → condition inside condition</li>
+                <li>match case → modern switch alternative</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Python Notes | Conditions Section 🚀</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

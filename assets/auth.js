@@ -30,27 +30,16 @@ const pages = {
 
 const dayPasswords = {
   1: "Adil@123",
-
   2: "python02",
-
   3: "Java03",
-
   4: "Gits@123",
-
   5: "shivam@123",
-
   6: "Akshay@321",
-
   7: "Anmol@090",
-
   8: "Imran@899",
-
   9: "Ak@123",
-
   10: "Ak@123",
-
   11: "Shabbar@123",
-
   12: "azim@420",
 };
 

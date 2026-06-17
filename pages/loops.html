@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops - Python Notes</title>
+
+    <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="fundamentals.html">Fundamentals</a>
+            <a href="variables.html">Variables</a>
+            <a href="input-output.html">Input/Output</a>
+            <a href="operators.html">Operators</a>
+            <a href="strings.html">Strings</a>
+            <a href="conditions.html">Conditions</a>
+            <a href="loops.html">Loops</a>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <h1>🔁 Loops in Python</h1>
+            <p>for loop, while loop, and iteration concepts explained simply</p>
+        </header>
+
+        <!-- Introduction -->
+        <div class="card">
+            <h2>1. What is a Loop?</h2>
+            <p>
+                A loop is used to repeat a block of code multiple times.
+            </p>
+        </div>
+
+        <!-- FOR LOOP -->
+        <div class="card">
+            <h2>2. for Loop</h2>
+
+            <p>Used to iterate over a sequence (list, string, range).</p>
+
+            <h3>Example - range()</h3>
+            <pre>
+for i in range(5):
+    print(i)
+      </pre>
+
+            <h3>Output</h3>
+            <pre>
+0
+1
+2
+3
+4
+      </pre>
+
+            <h3>Example - List</h3>
+            <pre>
+fruits = ["apple", "banana", "mango"]
+
+for f in fruits:
+    print(f)
+      </pre>
+        </div>
+
+        <!-- WHILE LOOP -->
+        <div class="card">
+            <h2>3. while Loop</h2>
+
+            <p>Runs as long as condition is true.</p>
+
+            <h3>Example</h3>
+            <pre>
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+      </pre>
+
+            <h3>Output</h3>
+            <pre>
+1
+2
+3
+4
+5
+      </pre>
+        </div>
+
+        <!-- BREAK -->
+        <div class="card">
+            <h2>4. break Statement</h2>
+
+            <p>Used to stop loop immediately.</p>
+
+            <pre>
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+      </pre>
+        </div>
+
+        <!-- CONTINUE -->
+        <div class="card">
+            <h2>5. continue Statement</h2>
+
+            <p>Skips current iteration.</p>
+
+            <pre>
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+      </pre>
+        </div>
+
+        <!-- NESTED -->
+        <div class="card">
+            <h2>6. Nested Loops</h2>
+
+            <p>Loop inside another loop.</p>
+
+            <pre>
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+      </pre>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="card">
+            <h2>📌 Quick Summary</h2>
+
+            <ul>
+                <li>for loop → fixed iterations</li>
+                <li>while loop → condition-based</li>
+                <li>break → stop loop</li>
+                <li>continue → skip iteration</li>
+                <li>nested loops → loop inside loop</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Python Notes | Loops Section 🚀</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
