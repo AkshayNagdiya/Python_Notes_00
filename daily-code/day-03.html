@@ -1,311 +1,1541 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Day 03 - Functions & Modular Programming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/style.css" />
-     <script>
-    if (sessionStorage.getItem("allowedDay") !== "3") {
-      window.location.href = "../index.html";
+  <title>Day 03 - Functions & Modular Programming</title>
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script>
+    if (sessionStorage.getItem('allowedDay') !== '3') {
+      window.location.href = '../index.html'
     }
   </script>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <!-- Navbar -->
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Day 03 - Functions & Modular Programming</h1>
+      <p>Creating Reusable Code Using Functions</p>
+    </header>
 
-      <nav class="navbar">
-        <a href="../index.html"> Home </a>
+    <!-- Topics -->
 
-        <a href="day-01.html"> Day 01 </a>
+    <section class="card">
+      <h2>Topics Covered</h2>
 
-        <a href="day-02.html"> Day 02 </a>
+      <ul class="ul">
+        <li>Introduction to Functions</li>
+        <li>Why Functions are Used</li>
+        <li>User Defined Functions</li>
+        <li>Creating Functions</li>
+        <li>Calling Functions</li>
+        <li>Function Syntax</li>
+        <li>Parameters and Arguments</li>
+        <li>Single Parameter Functions</li>
+        <li>Multiple Parameters</li>
+        <li>Types of Arguments</li>
+        <li>Positional Arguments</li>
+        <li>Keyword Arguments</li>
+        <li>Default Arguments</li>
+        <li>Variable Length Arguments (*args)</li>
+        <li>Keyword Variable Arguments (**kwargs)</li>
+        <li>Return Statement</li>
+        <li>Returning Multiple Values</li>
+        <li>Local Variables</li>
+        <li>Global Variables</li>
+        <li>Global Keyword</li>
+        <li>Variable Scope</li>
+        <li>Recursive Functions</li>
+        <li>Factorial Using Recursion</li>
+        <li>Fibonacci Using Recursion</li>
+        <li>Lambda Functions</li>
+        <li>Anonymous Functions</li>
+        <li>Nested Functions</li>
+        <li>Functions as Arguments</li>
+        <li>Functions Returning Functions</li>
+        <li>Built-in Functions</li>
+        <li>User Defined vs Built-in Functions</li>
+        <li>Function Documentation (Docstrings)</li>
+        <li>Scope Resolution (LEGB Rule)</li>
+        <li>Modular Programming</li>
+        <li>Creating Modules</li>
+        <li>Importing Functions</li>
+        <li>Import Statements</li>
+      </ul>
+    </section>
 
-        <a href="day-03.html"> Day 03 </a>
-      </nav>
+    <!-- Function Intro -->
 
-      <!-- Header -->
+    <section class="card">
+      <h2>1. What is Function?</h2>
 
-      <header>
-        <h1>🚀 Day 03 - Functions & Modular Programming</h1>
+      <p>
+        A function is a reusable block of code that performs a specific task.
+      </p>
 
-        <p>Creating Reusable Code Using Functions</p>
-      </header>
+      <h3>Why use Functions?</h3>
 
-      <!-- Topics -->
+      <ul>
+        <li>Avoid repeating code</li>
 
-      <section class="card">
-        <h2>Topics Covered</h2>
+        <li>Make code clean</li>
 
-        <ul>
-          <li>User Defined Functions</li>
+        <li>Easy debugging</li>
 
-          <li>Creating Functions</li>
+        <li>Better project structure</li>
+      </ul>
+    </section>
 
-          <li>Calling Functions</li>
+    <!-- Creating Function -->
+    <section class="card">
+      <h2>2. Creating a Function</h2>
 
-          <li>Parameters and Arguments</li>
+      <p>
+        In Python, functions are created using the <b>def</b> keyword followed by
+        a function name, parentheses <b>()</b>, and a colon <b>:</b>.
+        Functions allow us to organize code into reusable blocks.
+      </p>
 
-          <li>Return Values</li>
+      <h3>General Syntax</h3>
 
-          <li>Scope of Variables</li>
+      <pre>
+def function_name():
+    # Code Block
+  </pre>
 
-          <li>Modular Programming Basics</li>
-        </ul>
-      </section>
+      <h3>Example</h3>
 
-      <!-- Function Intro -->
-
-      <section class="card">
-        <h2>1. What is Function?</h2>
-
-        <p>
-          A function is a reusable block of code that performs a specific task.
-        </p>
-
-        <h3>Why use Functions?</h3>
-
-        <ul>
-          <li>Avoid repeating code</li>
-
-          <li>Make code clean</li>
-
-          <li>Easy debugging</li>
-
-          <li>Better project structure</li>
-        </ul>
-      </section>
-
-      <!-- Creating Function -->
-
-      <section class="card">
-        <h2>2. Creating a Function</h2>
-
-        <p>Functions are created using the <b>def</b> keyword.</p>
-
-        <pre>
-
+      <pre>
 def greet():
+    print("Hello Python")
+  </pre>
 
+      <p>
+        The function has been created, but it will not execute until it is called.
+      </p>
+
+      <h3>Calling a Function</h3>
+
+      <pre>
+greet()
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Hello Python
+  </pre>
+
+      <h3>Function Components</h3>
+
+      <ul class="ul">
+        <li><b>def</b> → Keyword used to define a function.</li>
+        <li><b>greet</b> → Function name.</li>
+        <li><b>()</b> → Parentheses that may contain parameters.</li>
+        <li><b>:</b> → Marks the beginning of the function body.</li>
+        <li><b>Indented Block</b> → Statements executed when the function is called.</li>
+      </ul>
+
+      <h3 style="margin-top: 20px;">Function Naming Rules</h3>
+
+      <ul class="ul">
+        <li>Function names should start with a letter or underscore (_).</li>
+        <li>Spaces are not allowed.</li>
+        <li>Use meaningful names.</li>
+        <li>Follow snake_case naming convention.</li>
+      </ul>
+
+      <pre>
+def calculate_total():
+    pass
+
+def student_details():
+    pass
+  </pre>
+
+      <h3>Function Execution Flow</h3>
+
+      <pre>
+def greet():
     print("Hello Python")
 
+print("Start")
 
 greet()
 
-</pre
-        >
+print("End")
+  </pre>
 
-        <h3>Output</h3>
+      <h3>Output</h3>
 
-        <pre>
-
+      <pre>
+Start
 Hello Python
+End
+  </pre>
 
-</pre
-        >
-      </section>
-
-      <!-- Parameters -->
-
-      <section class="card">
-        <h2>3. Parameters and Arguments</h2>
-
-        <p>
-          Parameters are values received by a function. Arguments are values
-          passed when calling a function.
-        </p>
-
-        <pre>
+      <p>
+        When a function is called, program execution jumps to the function,
+        executes its statements, and then returns to the next line after the
+        function call.
+      </p>
+    </section>
 
 
+    <!-- Parameters -->
+
+    <section class="card">
+      <h2>3. Parameters and Arguments</h2>
+
+      <p>
+        Functions often need data to perform tasks. This data is passed to functions
+        using <b>parameters</b> and <b>arguments</b>.
+      </p>
+
+      <h3>What is a Parameter?</h3>
+
+      <p>
+        A parameter is a variable listed inside the function definition.
+        It acts as a placeholder that receives values when the function is called.
+      </p>
+
+      <pre>
 def welcome(name):
+    print("Welcome", name)
+  </pre>
 
-    print(
-    "Welcome",
-    name
-    )
+      <p>
+        Here, <b>name</b> is a parameter.
+      </p>
 
+      <h3>What is an Argument?</h3>
 
+      <p>
+        An argument is the actual value passed to a function when it is called.
+      </p>
 
-welcome("Alex")
+      <pre>
+welcome("Akshay")
+  </pre>
 
+      <p>
+        Here, <b>"Akshay"</b> is an argument.
+      </p>
 
-</pre
-        >
+      <h3>Example</h3>
 
-        <h3>Output</h3>
+      <pre>
+def welcome(name):
+    print("Welcome", name)
 
-        <pre>
+welcome("Akshay")
+  </pre>
 
-Welcome Alex
+      <h3>Output</h3>
 
-</pre
-        >
-      </section>
+      <pre>
+Welcome Akshay
+  </pre>
 
-      <!-- Multiple Parameters -->
+      <h3>Parameter vs Argument</h3>
 
-      <section class="card">
-        <h2>4. Multiple Parameters</h2>
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Parameter</th>
+          <th>Argument</th>
+        </tr>
 
-        <pre>
+        ```
+        <tr>
+          <td>Defined in function declaration</td>
+          <td>Passed during function call</td>
+        </tr>
 
+        <tr>
+          <td>Acts as a placeholder</td>
+          <td>Actual value supplied</td>
+        </tr>
 
-def add(a,b):
+        <tr>
+          <td>Receives data</td>
+          <td>Sends data</td>
+        </tr>
+        ```
 
-    result = a + b
+      </table>
 
-    print(result)
+      <h3>Single Parameter Function</h3>
 
-
-
-add(10,20)
-
-
-
-</pre
-        >
-
-        Output:
-
-        <pre>
-
-30
-
-</pre
-        >
-      </section>
-
-      <!-- Return -->
-
-      <section class="card">
-        <h2>5. Return Values</h2>
-
-        <p>return sends a value back from a function.</p>
-
-        <pre>
-
-
+      <pre>
 def square(number):
+    print(number * number)
 
+square(5)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+25
+  </pre>
+
+      <h3>Multiple Parameters</h3>
+
+      <pre>
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+30
+  </pre>
+
+      <h3>How Data Flows</h3>
+
+      <pre>
+Function Definition
+
+def add(a, b)
+
+        ↓
+
+Function Call
+
+add(10, 20)
+
+        ↓
+
+a = 10
+b = 20
+
+        ↓
+
+Result = 30
+  </pre>
+
+      <h3>Real-World Example</h3>
+
+      <pre>
+def calculate_salary(name, salary):
+    print(name, salary)
+
+calculate_salary("Akshay", 50000)
+  </pre>
+
+      <p>
+        Real-world applications pass data such as employee names,
+        product prices, account details, and user information
+        through parameters and arguments.
+      </p>
+
+      <h3>Advantages of Parameters</h3>
+
+      <ul class="ul">
+        <li>Make functions reusable.</li>
+        <li>Allow dynamic input.</li>
+        <li>Reduce code duplication.</li>
+        <li>Increase flexibility.</li>
+        <li>Improve program design.</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Memory Tip:</strong>
+        Parameters receive data. Arguments send data.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4. Types of Arguments</h2>
+
+      <p>
+        Python provides different ways to pass arguments to a function.
+        These are known as Types of Arguments.
+      </p>
+
+      <ul>
+        <li>Positional Arguments</li>
+        <li>Keyword Arguments</li>
+        <li>Default Arguments</li>
+        <li>Variable Length Arguments (*args)</li>
+        <li>Keyword Variable Arguments (**kwargs)</li>
+      </ul>
+
+      <h3>1. Positional Arguments</h3>
+
+      <p>
+        In positional arguments, values are assigned to parameters based on
+        their position.
+      </p>
+
+      <pre>
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student("Akshay", 22)
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+Name: Akshay
+Age: 22
+  </pre>
+
+      <p>
+        The first value goes to <b>name</b> and the second value goes to
+        <b>age</b>.
+      </p>
+
+
+
+      <h3>2. Keyword Arguments</h3>
+
+      <p>
+        In keyword arguments, parameter names are specified while passing values.
+        Order does not matter.
+      </p>
+
+      <pre>
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student(age=22, name="Akshay")
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+Name: Akshay
+Age: 22
+  </pre>
+
+      <p>
+        Since parameter names are provided, Python automatically matches values.
+      </p>
+
+
+
+      <h3>3. Default Arguments</h3>
+
+      <p>
+        A default argument provides a value that is used if no argument is supplied.
+      </p>
+
+      <pre>
+def greet(name="Guest"):
+    print("Welcome", name)
+
+greet()
+greet("Akshay")
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+Welcome Guest
+Welcome Akshay
+  </pre>
+
+      <p>
+        If no value is passed, Python uses the default value.
+      </p>
+
+
+
+      <h3>4. Variable Length Arguments (*args)</h3>
+
+      <p>
+        Sometimes we do not know how many arguments will be passed.
+        In such cases, we use <b>*args</b>.
+      </p>
+
+      <pre>
+def total(*numbers):
+    print(sum(numbers))
+
+total(10, 20)
+total(10, 20, 30, 40)
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+30
+100
+  </pre>
+
+      <p>
+        *args stores all arguments inside a tuple.
+      </p>
+
+      <pre>
+def show(*data):
+    print(data)
+
+show(1, 2, 3, 4)
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+(1, 2, 3, 4)
+  </pre>
+
+
+
+      <h3>5. Keyword Variable Arguments (**kwargs)</h3>
+
+      <p>
+        When multiple keyword arguments need to be passed, Python provides
+        <b>**kwargs</b>.
+      </p>
+
+      <pre>
+def profile(**details):
+    print(details)
+
+profile(name="Akshay", city="Bhopal")
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+{'name': 'Akshay', 'city': 'Bhopal'}
+  </pre>
+
+      <p>
+        **kwargs stores all keyword arguments inside a dictionary.
+      </p>
+
+      <pre>
+def employee(**data):
+    for key, value in data.items():
+        print(key, ":", value)
+
+employee(
+    name="Akshay",
+    role="Developer",
+    salary=50000
+)
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+name : Akshay
+role : Developer
+salary : 50000
+  </pre>
+
+
+
+      <h3>Comparison of Argument Types</h3>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>Positional</td>
+          <td>Arguments are matched by position.</td>
+        </tr>
+
+        <tr>
+          <td>Keyword</td>
+          <td>Arguments are matched using parameter names.</td>
+        </tr>
+
+        <tr>
+          <td>Default</td>
+          <td>Uses predefined values when arguments are not provided.</td>
+        </tr>
+
+        <tr>
+          <td>*args</td>
+          <td>Accepts multiple positional arguments.</td>
+        </tr>
+
+        <tr>
+          <td>**kwargs</td>
+          <td>Accepts multiple keyword arguments.</td>
+        </tr>
+      </table>
+
+      <h3>Memory Tip</h3>
+
+      <ol class="ul">
+        <li>Positional → Order Matters</li>
+        <li>Keyword → Name Matters</li>
+        <li>Default → Uses Default Value</li>
+        <li>*args → Multiple Positional Values</li>
+        <li>**kwargs → Multiple Keyword Values</li>
+      </ol>
+    </section>
+
+    <!-- Return -->
+
+    <section class="card">
+      <h2>5. Return Statement</h2>
+
+      <p>
+        The <b>return</b> statement is used to send a value back from a function.
+        Once a return statement is executed, the function ends immediately.
+      </p>
+
+      <h3>Why Use Return?</h3>
+
+      <ul>
+        <li>Send results back to the caller.</li>
+        <li>Reuse calculated values.</li>
+        <li>Make functions more flexible.</li>
+        <li>Avoid unnecessary printing inside functions.</li>
+      </ul>
+
+      <h3>Syntax</h3>
+
+      <pre>
+def function_name():
+    return value
+  </pre>
+
+      <h3>Example</h3>
+
+      <pre>
+def square(number):
     return number * number
-
-
 
 result = square(5)
 
+print(result)
+  </pre>
 
+      <h3>Output</h3>
+
+      <pre>
+25
+  </pre>
+
+      <h3>Difference Between print() and return</h3>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>print()</th>
+          <th>return</th>
+        </tr>
+
+        <tr>
+          <td>Displays output</td>
+          <td>Sends value back</td>
+        </tr>
+
+        <tr>
+          <td>Cannot be reused easily</td>
+          <td>Can be stored and reused</td>
+        </tr>
+
+        <tr>
+          <td>Used for displaying</td>
+          <td>Used for processing results</td>
+        </tr>
+      </table>
+
+      <h3>Example Using print()</h3>
+
+      <pre>
+def add(a, b):
+    print(a + b)
+
+result = add(10, 20)
 
 print(result)
+  </pre>
 
+      <h3>Output</h3>
 
+      <pre>
+30
+None
+  </pre>
 
-</pre
-        >
+      <h3>Example Using return</h3>
 
-        Output:
+      <pre>
+def add(a, b):
+    return a + b
 
-        <pre>
+result = add(10, 20)
 
-25
+print(result)
+  </pre>
 
-</pre
-        >
-      </section>
+      <h3>Output</h3>
 
-      <!-- Scope -->
+      <pre>
+30
+  </pre>
 
-      <section class="card">
-        <h2>6. Variable Scope</h2>
+      <div class="tip">
+        <strong>Remember:</strong>
+        print() shows the value.
+        return gives the value back.
+      </div>
+    </section>
 
-        <h3>Local Variable</h3>
+    <!-- Scope -->
+    <section class="card">
+      <h2>6. Variable Scope</h2>
 
-        <pre>
+      <p>
+        Variable scope determines where a variable can be accessed within a program.
+        Variables can be local or global depending on where they are declared.
+      </p>
 
+      <h3>1. Local Variables</h3>
 
+      <p>
+        A local variable is declared inside a function and can only be accessed
+        within that function.
+      </p>
+
+      <pre>
 def test():
 
     x = 10
 
     print(x)
 
-
-
 test()
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+10
+  </pre>
+
+      <p>
+        The variable <b>x</b> exists only inside the function <b>test()</b>.
+      </p>
 
 
 
-</pre
-        >
+      <h3>2. Global Variables</h3>
 
-        <p>Variable created inside function is local.</p>
+      <p>
+        A global variable is declared outside all functions and can be accessed
+        from anywhere in the program.
+      </p>
 
-        <h3>Global Variable</h3>
-
-        <pre>
-
-
+      <pre>
 x = 100
-
-
 
 def show():
 
     print(x)
 
-
-
 show()
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+100
+  </pre>
+
+      <p>
+        The variable <b>x</b> is available throughout the program.
+      </p>
 
 
 
-</pre
-        >
-      </section>
+      <h3>3. Local vs Global Variables</h3>
 
-      <!-- Modular Programming -->
+      <pre>
+x = 100
 
-      <section class="card">
-        <h2>7. Modular Programming</h2>
+def demo():
 
-        <p>
-          Modular programming means dividing a large program into smaller
-          reusable parts.
-        </p>
+    x = 10
 
-        <h3>Example Structure</h3>
+    print("Inside Function:", x)
 
-        <pre>
+demo()
+
+print("Outside Function:", x)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Inside Function: 10
+Outside Function: 100
+  </pre>
+
+      <p>
+        Python first looks for variables inside the function. If not found,
+        it searches outside the function.
+      </p>
 
 
+
+      <h3>4. Global Keyword</h3>
+
+      <p>
+        Normally, a global variable cannot be modified directly inside a function.
+        To modify it, use the <b>global</b> keyword.
+      </p>
+
+      <pre>
+count = 0
+
+def increment():
+
+    global count
+
+    count += 1
+
+increment()
+
+print(count)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+1
+  </pre>
+
+      <p>
+        The <b>global</b> keyword tells Python to use the global variable instead
+        of creating a new local variable.
+      </p>
+
+
+
+      <h3>Without Global Keyword</h3>
+
+      <pre>
+count = 0
+
+def increment():
+
+    count = count + 1
+
+increment()
+  </pre>
+
+      <p>
+        This produces an error because Python treats <b>count</b> as a local variable.
+      </p>
+
+
+
+      <h3>5. Variable Scope</h3>
+
+      <p>
+        Scope refers to the region of a program where a variable is accessible.
+      </p>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Variable Type</th>
+          <th>Accessible In</th>
+        </tr>
+
+        <tr>
+          <td>Local Variable</td>
+          <td>Inside the function only</td>
+        </tr>
+
+        <tr>
+          <td>Global Variable</td>
+          <td>Entire program</td>
+        </tr>
+      </table>
+
+
+
+      <h3>Real-World Example</h3>
+
+      <pre>
+company_name = "ABC Technologies"
+
+def employee():
+
+    employee_name = "Akshay"
+
+    print(employee_name)
+
+    print(company_name)
+
+employee()
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Akshay
+ABC Technologies
+  </pre>
+
+      <p>
+        Local variables store function-specific data while global variables
+        store shared information used throughout the application.
+      </p>
+
+
+
+      <h3>Advantages of Local Variables</h3>
+
+      <ul>
+        <li>Prevent accidental modification.</li>
+        <li>Improve code security.</li>
+        <li>Reduce memory usage.</li>
+        <li>Make debugging easier.</li>
+      </ul>
+
+      <h3>Advantages of Global Variables</h3>
+
+      <ul>
+        <li>Accessible throughout the program.</li>
+        <li>Useful for shared configuration data.</li>
+        <li>Reduce repeated declarations.</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Memory Tip:</strong>
+        Local Variables live inside a function.
+        Global Variables live throughout the program.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>7. Recursive Functions</h2>
+
+      <p>
+        A recursive function is a function that calls itself. Recursion is used
+        to solve problems by breaking them down into smaller versions of the same
+        problem.
+      </p>
+
+      <h3>How Recursion Works</h3>
+
+      <p>
+        Every recursive function must contain:
+      </p>
+
+      <ul>
+        <li><b>Base Case</b> → Condition that stops the recursion.</li>
+        <li><b>Recursive Case</b> → Function calls itself.</li>
+      </ul>
+
+      <h3>General Syntax</h3>
+
+      <pre>
+def function_name():
+
+    if condition:
+        return
+
+    function_name()
+  </pre>
+
+      <div class="tip">
+        <strong>Important:</strong>
+        Without a base case, recursion will continue forever and cause a
+        RecursionError.
+      </div>
+
+
+
+      <h3>Example 1: Countdown Using Recursion</h3>
+
+      <pre>
+def countdown(n):
+
+    if n == 0:
+        return
+
+    print(n)
+
+    countdown(n - 1)
+
+countdown(5)
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+5
+4
+3
+2
+1
+  </pre>
+
+      <p>
+        The function keeps calling itself until the value becomes 0.
+      </p>
+
+
+
+      <h3>Example 2: Factorial Using Recursion</h3>
+
+      <p>
+        Factorial of a number is the product of all positive integers from
+        1 to that number.
+      </p>
+
+      <pre>
+def factorial(n):
+
+    if n == 1:
+        return 1
+
+    return n * factorial(n - 1)
+
+print(factorial(5))
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+120
+  </pre>
+
+      <h4>Working</h4>
+
+      <pre>
+factorial(5)
+
+5 × factorial(4)
+
+5 × 4 × factorial(3)
+
+5 × 4 × 3 × factorial(2)
+
+5 × 4 × 3 × 2 × factorial(1)
+
+5 × 4 × 3 × 2 × 1
+
+= 120
+  </pre>
+
+
+
+      <h3>Example 3: Fibonacci Using Recursion</h3>
+
+      <p>
+        The Fibonacci sequence is a series where each number is the sum
+        of the previous two numbers.
+      </p>
+
+      <pre>
+def fibonacci(n):
+
+    if n <= 1:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+for i in range(10):
+    print(fibonacci(i), end=" ")
+  </pre>
+
+      <h4>Output</h4>
+
+      <pre>
+0 1 1 2 3 5 8 13 21 34
+  </pre>
+
+      <h4>Working</h4>
+
+      <pre>
+fibonacci(5)
+
+=
+
+fibonacci(4) + fibonacci(3)
+
+=
+
+3 + 2
+
+=
+
+5
+  </pre>
+
+
+
+      <h3>Advantages of Recursion</h3>
+
+      <ul>
+        <li>Reduces code length.</li>
+        <li>Makes complex problems easier to solve.</li>
+        <li>Useful for tree and graph traversal.</li>
+        <li>Useful in divide-and-conquer algorithms.</li>
+      </ul>
+
+      <h3>Disadvantages of Recursion</h3>
+
+      <ul>
+        <li>Consumes more memory.</li>
+        <li>Can be slower than loops.</li>
+        <li>May cause stack overflow for very large inputs.</li>
+      </ul>
+
+
+
+      <h3>Recursion vs Loop</h3>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Recursion</th>
+          <th>Loop</th>
+        </tr>
+
+        <tr>
+          <td>Function calls itself.</td>
+          <td>Repeats using loops.</td>
+        </tr>
+
+        <tr>
+          <td>Uses call stack memory.</td>
+          <td>Uses less memory.</td>
+        </tr>
+
+        <tr>
+          <td>Suitable for complex problems.</td>
+          <td>Suitable for simple repetitive tasks.</td>
+        </tr>
+      </table>
+
+      <div class="tip">
+        <strong>Memory Tip:</strong>
+        Recursion = A Function Calling Itself Until a Base Case Stops It.
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>8. Lambda Functions & Anonymous Functions</h2>
+
+      <p>
+        A lambda function is a small anonymous function created using
+        the <b>lambda</b> keyword.
+      </p>
+
+      <h3>Syntax</h3>
+
+      <pre>
+lambda arguments : expression
+  </pre>
+
+      <h3>Example</h3>
+
+      <pre>
+square = lambda x: x * x
+
+print(square(5))
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+25
+  </pre>
+
+      <h3>Anonymous Function Example</h3>
+
+      <pre>
+result = (lambda a, b: a + b)(10, 20)
+
+print(result)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+30
+  </pre>
+
+      <p>
+        Lambda functions are commonly used with map(), filter(), and sorted().
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>9. Advanced Function Concepts</h2>
+
+      <h3>Nested Functions</h3>
+
+      <p>
+        A function defined inside another function is called a nested function.
+      </p>
+
+      <pre>
+def outer():
+
+    def inner():
+        print("Inside Inner Function")
+
+    inner()
+
+outer()
+  </pre>
+
+      <h3>Functions as Arguments</h3>
+
+      <pre>
+def greet():
+
+    return "Hello"
+
+def display(func):
+
+    print(func())
+
+display(greet)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Hello
+  </pre>
+
+      <h3>Functions Returning Functions</h3>
+
+      <pre>
+def outer():
+
+    def inner():
+        return "Python"
+
+    return inner
+
+result = outer()
+
+print(result())
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Python
+  </pre>
+
+      <p>
+        These concepts are heavily used in decorators and frameworks.
+      </p>
+    </section>
+
+
+    <section class="card">
+      <h2>10. Built-in Functions</h2>
+
+      <p>
+        Python provides many predefined functions called built-in functions.
+      </p>
+
+      <h3>Common Built-in Functions</h3>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Function</th>
+          <th>Purpose</th>
+        </tr>
+
+        <tr>
+          <td>print()</td>
+          <td>Display output</td>
+        </tr>
+
+        <tr>
+          <td>input()</td>
+          <td>Take user input</td>
+        </tr>
+
+        <tr>
+          <td>len()</td>
+          <td>Length of object</td>
+        </tr>
+
+        <tr>
+          <td>sum()</td>
+          <td>Add values</td>
+        </tr>
+
+        <tr>
+          <td>max()</td>
+          <td>Largest value</td>
+        </tr>
+
+        <tr>
+          <td>min()</td>
+          <td>Smallest value</td>
+        </tr>
+
+        <tr>
+          <td>type()</td>
+          <td>Data type</td>
+        </tr>
+      </table>
+
+      <h3>Example</h3>
+
+      <pre>
+numbers = [10, 20, 30]
+
+print(len(numbers))
+print(sum(numbers))
+print(max(numbers))
+  </pre>
+    </section>
+
+    <section class="card">
+      <h2>11. User Defined vs Built-in Functions</h2>
+
+      <table border="1" cellpadding="8">
+        <tr>
+          <th>Built-in Function</th>
+          <th>User Defined Function</th>
+        </tr>
+
+        <tr>
+          <td>Provided by Python</td>
+          <td>Created by Programmer</td>
+        </tr>
+
+        <tr>
+          <td>Ready to use</td>
+          <td>Must be defined first</td>
+        </tr>
+
+        <tr>
+          <td>print(), len(), sum()</td>
+          <td>add(), factorial(), square()</td>
+        </tr>
+      </table>
+
+      <h3>Example</h3>
+
+      <pre>
+print(len("Python"))
+
+def greet():
+    print("Hello")
+
+greet()
+  </pre>
+    </section>
+
+    <section class="card">
+      <h2>12. Function Documentation (Docstrings)</h2>
+
+      <p>
+        A docstring is a string written inside a function to explain
+        what the function does.
+      </p>
+
+      <pre>
+def add(a, b):
+    """
+    Returns the sum of two numbers.
+    """
+
+    return a + b
+
+print(add.__doc__)
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Returns the sum of two numbers.
+  </pre>
+
+      <p>
+        Docstrings improve code readability and documentation.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>13. Scope Resolution (LEGB Rule)</h2>
+
+      <p>
+        Python follows the LEGB rule to search for variables.
+      </p>
+
+      <ul>
+        <li><b>L</b> → Local Scope</li>
+        <li><b>E</b> → Enclosing Scope</li>
+        <li><b>G</b> → Global Scope</li>
+        <li><b>B</b> → Built-in Scope</li>
+      </ul>
+
+      <pre>
+x = "Global"
+
+def outer():
+
+    x = "Enclosing"
+
+    def inner():
+
+        x = "Local"
+
+        print(x)
+
+    inner()
+
+outer()
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+Local
+  </pre>
+
+      <p>
+        Python searches variables in the order:
+        Local → Enclosing → Global → Built-in.
+      </p>
+    </section>
+
+    <!-- Modular Programming -->
+
+    <section class="card">
+      <h2>14. Modular Programming</h2>
+
+      <p>
+        Modular Programming is the practice of dividing a large program
+        into smaller reusable modules.
+      </p>
+
+      <h3>Advantages</h3>
+
+      <ul>
+        <li>Code Reusability</li>
+        <li>Easier Maintenance</li>
+        <li>Better Organization</li>
+        <li>Team Collaboration</li>
+      </ul>
+
+      <h3>Project Structure</h3>
+
+      <pre>
 project/
 
+│
 
-    main.py
+├── main.py
 
-    calculator.py
+├── calculator.py
 
-    users.py
+└── users.py
+  </pre>
+    </section>
 
+    <section class="card">
+      <h2>15. Creating Modules & Importing Functions</h2>
 
+      <h3>Step 1: Create Module</h3>
 
-</pre
-        >
-      </section>
+      <p><b>calculator.py</b></p>
 
-      <!-- Practical -->
+      <pre>
+def add(a, b):
 
-      <section class="card">
-        <h2>Practical Activities</h2>
+    return a + b
+  </pre>
 
-        <h3>1. Area Calculator</h3>
+      <h3>Step 2: Import Module</h3>
 
-        <pre>
+      <p><b>main.py</b></p>
+
+      <pre>
+import calculator
+
+print(calculator.add(10, 20))
+  </pre>
+
+      <h3>Output</h3>
+
+      <pre>
+30
+  </pre>
+
+      <h3>Import Specific Function</h3>
+
+      <pre>
+from calculator import add
+
+print(add(10, 20))
+  </pre>
+    </section>
+
+    <section class="card">
+      <h2>16. Import Statements</h2>
+
+      <h3>Import Entire Module</h3>
+
+      <pre>
+import math
+
+print(math.sqrt(25))
+  </pre>
+
+      <h3>Import Specific Function</h3>
+
+      <pre>
+from math import sqrt
+
+print(sqrt(25))
+  </pre>
+
+      <h3>Import with Alias</h3>
+
+      <pre>
+import numpy as np
+  </pre>
+
+      <h3>Import Everything</h3>
+
+      <pre>
+from math import *
+  </pre>
+
+      <div class="tip">
+        <strong>Best Practice:</strong>
+        Avoid using import * in real projects because it can create naming conflicts.
+      </div>
+    </section>
+
+    <!-- Practical -->
+
+    <section class="card">
+      <h2>Practical Activities</h2>
+
+      <h3>1. Area Calculator</h3>
+
+      <pre>
 
 
 def area(length,width):
@@ -331,12 +1561,11 @@ area(l,w)
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>2. Factorial Calculator</h3>
+      <h3>2. Factorial Calculator</h3>
 
-        <pre>
+      <pre>
 
 
 def factorial(n):
@@ -350,10 +1579,6 @@ def factorial(n):
 
 
     return result
-
-
-
-
 num = int(
 input("Enter number: ")
 )
@@ -366,21 +1591,19 @@ factorial(num)
 
 
 
-</pre
-        >
+</pre>
 
-        Output:
+      Output:
 
-        <pre>
+      <pre>
 
 120
 
-</pre
-        >
+</pre>
 
-        <h3>3. Menu Driven Program</h3>
+      <h3>3. Menu Driven Program</h3>
 
-        <pre>
+      <pre>
 
 
 def add(a,b):
@@ -428,31 +1651,31 @@ elif choice == 2:
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Practice -->
+    <!-- Practice -->
 
-      <section class="card">
-        <h2>Day 03 Practice Tasks</h2>
+    <section class="card">
+      <h2>Day 03 Practice Tasks</h2>
 
-        <ol>
-          <li>Create calculator using functions</li>
+      <ol>
+        <li>Create calculator using functions</li>
 
-          <li>Create function to check even/odd</li>
+        <li>Create function to check even/odd</li>
 
-          <li>Create function to find maximum number</li>
+        <li>Create function to find maximum number</li>
 
-          <li>Create temperature converter function</li>
+        <li>Create temperature converter function</li>
 
-          <li>Create simple banking menu program</li>
+        <li>Create banking menu program</li>
 
-          <li>Create student result calculator</li>
-        </ol>
-      </section>
+        <li>Create student result calculator</li>
+      </ol>
+    </section>
 
-      <footer>Python Learning Notes 🚀</footer>
-    </div>
-  </body>
+    <footer>Python Learning Notes </footer>
+  </div>
+</body>
+
 </html>
