@@ -1,382 +1,1977 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Day 05 - Object Oriented Programming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/style.css" />
-     <script>
+  <title>Day 05 - Object Oriented Programming</title>
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script>
     if (sessionStorage.getItem("allowedDay") !== "5") {
       window.location.href = "../index.html";
     }
   </script>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <!-- Navbar -->
+<body>
+  <div class="container">
+    <!-- Header -->
 
-      <nav class="navbar">
-        <a href="../index.html"> Home </a>
+    <header class="daysbg">
+      <h1>🏗️ Day 05 - Object Oriented Programming</h1>
 
-        <a href="day-01.html"> Day 01 </a>
+      <p>Classes, Objects, Inheritance and OOP Concepts</p>
+    </header>
 
-        <a href="day-02.html"> Day 02 </a>
+    <!-- Topics -->
 
-        <a href="day-03.html"> Day 03 </a>
+    <section class="card">
+      <h2>Topics Covered</h2>
 
-        <a href="day-04.html"> Day 04 </a>
+      <ul class="ul">
+        <li>Classes and Objects</li>
 
-        <a href="day-05.html"> Day 05 </a>
-      </nav>
+        <li>Constructors</li>
 
-      <!-- Header -->
+        <li>self Keyword</li>
 
-      <header>
-        <h1>🏗️ Day 05 - Object Oriented Programming</h1>
+        <li>Encapsulation</li>
 
-        <p>Classes, Objects, Inheritance and OOP Concepts</p>
-      </header>
+        <li>Inheritance</li>
 
-      <!-- Topics -->
+        <li>Polymorphism</li>
 
-      <section class="card">
-        <h2>Topics Covered</h2>
+        <li>Abstraction</li>
+      </ul>
+    </section>
 
-        <ul>
-          <li>Classes and Objects</li>
 
-          <li>Constructors</li>
+    <section class="card">
 
-          <li>self Keyword</li>
 
-          <li>Encapsulation</li>
+      <h2>Before Learning OOP - Why Do We Need Classes?</h2>
 
-          <li>Inheritance</li>
+      <p>
+        Before Object-Oriented Programming (OOP) was introduced,
+        developers mainly used functions and variables to build applications.
+      </p>
 
-          <li>Polymorphism</li>
+      <p>
+        This approach works well for small programs, but as applications grow,
+        managing data and functionality becomes difficult.
+      </p>
 
-          <li>Abstraction</li>
-        </ul>
-      </section>
+      <h3>Problem with Traditional Programming</h3>
 
-      <!-- OOP Intro -->
+      <p>
+        Imagine creating an Employee Management System using only variables.
+      </p>
 
-      <section class="card">
-        <h2>1. What is OOP?</h2>
+      <pre>
 
-        <p>
-          Object Oriented Programming is a programming approach based on objects
-          and classes.
-        </p>
 
-        <h3>Main Concepts</h3>
+employee_name = "Akshay"
 
-        <ul>
-          <li>Class</li>
+employee_salary = 50000
 
-          <li>Object</li>
+employee_department = "IT"
 
-          <li>Encapsulation</li>
+print(employee_name)
 
-          <li>Inheritance</li>
+print(employee_salary)
 
-          <li>Polymorphism</li>
+print(employee_department)
 
-          <li>Abstraction</li>
-        </ul>
-      </section>
+</pre>
 
-      <!-- Class Object -->
 
-      <section class="card">
-        <h2>2. Classes and Objects</h2>
+      <p>
+        This works for one employee, but what if the company has
+        hundreds or thousands of employees?
+      </p>
 
-        <p>
-          A class is a blueprint for creating objects. An object is an instance
-          of a class.
-        </p>
+      <pre>
 
-        <h3>Creating Class</h3>
 
-        <pre>
+emp1_name = "Akshay"
+emp1_salary = 50000
 
-class Student:
+emp2_name = "Rahul"
+emp2_salary = 60000
 
+emp3_name = "Aman"
+emp3_salary = 70000
 
-    name = "Alex"
+</pre>
 
-    age = 20
 
+      <p>
+        As the application grows, managing separate variables becomes
+        confusing and difficult.
+      </p>
 
+      <h3>The Solution - Classes</h3>
 
-student1 = Student()
+      <p>
+        Classes were created to organize related data and functions
+        into a single unit.
+      </p>
 
+      <p>
+        Instead of storing employee information in many separate variables,
+        we can store everything inside an Employee class.
+      </p>
 
+      <pre>
 
-print(student1.name)
 
+class Employee:
 
 
-</pre
-        >
+pass
 
-        Output:
 
-        <pre>
+</pre>
 
-Alex
 
-</pre
-        >
-      </section>
+      <p>
+        A class acts as a blueprint that can be used to create multiple
+        employee objects with their own data.
+      </p>
 
-      <!-- Constructor -->
+      <h3>What is a Class?</h3>
 
-      <section class="card">
-        <h2>3. Constructors</h2>
+      <p>
+        A Class is a blueprint or template used to create objects.
+      </p>
 
-        <p>
-          Constructor is a special method that runs automatically when object is
-          created.
-        </p>
+      <p>
+        Think of a class as the design of a house and objects as the
+        actual houses built using that design.
+      </p>
 
-        <pre>
+      <h3>What is an Object?</h3>
 
+      <p>
+        An Object is an instance of a class.
+      </p>
 
-class Student:
-
-
-    def __init__(self,name,age):
-
-        self.name = name
-
-        self.age = age
-
-
-
-
-student = Student(
-"Alex",
-20
-)
-
-
-
-print(student.name)
-
-
-
-</pre
-        >
-
-        Output:
-
-        <pre>
-
-Alex
-
-</pre
-        >
-      </section>
-
-      <!-- Self -->
-
-      <section class="card">
-        <h2>4. self Keyword</h2>
-
-        <p>self represents the current object of the class.</p>
-
-        <pre>
+      <pre>
 
 
 class Car:
 
 
+pass
+
+
+bmw = Car()
+
+audi = Car()
+
+tesla = Car()
+
+</pre>
+
+
+      <p>
+        Here, Car is a class while BMW, Audi and Tesla are objects.
+      </p>
+
+      <h3>Functions vs Classes</h3>
+
+      <table border="1">
+
+        <tr>
+          <th>Feature</th>
+          <th>Function</th>
+          <th>Class</th>
+        </tr>
+
+        <tr>
+          <td>Stores Data</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+
+        <tr>
+          <td>Stores Behavior</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+
+        <tr>
+          <td>Creates Multiple Objects</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+
+        <tr>
+          <td>Best for Small Tasks</td>
+          <td>Yes</td>
+          <td>No</td>
+        </tr>
+
+        <tr>
+          <td>Best for Large Applications</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+
+      </table>
+
+      <h3>When Should You Use Functions?</h3>
+
+      <p>
+        Use functions when you need to perform a specific task
+        and no data storage is required.
+      </p>
+
+      <pre>
+
+
+def calculate_gst(amount):
+
+
+return amount * 0.18
+
+
+</pre>
+
+
+      <h4>Examples</h4>
+
+      <ul class="ul">
+        <li>Calculate GST</li>
+        <li>Generate PDF</li>
+        <li>Send Email</li>
+        <li>Format Date</li>
+        <li>Validate Input</li>
+      </ul>
+
+      <h3>When Should You Use Classes?</h3>
+
+      <p>
+        Use classes when data and behavior belong together.
+      </p>
+
+      <pre>
+
+
+class Employee:
+
+
+pass
+
+
+class Student:
+
+
+pass
+
+
+class Product:
+
+
+pass
+
+
+</pre>
+
+
+      <h4>Examples</h4>
+
+      <ul class="ul">
+        <li>Employee Management System</li>
+        <li>Student Management System</li>
+        <li>Inventory Management System</li>
+        <li>CRM Application</li>
+        <li>Banking Application</li>
+      </ul>
+
+      <h3>Real-Life Example</h3>
+
+      <p>
+        Consider a Car.
+      </p>
+
+      <h4>Properties (Data)</h4>
+
+      <ul class="ul">
+        <li>Color</li>
+        <li>Brand</li>
+        <li>Fuel Type</li>
+        <li>Speed</li>
+      </ul>
+
+      <h4>Behaviors (Actions)</h4>
+
+      <ul class="ul">
+        <li>Start</li>
+        <li>Stop</li>
+        <li>Accelerate</li>
+        <li>Brake</li>
+      </ul>
+
+      <p>
+        Since a car has both properties and actions, it is best represented
+        using a class.
+      </p>
+
+      <h3>Golden Rule</h3>
+
+      <p>
+        Ask yourself two questions:
+      </p>
+
+      <ol class="ul">
+        <li>What does this thing HAVE?</li>
+        <li>What can this thing DO?</li>
+      </ol>
+
+      <p>
+        If it has both data and actions, it should usually be represented
+        as a class.
+      </p>
+      <p>
+        Classes help us combine data and methods into a single unit,
+        making code organized, reusable, scalable and easier to maintain.
+        Functions are best for small independent tasks, while classes are
+        best for modeling real-world entities and building large applications.
+      </p>
+
+
+    </section>
+
+    <!-- OOP Intro -->
+
+    <section class="card">
+      <h2>1. What is OOP?</h2>
+
+      <p>
+        OOP (Object-Oriented Programming) is a programming paradigm that
+        organizes code using Classes and Objects.
+      </p>
+
+      <p>
+        Instead of writing everything using variables and functions,
+        OOP helps us model real-world entities such as Employees,
+        Students, Products, Cars, Bank Accounts, and more.
+      </p>
+
+      <h3>Why OOP?</h3>
+
+      <p>
+        As applications grow larger, managing code becomes difficult.
+        OOP helps organize code into reusable and maintainable components.
+      </p>
+
+      <h3>Benefits of OOP</h3>
+
+      <ul class="ul">
+        <li>Code Reusability</li>
+        <li>Better Organization</li>
+        <li>Easy Maintenance</li>
+        <li>Improved Security</li>
+        <li>Scalability for Large Projects</li>
+        <li>Real World Modeling</li>
+      </ul>
+
+      <h3>Real World Examples</h3>
+
+      <table>
+        <tr>
+          <th>Real World Object</th>
+          <th>Properties</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr>
+          <td>Car</td>
+          <td>Color, Brand, Speed</td>
+          <td>Start, Stop, Accelerate</td>
+        </tr>
+
+        <tr>
+          <td>Student</td>
+          <td>Name, Age, Marks</td>
+          <td>Study, Attend Exam</td>
+        </tr>
+
+        <tr>
+          <td>Employee</td>
+          <td>Name, Salary, Department</td>
+          <td>Work, Apply Leave</td>
+        </tr>
+      </table>
+
+      <h3>Main Concepts of OOP</h3>
+
+      <ul class="ul">
+        <li><strong>Class</strong> - Blueprint for creating objects</li>
+
+        <li><strong>Object</strong> - Instance of a class</li>
+
+        <li><strong>Encapsulation</strong> - Wrapping data and methods together</li>
+
+        <li><strong>Inheritance</strong> - Acquiring properties from another class</li>
+
+        <li><strong>Polymorphism</strong> - Same method with different behavior</li>
+
+        <li><strong>Abstraction</strong> - Hiding implementation details</li>
+      </ul>
+
+      <h3>Applications of OOP</h3>
+
+      <ul class="ul">
+        <li>CRM Systems</li>
+        <li>HRMS Applications</li>
+        <li>Banking Software</li>
+        <li>E-Commerce Platforms</li>
+        <li>Inventory Management Systems</li>
+        <li>Game Development</li>
+        <li>Desktop Applications</li>
+        <li>Web Development</li>
+      </ul>
+
+      <p>
+        OOP is a programming paradigm that uses classes and objects to
+        organize code, improve reusability, maintainability, and model
+        real-world entities effectively.
+      </p>
+    </section>
+
+    <!-- Class Object -->
+
+    <section class="card">
+
+      <h2>2. Classes and Objects</h2>
+
+      <p>
+        A Class is a blueprint or template used to create objects.
+        It defines the properties and behaviors that objects will have.
+      </p>
+
+      <p>
+        An Object is an instance of a class. Multiple objects can be
+        created from a single class.
+      </p>
+
+      <h3>Real Life Example</h3>
+
+      <p>
+        Think of a Car blueprint in a factory.
+        The blueprint represents the Class,
+        while the actual cars manufactured from it are Objects.
+      </p>
+
+      <ul class="ul">
+        <li>Class → Car</li>
+        <li>Object → BMW</li>
+        <li>Object → Audi</li>
+        <li>Object → Tesla</li>
+      </ul>
+
+      <h3>Creating a Class</h3>
+
+      <pre>
+
+class Student:
+
+    name = "Akshay"
+
+    age = 20
+
+</pre>
+
+      <p>
+        Here, Student is a Class that contains two properties:
+        name and age.
+      </p>
+
+      <h3>Creating an Object</h3>
+
+      <pre>
+
+student1 = Student()
+
+print(student1.name)
+
+print(student1.age)
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Akshay
+
+20
+
+</pre>
+
+      <h3>Creating Multiple Objects</h3>
+
+      <pre>
+
+student1 = Student()
+
+student2 = Student()
+
+print(student1.name)
+
+print(student2.name)
+
+</pre>
+
+      <p>
+        Multiple objects can be created from the same class.
+      </p>
+
+      <h3>Checking Object Type</h3>
+
+      <pre>
+
+student1 = Student()
+
+print(type(student1))
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+&lt;class '__main__.Student'&gt;
+
+</pre>
+
+      <h3>Class vs Object</h3>
+
+      <table border="1">
+
+        <tr>
+          <th>Class</th>
+          <th>Object</th>
+        </tr>
+
+        <tr>
+          <td>Blueprint</td>
+          <td>Actual Instance</td>
+        </tr>
+
+        <tr>
+          <td>Defines Structure</td>
+          <td>Stores Data</td>
+        </tr>
+
+        <tr>
+          <td>Created Once</td>
+          <td>Can Be Created Multiple Times</td>
+        </tr>
+
+        <tr>
+          <td>Example: Car</td>
+          <td>BMW, Audi, Tesla</td>
+        </tr>
+
+      </table>
+
+      <h3>Why Do We Create Objects?</h3>
+
+      <p>
+        Objects allow us to create multiple independent instances
+        from a single class.
+      </p>
+
+      <p>
+        For example, in a Student Management System, each student
+        can be represented as an object with their own data.
+      </p>
+
+      <pre>
+
+student1 = Student()
+
+student2 = Student()
+
+student3 = Student()
+
+</pre>
+
+      <h3>Real Project Examples</h3>
+
+      <ul class="ul">
+        <li>Student → Student Management System</li>
+        <li>Employee → HRMS</li>
+        <li>Client → CRM</li>
+        <li>Product → Inventory System</li>
+        <li>Order → E-Commerce System</li>
+      </ul>
+
+
+
+    </section>
+
+    <!-- Constructor -->
+
+    <!-- Constructor -->
+
+    <section class="card">
+
+      <h2>3. Constructors (__init__)</h2>
+
+      <p>
+        A Constructor is a special method that automatically executes
+        whenever an object is created.
+      </p>
+
+      <p>
+        Constructors are used to initialize object data and give each
+        object its own values.
+      </p>
+
+      <h3>Why Do We Need Constructors?</h3>
+
+      <p>
+        Without constructors, all objects would use the same class
+        variables.
+      </p>
+
+      <pre>
+
+class Student:
+
+    name = "Akshay"
+
+student1 = Student()
+
+student2 = Student()
+
+print(student1.name)
+
+print(student2.name)
+
+</pre>
+
+      <p>
+        Both objects contain the same value.
+      </p>
+
+      <p>
+        What if we want every student to have different data?
+      </p>
+
+      <h3>Using Constructor</h3>
+
+      <pre>
+
+class Student:
+
+    def __init__(self, name, age):
+
+        self.name = name
+
+        self.age = age
+
+</pre>
+
+      <p>
+        The constructor automatically runs whenever an object is created.
+      </p>
+
+      <h3>Creating Objects</h3>
+
+      <pre>
+
+student1 = Student(
+    "Akshay",
+    20
+)
+
+student2 = Student(
+    "Jay",
+    22
+)
+
+print(student1.name)
+
+print(student2.name)
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Akshay
+
+Jay
+
+</pre>
+
+      <h3>How Constructor Works</h3>
+
+      <ol>
+        <li>Object is created.</li>
+        <li>Python automatically calls __init__().</li>
+        <li>Values are assigned to the object.</li>
+        <li>The object becomes ready to use.</li>
+      </ol>
+
+      <h3>Real World Example</h3>
+
+      <pre>
+
+class Employee:
+
+    def __init__(self, name, salary):
+
+        self.name = name
+
+        self.salary = salary
+
+emp1 = Employee(
+    "Akshay",
+    50000
+)
+
+emp2 = Employee(
+    "Rahul",
+    60000
+)
+
+</pre>
+
+      <p>
+        Each employee object stores its own data.
+      </p>
+
+
+    </section>
+
+    <!-- Self -->
+
+    <!-- Self -->
+
+    <section class="card">
+
+      <h2>4. self Keyword</h2>
+
+      <p>
+        self refers to the current object of the class.
+      </p>
+
+      <p>
+        It allows an object to access its own variables and methods.
+      </p>
+
+      <h3>Why Do We Need self?</h3>
+
+      <p>
+        When multiple objects are created, Python needs a way to know
+        which object's data should be used.
+      </p>
+
+      <pre>
+
+class Student:
+
+    def __init__(self, name):
+
+        self.name = name
+
+</pre>
+
+      <p>
+        Here self.name belongs to the current object.
+      </p>
+
+      <h3>Example</h3>
+
+      <pre>
+
+class Student:
+
+    def __init__(self, name):
+
+        self.name = name
+
+    def display(self):
+
+        print(self.name)
+
+student1 = Student("Akshay")
+
+student2 = Student("Jay")
+
+student1.display()
+
+student2.display()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Akshay
+
+Jay
+
+</pre>
+
+      <h3>Behind the Scenes</h3>
+
+      <p>
+        Python automatically passes the current object as the first
+        argument to every instance method.
+      </p>
+
+      <pre>
+
+student1.display()
+
+</pre>
+
+      <p>
+        Internally Python treats it like:
+      </p>
+
+      <pre>
+
+Student.display(student1)
+
+</pre>
+
+      <p>
+        Therefore self points to student1.
+      </p>
+
+      <h3>Accessing Variables with self</h3>
+
+      <pre>
+
+class Car:
+
+    def __init__(self, brand):
+
+        self.brand = brand
+
     def show(self):
 
-        print("This is car")
+        print(self.brand)
 
+car = Car("BMW")
 
+car.show()
 
-c = Car()
+</pre>
 
+      <p>Output:</p>
 
-c.show()
+      <pre>
 
+BMW
 
+</pre>
 
-</pre
-        >
-      </section>
+      <h3>Accessing Methods with self</h3>
 
-      <!-- Encapsulation -->
+      <pre>
 
-      <section class="card">
-        <h2>5. Encapsulation</h2>
+class Car:
 
-        <p>
-          Encapsulation means wrapping data and methods together inside a class.
-        </p>
+    def start(self):
 
-        <pre>
+        print("Car Started")
 
+    def drive(self):
+
+        self.start()
+
+        print("Driving")
+
+car = Car()
+
+car.drive()
+
+</pre>
+
+      <p>
+        self can be used to call other methods inside the same class.
+      </p>
+
+    </section>
+
+    <!-- Encapsulation -->
+    <!-- Encapsulation -->
+
+    <section class="card">
+
+      <h2>5. Encapsulation</h2>
+
+      <p>
+        Encapsulation is the process of combining data and methods
+        into a single unit (Class) and controlling direct access
+        to the data.
+      </p>
+
+      <p>
+        It helps protect sensitive information from unauthorized access.
+      </p>
+
+      <h3>Why Do We Need Encapsulation?</h3>
+
+      <p>
+        Imagine a bank account. If anyone could directly change the
+        account balance, the system would become insecure.
+      </p>
+
+      <pre>
+
+balance = 5000
+
+balance = 1000000
+
+print(balance)
+
+</pre>
+
+      <p>
+        Anyone can modify the balance directly.
+        This is not safe.
+      </p>
+
+      <p>
+        Encapsulation allows us to hide important data and provide
+        controlled access through methods.
+      </p>
+
+      <h3>Public Variable</h3>
+
+      <p>
+        Public variables can be accessed from anywhere.
+      </p>
+
+      <pre>
+
+class Student:
+
+    def __init__(self):
+
+        self.name = "Akshay"
+
+student = Student()
+
+print(student.name)
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Akshay
+
+</pre>
+
+      <h3>Protected Variable</h3>
+
+      <p>
+        Protected variables use a single underscore (_).
+        They should not be accessed directly outside the class,
+        although Python still allows it.
+      </p>
+
+      <pre>
+
+class Student:
+
+    def __init__(self):
+
+        self._name = "Akshay"
+
+student = Student()
+
+print(student._name)
+
+</pre>
+
+      <h3>Private Variable</h3>
+
+      <p>
+        Private variables use double underscores (__).
+        They are intended to be accessed only inside the class.
+      </p>
+
+      <pre>
 
 class Account:
 
-
-    def __init__(self,balance):
+    def __init__(self, balance):
 
         self.__balance = balance
 
+</pre>
 
+      <h3>Accessing Private Data Using Methods</h3>
+
+      <pre>
+
+class Account:
+
+    def __init__(self, balance):
+
+        self.__balance = balance
 
     def show_balance(self):
 
         print(self.__balance)
 
-
-
-
 acc = Account(5000)
-
-
 
 acc.show_balance()
 
+</pre>
 
+      <p>Output:</p>
 
-</pre
-        >
-      </section>
+      <pre>
 
-      <!-- Inheritance -->
+5000
 
-      <section class="card">
-        <h2>6. Inheritance</h2>
+</pre>
 
-        <p>Inheritance allows one class to use properties of another class.</p>
+      <h3>Direct Access Error</h3>
 
-        <pre>
+      <pre>
 
+class Account:
+
+    def __init__(self, balance):
+
+        self.__balance = balance
+
+acc = Account(5000)
+
+print(acc.__balance)
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+AttributeError
+
+</pre>
+
+      <h3>Updating Private Data Safely</h3>
+
+      <pre>
+
+class Account:
+
+    def __init__(self, balance):
+
+        self.__balance = balance
+
+    def deposit(self, amount):
+
+        self.__balance += amount
+
+    def show_balance(self):
+
+        print(self.__balance)
+
+acc = Account(5000)
+
+acc.deposit(1000)
+
+acc.show_balance()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+6000
+
+</pre>
+
+      <h3>Real World Example</h3>
+
+      <ul class="ul">
+        <li>Bank Account Balance</li>
+        <li>User Password</li>
+        <li>ATM PIN</li>
+        <li>Employee Salary</li>
+        <li>Medical Records</li>
+      </ul>
+
+      <p>
+        Sensitive information should not be modified directly.
+        Encapsulation helps protect such data.
+      </p>
+
+      <h3>Advantages of Encapsulation</h3>
+
+      <ul class="ul">
+        <li>Improves Security</li>
+        <li>Prevents Unauthorized Access</li>
+        <li>Better Code Organization</li>
+        <li>Easier Maintenance</li>
+        <li>Improves Data Integrity</li>
+      </ul>
+    </section>
+
+    <!-- Inheritance -->
+
+    <section class="card">
+
+      <h2>6. Inheritance</h2>
+
+      <p>
+        Inheritance is an OOP concept that allows one class to inherit
+        properties and methods from another class.
+      </p>
+
+      <p>
+        It promotes code reusability and helps avoid writing the same
+        code multiple times.
+      </p>
+
+      <h3>Why Do We Need Inheritance?</h3>
+
+      <p>
+        Suppose multiple classes need the same functionality.
+        Instead of rewriting the code, we can create a parent class
+        and allow child classes to inherit its features.
+      </p>
+
+      <h3>Parent Class (Base Class)</h3>
+
+      <pre>
 
 class Animal:
-
 
     def sound(self):
 
         print("Animal Sound")
 
+</pre>
 
+      <p>
+        Animal is the Parent Class because it provides common behavior.
+      </p>
 
+      <h3>Child Class (Derived Class)</h3>
+
+      <pre>
 
 class Dog(Animal):
 
     pass
 
+</pre>
 
+      <p>
+        Dog inherits all methods and properties from Animal.
+      </p>
 
+      <h3>Example</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    pass
 
 d = Dog()
 
-
 d.sound()
 
+</pre>
 
+      <p>Output:</p>
 
-</pre
-        >
-
-        Output:
-
-        <pre>
+      <pre>
 
 Animal Sound
 
-</pre
-        >
-      </section>
+</pre>
 
-      <!-- Polymorphism -->
+      <p>
+        Even though Dog does not have a sound() method,
+        it can use the method inherited from Animal.
+      </p>
 
-      <section class="card">
-        <h2>7. Polymorphism</h2>
+      <h3>Real Life Example</h3>
 
-        <p>Polymorphism means same method name with different behavior.</p>
+      <pre>
 
-        <pre>
+class Vehicle:
 
+    def start(self):
+
+        print("Vehicle Started")
+
+class Car(Vehicle):
+
+    pass
+
+car = Car()
+
+car.start()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Vehicle Started
+
+</pre>
+
+      <h3>Benefits of Inheritance</h3>
+
+      <ul class="ul">
+        <li>Code Reusability</li>
+        <li>Less Code Duplication</li>
+        <li>Easier Maintenance</li>
+        <li>Better Code Organization</li>
+        <li>Supports Extensibility</li>
+      </ul>
+
+      <h3>Inheritance Hierarchy</h3>
+
+      <pre>
+
+Animal
+   │
+   ├── Dog
+   │
+   └── Cat
+
+</pre>
+
+      <p>
+        Both Dog and Cat can inherit common functionality from Animal.
+      </p>
+
+      <h3>Types of Inheritance</h3>
+
+      <table border="1">
+
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>Single Inheritance</td>
+          <td>One Child inherits from One Parent</td>
+        </tr>
+
+        <tr>
+          <td>Multilevel Inheritance</td>
+          <td>Inheritance chain across multiple levels</td>
+        </tr>
+
+        <tr>
+          <td>Multiple Inheritance</td>
+          <td>One Child inherits from Multiple Parents</td>
+        </tr>
+
+        <tr>
+          <td>Hierarchical Inheritance</td>
+          <td>Multiple Children inherit from One Parent</td>
+        </tr>
+
+      </table>
+
+      <h3>Single Inheritance Example</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    pass
+
+dog = Dog()
+
+dog.sound()
+
+</pre>
+
+      <h3>Multilevel Inheritance Example</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    pass
+
+class Puppy(Dog):
+
+    pass
+
+puppy = Puppy()
+
+puppy.sound()
+
+</pre>
+
+      <h3>Hierarchical Inheritance Example</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    pass
+
+class Cat(Animal):
+
+    pass
+
+dog = Dog()
+
+cat = Cat()
+
+dog.sound()
+
+cat.sound()
+
+</pre>
+
+      <h3>Real Project Example</h3>
+
+      <pre>
+
+class Employee:
+
+    def login(self):
+
+        print("Login Successful")
+
+class Manager(Employee):
+
+    pass
+
+class Developer(Employee):
+
+    pass
+
+manager = Manager()
+
+developer = Developer()
+
+manager.login()
+
+developer.login()
+
+</pre>
+
+      <p>
+        Manager and Developer inherit the login functionality
+        from Employee.
+      </p>
+
+    </section>
+
+    <!-- super() Method -->
+
+    <section class="card">
+
+      <h2>7. super() Method</h2>
+
+      <p>
+        The super() function is used to access methods and constructors
+        of the parent class from the child class.
+      </p>
+
+      <p>
+        It helps us reuse parent class functionality without rewriting code.
+      </p>
+
+      <h3>Why Do We Need super()?</h3>
+
+      <p>
+        When a child class has its own constructor, the parent class
+        constructor does not run automatically.
+      </p>
+
+      <p>
+        We use super() to call the parent constructor and methods.
+      </p>
+
+      <h3>Without super()</h3>
+
+      <pre>
+
+class Animal:
+
+    def __init__(self):
+
+        print("Animal Constructor")
+
+class Dog(Animal):
+
+    def __init__(self):
+
+        print("Dog Constructor")
+
+dog = Dog()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Dog Constructor
+
+</pre>
+
+      <p>
+        Notice that the Animal constructor is not executed.
+      </p>
+
+      <h3>Using super()</h3>
+
+      <pre>
+
+class Animal:
+
+    def __init__(self):
+
+        print("Animal Constructor")
+
+class Dog(Animal):
+
+    def __init__(self):
+
+        super().__init__()
+
+        print("Dog Constructor")
+
+dog = Dog()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Animal Constructor
+
+Dog Constructor
+
+</pre>
+
+      <p>
+        super().__init__() calls the parent class constructor.
+      </p>
+
+      <h3>Calling Parent Methods</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    def sound(self):
+
+        super().sound()
+
+        print("Dog Bark")
+
+dog = Dog()
+
+dog.sound()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Animal Sound
+
+Dog Bark
+
+</pre>
+
+      <p>
+        Here the child class first executes the parent method and then
+        adds its own behavior.
+      </p>
+
+      <h3>Real World Example</h3>
+
+      <pre>
+
+class Employee:
+
+    def __init__(self, name):
+
+        self.name = name
+
+class Manager(Employee):
+
+    def __init__(self, name, department):
+
+        super().__init__(name)
+
+        self.department = department
+
+manager = Manager(
+    "Akshay",
+    "IT"
+)
+
+print(manager.name)
+
+print(manager.department)
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Akshay
+
+IT
+
+</pre>
+
+      <p>
+        The Manager class inherits the name property from Employee
+        using super().
+      </p>
+
+      <h3>Advantages of super()</h3>
+
+      <ul class="ul">
+        <li>Reuses Parent Class Code</li>
+        <li>Reduces Code Duplication</li>
+        <li>Makes Inheritance Easier</li>
+        <li>Improves Code Maintenance</li>
+        <li>Supports Multiple Inheritance</li>
+      </ul>
+
+    </section>
+
+    <!-- Polymorphism -->
+
+    <!-- Polymorphism -->
+
+    <section class="card">
+
+      <h2>8. Polymorphism</h2>
+
+      <p>
+        Polymorphism means "Many Forms".
+      </p>
+
+      <p>
+        In Object Oriented Programming, polymorphism allows the same
+        method name to perform different actions depending on the object.
+      </p>
+
+      <h3>Why Do We Need Polymorphism?</h3>
+
+      <p>
+        Different objects may perform the same action in different ways.
+        Polymorphism allows us to use a common interface while keeping
+        object-specific behavior.
+      </p>
+
+      <h3>Real Life Example</h3>
+
+      <p>
+        Every animal makes a sound, but the sound is different for each animal.
+      </p>
+
+      <ul class="ul">
+        <li>Dog → Bark</li>
+        <li>Cat → Meow</li>
+        <li>Cow → Moo</li>
+      </ul>
+
+      <p>
+        The action is the same (sound), but the behavior is different.
+      </p>
+
+      <h3>Basic Example</h3>
+
+      <pre>
 
 class Cat:
-
 
     def sound(self):
 
         print("Meow")
 
-
-
-
 class Dog:
-
 
     def sound(self):
 
         print("Bark")
 
-
-
-
 animals = [
-Cat(),
-Dog()
+    Cat(),
+    Dog()
 ]
-
-
 
 for animal in animals:
 
     animal.sound()
 
+</pre>
 
+      <p>Output:</p>
 
-</pre
-        >
-
-        Output:
-
-        <pre>
+      <pre>
 
 Meow
 
 Bark
 
-</pre
-        >
-      </section>
+</pre>
 
-      <!-- Abstraction -->
+      <p>
+        Both classes have the same method name sound(),
+        but each object behaves differently.
+      </p>
 
-      <section class="card">
-        <h2>8. Abstraction</h2>
+      <h3>Method Overriding</h3>
 
-        <p>
-          Abstraction hides implementation details and shows only required
-          information.
-        </p>
+      <p>
+        Method Overriding is a common form of polymorphism where
+        a child class provides its own implementation of a parent method.
+      </p>
 
-        <pre>
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    def sound(self):
+
+        print("Dog Bark")
+
+dog = Dog()
+
+dog.sound()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Dog Bark
+
+</pre>
+
+      <p>
+        The Dog class overrides the sound() method inherited from Animal.
+      </p>
+
+      <h3>Using super() with Polymorphism</h3>
+
+      <pre>
+
+class Animal:
+
+    def sound(self):
+
+        print("Animal Sound")
+
+class Dog(Animal):
+
+    def sound(self):
+
+        super().sound()
+
+        print("Dog Bark")
+
+dog = Dog()
+
+dog.sound()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Animal Sound
+
+Dog Bark
+
+</pre>
+
+      <h3>Real World Example</h3>
+
+      <pre>
+
+class Employee:
+
+    def work(self):
+
+        print("Employee Working")
+
+class Developer(Employee):
+
+    def work(self):
+
+        print("Writing Code")
+
+class Tester(Employee):
+
+    def work(self):
+
+        print("Testing Application")
+
+employees = [
+    Developer(),
+    Tester()
+]
+
+for emp in employees:
+
+    emp.work()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Writing Code
+
+Testing Application
+
+</pre>
+
+      <p>
+        Every employee works, but each role performs work differently.
+      </p>
+
+      <h3>Advantages of Polymorphism</h3>
+
+      <ul class="ul">
+        <li>Improves Code Flexibility</li>
+        <li>Reduces Complex Conditional Statements</li>
+        <li>Makes Code Reusable</li>
+        <li>Supports Extensibility</li>
+        <li>Improves Maintainability</li>
+      </ul>
+
+      <h3>Real Project Examples</h3>
+
+      <ul class="ul">
+        <li>Payment Gateway Systems</li>
+        <li>Employee Management Systems</li>
+        <li>E-Commerce Applications</li>
+        <li>Game Development</li>
+        <li>CRM Applications</li>
+      </ul>
+
+      <h4>Payment Example</h4>
+
+      <pre>
+
+class CreditCard:
+
+    def pay(self):
+
+        print("Payment via Credit Card")
+
+class UPI:
+
+    def pay(self):
+
+        print("Payment via UPI")
+
+class NetBanking:
+
+    def pay(self):
+
+        print("Payment via Net Banking")
+
+payments = [
+    CreditCard(),
+    UPI(),
+    NetBanking()
+]
+
+for payment in payments:
+
+    payment.pay()
+
+</pre>
+
+      <p>
+        All payment methods use the same method name pay(),
+        but each performs payment differently.
+      </p>
 
 
-from abc import ABC, abstractmethod
+    </section>
 
+    <!-- Abstraction -->
 
+    <!-- Abstraction -->
+
+    <section class="card">
+
+      <h2>9. Abstraction</h2>
+
+      <p>
+        Abstraction is the process of hiding implementation details
+        and showing only the essential features to the user.
+      </p>
+
+      <p>
+        The user only needs to know what an object does,
+        not how it does it internally.
+      </p>
+
+      <h3>Why Do We Need Abstraction?</h3>
+
+      <p>
+        Large applications contain complex logic.
+        Exposing all implementation details would make systems
+        difficult to use and maintain.
+      </p>
+
+      <p>
+        Abstraction hides unnecessary complexity and provides
+        a simple interface to the user.
+      </p>
+
+      <h3>Real Life Example - ATM Machine</h3>
+
+      <p>
+        When you withdraw money from an ATM,
+        you simply enter your card and PIN.
+      </p>
+
+      <p>
+        You do not see:
+      </p>
+
+      <ul class="ul">
+        <li>Database Queries</li>
+        <li>Bank Server Communication</li>
+        <li>Security Validation</li>
+        <li>Transaction Processing</li>
+      </ul>
+
+      <p>
+        All internal operations are hidden.
+        This is Abstraction.
+      </p>
+
+      <h3>Another Example - Car</h3>
+
+      <p>
+        To drive a car, you use:
+      </p>
+
+      <ul class="ul">
+        <li>Steering Wheel</li>
+        <li>Brake</li>
+        <li>Accelerator</li>
+      </ul>
+
+      <p>
+        You do not need to understand the engine,
+        fuel injection system or gearbox internals.
+      </p>
+
+      <p>
+        The complex implementation is hidden.
+      </p>
+
+      <h3>Abstract Class</h3>
+
+      <p>
+        Python provides the ABC (Abstract Base Class)
+        module to create abstract classes.
+      </p>
+
+      <pre>
+
+from abc import ABC
 
 class Shape(ABC):
 
+    pass
+
+</pre>
+
+      <p>
+        Shape is an Abstract Class.
+      </p>
+
+      <h3>Abstract Method</h3>
+
+      <p>
+        An abstract method is a method that has no implementation
+        in the parent class.
+      </p>
+
+      <pre>
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
 
     @abstractmethod
 
@@ -384,30 +1979,168 @@ class Shape(ABC):
 
         pass
 
+</pre>
 
+      <p>
+        Any child class must provide its own implementation
+        of the area() method.
+      </p>
 
+      <h3>Complete Example</h3>
+
+      <pre>
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    @abstractmethod
+
+    def area(self):
+
+        pass
 
 class Circle(Shape):
-
 
     def area(self):
 
         print("Circle Area")
 
+circle = Circle()
+
+circle.area()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Circle Area
+
+</pre>
+
+      <h3>What Happens if Child Class Doesn't Implement?</h3>
+
+      <pre>
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    @abstractmethod
+
+    def area(self):
+
+        pass
+
+class Circle(Shape):
+
+    pass
+
+circle = Circle()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+TypeError
+
+</pre>
+
+      <p>
+        Python will not allow creation of the object because
+        the abstract method was not implemented.
+      </p>
+
+      <h3>Real World Example</h3>
+
+      <pre>
+
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+
+    def pay(self):
+
+        pass
+
+class CreditCard(Payment):
+
+    def pay(self):
+
+        print("Paid using Credit Card")
+
+class UPI(Payment):
+
+    def pay(self):
+
+        print("Paid using UPI")
+
+</pre>
+
+      <p>
+        Every payment method must implement pay(),
+        but the implementation can be different.
+      </p>
+
+      <h3>Advantages of Abstraction</h3>
+
+      <ul class="ul">
+        <li>Hides Complexity</li>
+        <li>Improves Security</li>
+        <li>Makes Code Easier to Use</li>
+        <li>Improves Maintainability</li>
+        <li>Provides Standard Interfaces</li>
+      </ul>
+
+      <h3>Abstraction vs Encapsulation</h3>
+
+      <table border="1">
+
+        <tr>
+          <th>Abstraction</th>
+          <th>Encapsulation</th>
+        </tr>
+
+        <tr>
+          <td>Hides Implementation</td>
+          <td>Hides Data</td>
+        </tr>
+
+        <tr>
+          <td>Focuses on What</td>
+          <td>Focuses on How</td>
+        </tr>
+
+        <tr>
+          <td>Uses Abstract Classes</td>
+          <td>Uses Access Modifiers</td>
+        </tr>
+
+        <tr>
+          <td>Reduces Complexity</td>
+          <td>Protects Data</td>
+        </tr>
+
+      </table>
 
 
-</pre
-        >
-      </section>
 
-      <!-- Practical -->
+    </section>
 
-      <section class="card">
-        <h2>Practical Activities</h2>
+    <!-- Practical -->
 
-        <h3>1. Employee Management System</h3>
+    <section class="card">
+      <h2>Practical Activities</h2>
 
-        <pre>
+      <h3>1. Employee Management System</h3>
+
+      <pre>
 
 
 class Employee:
@@ -432,7 +2165,7 @@ class Employee:
 
 
 emp = Employee(
-"Alex",
+"Akshay",
 50000
 )
 
@@ -442,12 +2175,11 @@ emp.display()
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>2. Banking Application</h3>
+      <h3>2. Banking Application</h3>
 
-        <pre>
+      <pre>
 
 
 class BankAccount:
@@ -487,40 +2219,39 @@ print(account.balance)
 
 
 
-</pre
-        >
+</pre>
 
-        Output:
+      Output:
 
-        <pre>
+      <pre>
 
 1300
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Practice -->
+    <!-- Practice -->
 
-      <section class="card">
-        <h2>Day 05 Practice Tasks</h2>
+    <section class="card">
+      <h2>Day 05 Practice Tasks</h2>
 
-        <ol>
-          <li>Create Student class</li>
+      <ol class="ul">
+        <li>Create Student class</li>
 
-          <li>Create Employee management system</li>
+        <li>Create Employee management system</li>
 
-          <li>Create Bank Account class</li>
+        <li>Create Bank Account class</li>
 
-          <li>Implement inheritance example</li>
+        <li>Implement inheritance example</li>
 
-          <li>Create polymorphism example</li>
+        <li>Create polymorphism example</li>
 
-          <li>Create abstract class example</li>
-        </ol>
-      </section>
+        <li>Create abstract class example</li>
+      </ol>
+    </section>
 
-      <footer>Python Learning Notes 🚀</footer>
-    </div>
-  </body>
+    <footer>Python Learning Notes 🚀</footer>
+  </div>
+</body>
+
 </html>

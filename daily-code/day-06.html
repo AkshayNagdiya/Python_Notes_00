@@ -1,82 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>Day 06 - File Handling & Exception Handling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/style.css" />
-     <script>
+  <title>Day 06 - File Handling & Exception Handling</title>
+
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script>
     if (sessionStorage.getItem("allowedDay") !== "6") {
       window.location.href = "../index.html";
     }
   </script>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <!-- Navbar -->
+<body>
+  <div class="container">
+    <!-- Header -->
 
-      <nav class="navbar">
-        <a href="../index.html"> Home </a>
+    <header>
+      <h1> Day 06 - File Handling & Exception Handling</h1>
 
-        <a href="day-01.html"> Day 01 </a>
+      <p>Working with Files, Data Storage and Error Management</p>
+    </header>
 
-        <a href="day-02.html"> Day 02 </a>
+    <!-- Topics -->
 
-        <a href="day-03.html"> Day 03 </a>
+    <section class="card">
+      <h2>Topics Covered</h2>
 
-        <a href="day-04.html"> Day 04 </a>
+      <ul>
+        <li>File Operations</li>
 
-        <a href="day-05.html"> Day 05 </a>
+        <li>Reading Files</li>
 
-        <a href="day-06.html"> Day 06 </a>
-      </nav>
+        <li>Writing Files</li>
 
-      <!-- Header -->
+        <li>Append Mode</li>
 
-      <header>
-        <h1>📁 Day 06 - File Handling & Exception Handling</h1>
+        <li>CSV File Handling</li>
 
-        <p>Working with Files, Data Storage and Error Management</p>
-      </header>
+        <li>JSON File Handling</li>
 
-      <!-- Topics -->
+        <li>Exception Handling</li>
 
-      <section class="card">
-        <h2>Topics Covered</h2>
+        <li>Custom Exceptions</li>
+      </ul>
+    </section>
 
-        <ul>
-          <li>File Operations</li>
+    <!-- File Handling -->
 
-          <li>Reading Files</li>
+    <section class="card">
+      <h2>1. File Handling</h2>
 
-          <li>Writing Files</li>
+      <p>File handling is used to create, read, update and delete files.</p>
 
-          <li>Append Mode</li>
+      <h3>Opening File</h3>
 
-          <li>CSV File Handling</li>
-
-          <li>JSON File Handling</li>
-
-          <li>Exception Handling</li>
-
-          <li>Custom Exceptions</li>
-        </ul>
-      </section>
-
-      <!-- File Handling -->
-
-      <section class="card">
-        <h2>1. File Handling</h2>
-
-        <p>File handling is used to create, read, update and delete files.</p>
-
-        <h3>Opening File</h3>
-
-        <pre>
+      <pre>
 
 file = open(
 "data.txt",
@@ -90,56 +73,55 @@ print(file.read())
 file.close()
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Modes -->
+    <!-- Modes -->
 
-      <section class="card">
-        <h2>2. File Modes</h2>
+    <section class="card">
+      <h2>2. File Modes</h2>
 
-        <table>
-          <tr>
-            <th>Mode</th>
+      <table>
+        <tr>
+          <th>Mode</th>
 
-            <th>Purpose</th>
-          </tr>
+          <th>Purpose</th>
+        </tr>
 
-          <tr>
-            <td>r</td>
+        <tr>
+          <td>r</td>
 
-            <td>Read file</td>
-          </tr>
+          <td>Read file</td>
+        </tr>
 
-          <tr>
-            <td>w</td>
+        <tr>
+          <td>w</td>
 
-            <td>Write file</td>
-          </tr>
+          <td>Write file</td>
+        </tr>
 
-          <tr>
-            <td>a</td>
+        <tr>
+          <td>a</td>
 
-            <td>Append data</td>
-          </tr>
+          <td>Append data</td>
+        </tr>
 
-          <tr>
-            <td>x</td>
+        <tr>
+          <td>x</td>
 
-            <td>Create file</td>
-          </tr>
-        </table>
-      </section>
+          <td>Create file</td>
+        </tr>
+      </table>
+    </section>
 
-      <!-- Read Write -->
+    <!-- Read Write -->
 
-      <section class="card">
-        <h2>3. Reading and Writing Files</h2>
+    <section class="card">
+      <h2>3. Reading and Writing Files</h2>
 
-        <h3>Write File</h3>
+      <h3>Write File</h3>
 
-        <pre>
+      <pre>
 
 
 file = open(
@@ -159,12 +141,11 @@ file.close()
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>Read File</h3>
+      <h3>Read File</h3>
 
-        <pre>
+      <pre>
 
 
 file = open(
@@ -186,27 +167,25 @@ file.close()
 
 
 
-</pre
-        >
+</pre>
 
-        Output:
+      Output:
 
-        <pre>
+      <pre>
 
 Python File Handling
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- With -->
+    <!-- With -->
 
-      <section class="card">
-        <h2>4. Using with Statement</h2>
+    <section class="card">
+      <h2>4. Using with Statement</h2>
 
-        <p>with automatically closes the file after operation.</p>
+      <p>with automatically closes the file after operation.</p>
 
-        <pre>
+      <pre>
 
 
 with open(
@@ -221,18 +200,17 @@ with open(
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- CSV -->
+    <!-- CSV -->
 
-      <section class="card">
-        <h2>5. CSV File Handling</h2>
+    <section class="card">
+      <h2>5. CSV File Handling</h2>
 
-        <p>CSV stores data in table format.</p>
+      <p>CSV stores data in table format.</p>
 
-        <pre>
+      <pre>
 
 
 import csv
@@ -257,12 +235,11 @@ with open(
     )
 
 
-</pre
-        >
+</pre>
 
-        <h3>Reading CSV</h3>
+      <h3>Reading CSV</h3>
 
-        <pre>
+      <pre>
 
 
 import csv
@@ -284,18 +261,17 @@ with open(
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- JSON -->
+    <!-- JSON -->
 
-      <section class="card">
-        <h2>6. JSON File Handling</h2>
+    <section class="card">
+      <h2>6. JSON File Handling</h2>
 
-        <p>JSON is commonly used for storing and transferring data.</p>
+      <p>JSON is commonly used for storing and transferring data.</p>
 
-        <pre>
+      <pre>
 
 
 import json
@@ -326,12 +302,11 @@ with open(
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>Reading JSON</h3>
+      <h3>Reading JSON</h3>
 
-        <pre>
+      <pre>
 
 
 with open(
@@ -348,18 +323,17 @@ print(data)
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Exception -->
+    <!-- Exception -->
 
-      <section class="card">
-        <h2>7. Exception Handling</h2>
+    <section class="card">
+      <h2>7. Exception Handling</h2>
 
-        <p>Exception handling prevents program crashes.</p>
+      <p>Exception handling prevents program crashes.</p>
 
-        <pre>
+      <pre>
 
 
 try:
@@ -383,16 +357,15 @@ except:
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Try Except Else Finally -->
+    <!-- Try Except Else Finally -->
 
-      <section class="card">
-        <h2>8. try except finally</h2>
+    <section class="card">
+      <h2>8. try except finally</h2>
 
-        <pre>
+      <pre>
 
 
 try:
@@ -420,18 +393,17 @@ finally:
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Custom Exception -->
+    <!-- Custom Exception -->
 
-      <section class="card">
-        <h2>9. Custom Exceptions</h2>
+    <section class="card">
+      <h2>9. Custom Exceptions</h2>
 
-        <p>Creating your own error using Exception class.</p>
+      <p>Creating your own error using Exception class.</p>
 
-        <pre>
+      <pre>
 
 
 class AgeError(Exception):
@@ -456,18 +428,17 @@ if age < 18:
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Practical -->
+    <!-- Practical -->
 
-      <section class="card">
-        <h2>Practical Activities</h2>
+    <section class="card">
+      <h2>Practical Activities</h2>
 
-        <h3>1. Student Data Storage System</h3>
+      <h3>1. Student Data Storage System</h3>
 
-        <pre>
+      <pre>
 
 
 import json
@@ -507,12 +478,11 @@ with open(
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>2. CSV Reader Application</h3>
+      <h3>2. CSV Reader Application</h3>
 
-        <pre>
+      <pre>
 
 
 import csv
@@ -534,12 +504,11 @@ with open(
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>3. Error Handling Example</h3>
+      <h3>3. Error Handling Example</h3>
 
-        <pre>
+      <pre>
 
 
 try:
@@ -574,31 +543,31 @@ except ZeroDivisionError:
 
 
 
-</pre
-        >
-      </section>
+</pre>
+    </section>
 
-      <!-- Practice -->
+    <!-- Practice -->
 
-      <section class="card">
-        <h2>Day 06 Practice Tasks</h2>
+    <section class="card">
+      <h2>Day 06 Practice Tasks</h2>
 
-        <ol>
-          <li>Create text file manager</li>
+      <ol>
+        <li>Create text file manager</li>
 
-          <li>Create contact storage using JSON</li>
+        <li>Create contact storage using JSON</li>
 
-          <li>Create CSV student report</li>
+        <li>Create CSV student report</li>
 
-          <li>Handle invalid inputs</li>
+        <li>Handle invalid inputs</li>
 
-          <li>Create custom age exception</li>
+        <li>Create custom age exception</li>
 
-          <li>Build simple file based database</li>
-        </ol>
-      </section>
+        <li>Build simple file based database</li>
+      </ol>
+    </section>
 
-      <footer>Python Learning Notes 🚀</footer>
-    </div>
-  </body>
+    <footer>Python Learning Notes 🚀</footer>
+  </div>
+</body>
+
 </html>
