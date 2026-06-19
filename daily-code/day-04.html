@@ -1,365 +1,3071 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+        <meta charset="UTF-8" />
 
-    <title>Day 04 - Python Data Structures</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/style.css" />
-     <script>
-    if (sessionStorage.getItem("allowedDay") !== "4") {
-      window.location.href = "../index.html";
-    }
-  </script>
-  </head>
+        <title>Day 04 - Python Data Structures</title>
 
-  <body>
-    <div class="container">
-      <!-- Navbar -->
+        <link rel="stylesheet" href="../assets/style.css" />
+        <script>
+                if (sessionStorage.getItem("allowedDay") !== "4") {
+                        window.location.href = "../index.html";
+                }
+        </script>
 
-      <nav class="navbar">
-        <a href="../index.html"> Home </a>
+</head>
 
-        <a href="day-01.html"> Day 01 </a>
 
-        <a href="day-02.html"> Day 02 </a>
 
-        <a href="day-03.html"> Day 03 </a>
+<body>
 
-        <a href="day-04.html"> Day 04 </a>
-      </nav>
+        <div class="container">
+                <!-- Header -->
 
-      <!-- Header -->
+                <header>
+                        <h1>🗂️ Day 04 - Python Data Structures</h1>
 
-      <header>
-        <h1>🗂️ Day 04 - Python Data Structures</h1>
+                        <p>Lists, Tuples, Sets, Dictionaries and Data Management</p>
+                </header>
 
-        <p>Lists, Tuples, Sets, Dictionaries and Data Management</p>
-      </header>
+                <!-- Topics -->
 
-      <!-- Topics -->
+                <section class="card">
+                        <h2>Topics Covered</h2>
 
-      <section class="card">
-        <h2>Topics Covered</h2>
+                        <ul class="ul" >
+                                <li>Lists</li>
 
-        <ul>
-          <li>Lists</li>
+                                <li>Tuples</li>
 
-          <li>Tuples</li>
+                                <li>Sets</li>
 
-          <li>Sets</li>
+                                <li>Dictionaries</li>
 
-          <li>Dictionaries</li>
+                                <li>Comprehensions</li>
 
-          <li>Comprehensions</li>
+                                <li>Nested Data Structures</li>
+                        </ul>
+                </section>
 
-          <li>Nested Data Structures</li>
-        </ul>
-      </section>
+                <!-- Lists -->
+                <section class="card">
+                        <h2>1. Lists</h2>
 
-      <!-- Lists -->
+                        <p>
+                                A List is an ordered collection of multiple values stored in a single
+                                variable. Lists are one of the most commonly used data structures in
+                                Python and are widely used in real-world applications like CRM systems,
+                                HRMS, Inventory Management, APIs, and E-commerce applications.
+                        </p>
 
-      <section class="card">
-        <h2>1. Lists</h2>
+                        <h3>Why Do We Need Lists?</h3>
 
-        <p>
-          A list is a collection that stores multiple values in a single
-          variable.
-        </p>
+                        <p>
+                                Instead of creating multiple variables for related data, we can store all
+                                values inside a single list.
+                        </p>
 
-        <h3>Creating List</h3>
+                        <pre>
 
-        <pre>
+employee1 = "Akshay"
+employee2 = "Rahul"
+employee3 = "Aman"
 
-numbers = [10,20,30,40]
+  </pre>
 
+                        <p>Using a List:</p>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul", "Aman"]
+
+print(employees)
+
+  </pre>
+
+                        <h3>Characteristics of Lists</h3>
+
+                        <ul class="ul">
+                                <li>Ordered Collection</li>
+                                <li>Mutable (Can be Modified)</li>
+                                <li>Allows Duplicate Values</li>
+                                <li>Supports Indexing</li>
+                                <li>Can Store Multiple Data Types</li>
+                        </ul>
+
+                        <h3>Creating Lists</h3>
+
+                        <pre>
+
+numbers = [10, 20, 30, 40]
 
 print(numbers)
 
-</pre
-        >
+  </pre>
 
-        Output:
+                        <p>Output:</p>
 
-        <pre>
+                        <pre>
 
-[10,20,30,40]
+[10, 20, 30, 40]
 
-</pre
-        >
+  </pre>
 
-        <h3>Access List Items</h3>
+                        <h3>List with Different Data Types</h3>
 
-        <pre>
+                        <pre>
 
-numbers = [10,20,30]
-
-
-print(numbers[0])
-
-</pre
-        >
-
-        Output:
-
-        <pre>
-
-10
-
-</pre
-        >
-
-        <h3>List Methods</h3>
-
-        <pre>
-
-numbers.append(50)
-
-numbers.remove(20)
-
-numbers.sort()
-
-</pre
-        >
-      </section>
-
-      <!-- Tuple -->
-
-      <section class="card">
-        <h2>2. Tuples</h2>
-
-        <p>Tuple is an ordered collection that cannot be changed.</p>
-
-        <pre>
-
-
-data = (
-"Python",
-"Java",
-"C++"
-)
-
-
+data = [
+    "Akshay",
+    25,
+    True,
+    50000.50
+]
 
 print(data)
 
+  </pre>
 
-</pre
-        >
+                        <h3>Accessing List Items (Indexing)</h3>
 
-        Output:
+                        <pre>
 
-        <pre>
+employees = ["Akshay", "Rahul", "Aman"]
 
-('Python','Java','C++')
+print(employees[0])
 
-</pre
-        >
+  </pre>
 
-        <h3>Tuple Access</h3>
+                        <p>Output:</p>
 
-        <pre>
+                        <pre>
 
-print(data[0])
+Akshay
 
+  </pre>
 
-</pre
-        >
+                        <h3>Negative Indexing</h3>
 
-        Output:
+                        <pre>
 
-        <pre>
+employees = ["Akshay", "Rahul", "Aman"]
 
-Python
+print(employees[-1])
 
-</pre
-        >
-      </section>
+  </pre>
 
-      <!-- Sets -->
+                        <p>Output:</p>
 
-      <section class="card">
-        <h2>3. Sets</h2>
+                        <pre>
 
-        <p>Set stores unique values and does not allow duplicates.</p>
+Aman
 
-        <pre>
+  </pre>
 
+                        <h3>Slicing Lists</h3>
 
-numbers = {
+                        <pre>
 
-1,2,3,3,4
+numbers = [10, 20, 30, 40, 50]
 
-}
+print(numbers[1:4])
 
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[20, 30, 40]
+
+  </pre>
+
+                        <h3>Adding Items using append()</h3>
+
+                        <pre>
+
+employees = []
+
+employees.append("Akshay")
+employees.append("Rahul")
+
+print(employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['Akshay', 'Rahul']
+
+  </pre>
+
+                        <h3>Adding Items using insert()</h3>
+
+                        <pre>
+
+numbers = [1, 3, 4]
+
+numbers.insert(1, 2)
 
 print(numbers)
 
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 2, 3, 4]
+
+  </pre>
+
+                        <h3>Merging Lists using extend()</h3>
+
+                        <pre>
+
+frontend = ["React", "Next"]
+backend = ["Node", "Python"]
+
+frontend.extend(backend)
+
+print(frontend)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['React', 'Next', 'Node', 'Python']
+
+  </pre>
+
+                        <h3>Removing Items using remove()</h3>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul"]
+
+employees.remove("Rahul")
+
+print(employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['Akshay']
+
+  </pre>
+
+                        <h3>Removing Items using pop()</h3>
+
+                        <pre>
+
+employees = ["A", "B", "C"]
+
+employees.pop(1)
+
+print(employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['A', 'C']
+
+  </pre>
+
+                        <h3>Clearing a List</h3>
+
+                        <pre>
+
+employees.clear()
+
+print(employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[]
+
+  </pre>
+
+                        <h3>Checking Item Existence using in</h3>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul"]
+
+print("Akshay" in employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Finding Length of List</h3>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul", "Aman"]
+
+print(len(employees))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+3
+
+  </pre>
+
+                        <h3>Sorting Lists</h3>
+
+                        <pre>
+
+numbers = [5, 2, 9, 1]
+
+numbers.sort()
+
+print(numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 2, 5, 9]
+
+  </pre>
+
+                        <h3>Sorting in Descending Order</h3>
+
+                        <pre>
+
+numbers.sort(reverse=True)
+
+print(numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[9, 5, 2, 1]
+
+  </pre>
+
+                        <h3>Reversing a List</h3>
+
+                        <pre>
+
+numbers.reverse()
+
+print(numbers)
+
+  </pre>
+
+                        <h3>Counting Occurrences</h3>
+
+                        <pre>
+
+numbers = [1, 1, 2, 3, 1]
+
+print(numbers.count(1))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+3
+
+  </pre>
+
+                        <h3>Finding Index of an Item</h3>
+
+                        <pre>
+
+fruits = ["Apple", "Mango"]
+
+print(fruits.index("Mango"))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+1
+
+  </pre>
+
+                        <h3>Copying Lists</h3>
+
+                        <pre>
+
+a = [1, 2, 3]
+
+b = a.copy()
+
+print(b)
+
+  </pre>
+
+                        <h3>Looping Through Lists</h3>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul", "Aman"]
+
+for employee in employees:
+    print(employee)
+
+  </pre>
+
+                        <h3>Looping with Index</h3>
+
+                        <pre>
+
+employees = ["Akshay", "Rahul", "Aman"]
+
+for i in range(len(employees)):
+    print(i, employees[i])
+
+  </pre>
+
+                        <h3>Nested Lists</h3>
+
+                        <pre>
+
+students = [
+    ["Akshay", 90],
+    ["Rahul", 80],
+    ["Aman", 95]
+]
+
+print(students[0][1])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+90
+
+  </pre>
+
+                        <h3>List of Dictionaries (Industry Standard)</h3>
+
+                        <pre>
+
+employees = [
+    {
+        "id": 1,
+        "name": "Akshay",
+        "salary": 50000
+    },
+    {
+        "id": 2,
+        "name": "Rahul",
+        "salary": 60000
+    }
+]
+
+  </pre>
+
+                        <h3>Searching Data in List of Dictionaries</h3>
+
+                        <pre>
+
+employee_id = 2
+
+for employee in employees:
+    if employee["id"] == employee_id:
+        print(employee)
+
+  </pre>
+
+                        <h3>Updating Data</h3>
+
+                        <pre>
+
+for employee in employees:
+    if employee["id"] == 2:
+        employee["salary"] = 70000
+
+  </pre>
+
+                        <h3>Deleting Data</h3>
+
+                        <pre>
+
+for employee in employees:
+    if employee["id"] == 2:
+        employees.remove(employee)
+
+  </pre>
+
+                        <h3>List Comprehension</h3>
+
+                        <pre>
+
+squares = [i * i for i in range(1, 6)]
+
+print(squares)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 4, 9, 16, 25]
+
+  </pre>
+
+                        <h3>Filtering Data using List Comprehension</h3>
+
+                        <pre>
+
+employees = [
+    {"name": "Akshay", "salary": 50000},
+    {"name": "Rahul", "salary": 80000},
+    {"name": "Aman", "salary": 40000}
+]
+
+high_salary = [
+    emp
+    for emp in employees
+    if emp["salary"] > 50000
+]
+
+print(high_salary)
+
+  </pre>
+
+                        <h3>Real World Example - CRM Client List</h3>
+
+                        <pre>
+
+clients = [
+    {
+        "id": 1,
+        "name": "ABC Ltd",
+        "city": "Indore"
+    },
+    {
+        "id": 2,
+        "name": "XYZ Ltd",
+        "city": "Mumbai"
+    }
+]
+
+  </pre>
+
+                        <h3>Interview Question: append() vs extend()</h3>
+
+                        <pre>
+
+a = [1, 2]
+
+a.append([3, 4])
+
+print(a)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 2, [3, 4]]
+
+  </pre>
+
+                        <pre>
+
+a = [1, 2]
+
+a.extend([3, 4])
+
+print(a)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 2, 3, 4]
+
+  </pre>
+
+                        <h3>Practice Assignment</h3>
+
+                        <p>
+                                Build an Employee Management System using Lists and Dictionaries with:
+                        </p>
+
+                        <ul class="ul">
+                                <li>Add Employee</li>
+                                <li>View Employees</li>
+                                <li>Search Employee</li>
+                                <li>Update Employee</li>
+                                <li>Delete Employee</li>
+                                <li>Sort by Salary</li>
+                                <li>Find Highest Salary Employee</li>
+                                <li>Filter Employees Above 50,000 Salary</li>
+                        </ul>
+
+                </section>
+                <!-- Tuple -->
+
+                <section class="card">
+                        <h2>2. Tuples</h2>
+
+                        <p>
+                                A Tuple is an ordered collection of items that cannot be modified after
+                                creation. Tuples are immutable, meaning once a tuple is created, its values
+                                cannot be changed, added, or removed.
+                        </p>
+
+                        <p>
+                                Tuples are used when data should remain constant throughout the execution of
+                                a program. They are faster and more memory efficient than lists.
+                        </p>
+
+                        <h3>Why Do We Need Tuples?</h3>
+
+                        <p>
+                                Some data should never change, such as Employee IDs, Database
+                                Configurations, GPS Coordinates, API Keys, and Fixed Settings.
+                        </p>
+
+                        <pre>
+
+employee_id = ("EMP001", "Akshay")
+
+print(employee_id)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+('EMP001', 'Akshay')
+
+  </pre>
+
+                        <h3>Characteristics of Tuples</h3>
+
+                        <ul class="ul">
+                                <li>Ordered Collection</li>
+                                <li>Immutable (Cannot be Modified)</li>
+                                <li>Allows Duplicate Values</li>
+                                <li>Supports Indexing</li>
+                                <li>Supports Slicing</li>
+                                <li>Faster than Lists</li>
+                                <li>Memory Efficient</li>
+                        </ul>
+
+                        <h3>Creating a Tuple</h3>
+
+                        <pre>
+
+numbers = (10, 20, 30, 40)
+
+print(numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+(10, 20, 30, 40)
+
+  </pre>
+
+                        <h3>Tuple with Different Data Types</h3>
+
+                        <pre>
+
+data = (
+    "Akshay",
+    25,
+    True,
+    50000.50
+)
+
+print(data)
+
+  </pre>
+
+                        <h3>Single Item Tuple</h3>
+
+                        <p>
+                                A comma is required when creating a tuple with only one item.
+                        </p>
+
+                        <pre>
+
+number = (10,)
+
+print(type(number))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+<class 'tuple'>
+
+  </pre>
+
+                        <h3>Without Comma</h3>
+
+                        <pre>
+
+number = (10)
+
+print(type(number))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+<class 'int'>
+
+  </pre>
+
+                        <h3>Accessing Tuple Items</h3>
+
+                        <pre>
+
+employees = ("Akshay", "Rahul", "Aman")
+
+print(employees[0])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Akshay
+
+  </pre>
+
+                        <h3>Negative Indexing</h3>
+
+                        <pre>
+
+employees = ("Akshay", "Rahul", "Aman")
+
+print(employees[-1])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Aman
+
+  </pre>
+
+                        <h3>Slicing Tuples</h3>
+
+                        <pre>
+
+numbers = (10, 20, 30, 40, 50)
+
+print(numbers[1:4])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+(20, 30, 40)
+
+  </pre>
+
+                        <h3>Length of Tuple</h3>
+
+                        <pre>
+
+numbers = (10, 20, 30, 40)
+
+print(len(numbers))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+4
+
+  </pre>
+
+                        <h3>Looping Through Tuples</h3>
+
+                        <pre>
+
+employees = ("Akshay", "Rahul", "Aman")
+
+for employee in employees:
+    print(employee)
+
+  </pre>
+
+                        <h3>Looping with Index</h3>
+
+                        <pre>
+
+employees = ("Akshay", "Rahul", "Aman")
+
+for i in range(len(employees)):
+    print(i, employees[i])
+
+  </pre>
+
+                        <h3>Checking Item Existence</h3>
+
+                        <pre>
+
+employees = ("Akshay", "Rahul", "Aman")
+
+print("Rahul" in employees)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Tuple Methods</h3>
+
+                        <p>
+                                Tuples have only two built-in methods because they are immutable.
+                        </p>
+
+                        <h4>count()</h4>
+
+                        <pre>
+
+numbers = (1, 1, 2, 3, 1)
+
+print(numbers.count(1))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+3
+
+  </pre>
+
+                        <h4>index()</h4>
+
+                        <pre>
+
+fruits = ("Apple", "Mango", "Banana")
+
+print(fruits.index("Mango"))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+1
+
+  </pre>
+
+                        <h3>Tuple Packing</h3>
+
+                        <pre>
+
+employee = "EMP001", "Akshay", "Developer"
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+('EMP001', 'Akshay', 'Developer')
+
+  </pre>
+
+                        <h3>Tuple Unpacking</h3>
+
+                        <pre>
+
+employee_id, name, role = (
+    "EMP001",
+    "Akshay",
+    "Developer"
+)
+
+print(employee_id)
+print(name)
+print(role)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+EMP001
+Akshay
+Developer
+
+  </pre>
+
+                        <h3>Swapping Variables Using Tuple</h3>
+
+                        <pre>
+
+a = 10
+b = 20
+
+a, b = b, a
+
+print(a)
+print(b)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+20
+10
+
+  </pre>
+
+                        <h3>Nested Tuples</h3>
+
+                        <pre>
+
+students = (
+    ("Akshay", 90),
+    ("Rahul", 80),
+    ("Aman", 95)
+)
+
+print(students[0])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+('Akshay', 90)
+
+  </pre>
+
+                        <h3>Access Nested Tuple Data</h3>
+
+                        <pre>
+
+students = (
+    ("Akshay", 90),
+    ("Rahul", 80)
+)
+
+print(students[0][1])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+90
+
+  </pre>
+
+                        <h3>Converting Tuple to List</h3>
+
+                        <p>
+                                Since tuples cannot be modified, convert them into a list when updates are
+                                required.
+                        </p>
+
+                        <pre>
+
+numbers = (10, 20, 30)
+
+numbers_list = list(numbers)
+
+numbers_list.append(40)
+
+print(numbers_list)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[10, 20, 30, 40]
+
+  </pre>
+
+                        <h3>Converting List to Tuple</h3>
+
+                        <pre>
+
+numbers = [10, 20, 30, 40]
+
+numbers_tuple = tuple(numbers)
+
+print(numbers_tuple)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+(10, 20, 30, 40)
+
+  </pre>
+
+                        <h3>Tuple Concatenation</h3>
+
+                        <pre>
+
+frontend = ("React", "Next")
+
+backend = ("Node", "Python")
+
+skills = frontend + backend
+
+print(skills)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+('React', 'Next', 'Node', 'Python')
+
+  </pre>
+
+                        <h3>Tuple Repetition</h3>
+
+                        <pre>
+
+numbers = (1, 2)
+
+print(numbers * 3)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+(1, 2, 1, 2, 1, 2)
+
+  </pre>
+
+                        <h3>Real World Example - GPS Coordinates</h3>
+
+                        <pre>
+
+location = (
+    22.7196,
+    75.8577
+)
+
+print(location)
+
+  </pre>
+
+                        <h3>Real World Example - Database Configuration</h3>
+
+                        <pre>
+
+database_config = (
+    "localhost",
+    "root",
+    "password123"
+)
+
+  </pre>
+
+                        <h3>Real World Example - Employee Record</h3>
+
+                        <pre>
+
+employee = (
+    "EMP001",
+    "Akshay",
+    "Developer",
+    50000
+)
+
+  </pre>
+
+                        <h3>Nested Tuple Project Example</h3>
+
+                        <pre>
+
+employees = (
+    ("EMP001", "Akshay", "Developer"),
+    ("EMP002", "Rahul", "Tester"),
+    ("EMP003", "Aman", "Manager")
+)
+
+for employee in employees:
+    print(employee)
+
+  </pre>
+
+                        <h3>Difference Between List and Tuple</h3>
+
+                        <table border="1">
+                                <tr>
+                                        <th>List</th>
+                                        <th>Tuple</th>
+                                </tr>
+                                <tr>
+                                        <td>Mutable</td>
+                                        <td>Immutable</td>
+                                </tr>
+                                <tr>
+                                        <td>Uses []</td>
+                                        <td>Uses ()</td>
+                                </tr>
+                                <tr>
+                                        <td>More Memory</td>
+                                        <td>Less Memory</td>
+                                </tr>
+                                <tr>
+                                        <td>Slower</td>
+                                        <td>Faster</td>
+                                </tr>
+                                <tr>
+                                        <td>Many Methods</td>
+                                        <td>Only count() and index()</td>
+                                </tr>
+                        </table>
 
 
-</pre
-        >
 
-        Output:
+                        </pre>
 
-        <pre>
+                        <h4>Why Use Tuple Instead of List?</h4>
 
-{1,2,3,4}
+                        <ul class="ul" >
+                                <li>Data Safety</li>
+                                <li>Better Performance</li>
+                                <li>Memory Optimization</li>
+                                <li>Fixed Data Storage</li>
+                        </ul>
 
-</pre
-        >
+                        <h3>Practice Assignment</h3>
 
-        <h3>Set Methods</h3>
+                        <p>
+                                Create an Employee Record System using Tuples.
+                        </p>
 
-        <pre>
+                        <ul class="ul">
+                                <li>Create Employee Records using Tuples</li>
+                                <li>Display Employee Details</li>
+                                <li>Search Employee by ID</li>
+                                <li>Count Employees</li>
+                                <li>Use Tuple Unpacking</li>
+                                <li>Store Records as Nested Tuples</li>
+                                <li>Display Employee Salaries</li>
+                                <li>Find Highest Salary Employee</li>
+                        </ul>
 
-add()
+                </section>
 
-remove()
+                <!-- Sets -->
 
-union()
+                <section class="card">
+                        <h2>3. Sets </h2>
 
-intersection()
+                        <p>
+                                A Set is an unordered collection of unique items. Sets automatically remove
+                                duplicate values and are commonly used when uniqueness is required.
+                        </p>
 
+                        <p>
+                                Sets are widely used in real-world applications for duplicate removal,
+                                unique user validation, permission management, tags, filtering, and data
+                                comparison operations.
+                        </p>
 
-</pre
-        >
-      </section>
+                        <h3>Why Do We Need Sets?</h3>
 
-      <!-- Dictionary -->
+                        <p>
+                                Imagine a website where users register using email addresses. We do not
+                                want duplicate email IDs.
+                        </p>
 
-      <section class="card">
-        <h2>4. Dictionaries</h2>
+                        <pre>
 
-        <p>Dictionary stores data in key-value pairs.</p>
-
-        <pre>
-
-
-student = {
-
-
-"name":"Alex",
-
-"age":20,
-
-"course":"Python"
-
-
+emails = {
+    "akshay@gmail.com",
+    "rahul@gmail.com",
+    "akshay@gmail.com"
 }
 
+print(emails)
 
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'akshay@gmail.com', 'rahul@gmail.com'}
+
+  </pre>
+
+                        <h3>Characteristics of Sets</h3>
+
+                        <ul class="ul" >
+                                <li>Unordered Collection</li>
+                                <li>Stores Unique Values Only</li>
+                                <li>Mutable (Can Add or Remove Items)</li>
+                                <li>Does Not Support Indexing</li>
+                                <li>Does Not Allow Duplicate Values</li>
+                                <li>Fast Searching Operations</li>
+                        </ul>
+
+                        <h3>Creating a Set</h3>
+
+                        <pre>
+
+numbers = {10, 20, 30, 40}
+
+print(numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{10, 20, 30, 40}
+
+  </pre>
+
+                        <h3>Creating an Empty Set</h3>
+
+                        <p>
+                                Use set() because {} creates a dictionary, not a set.
+                        </p>
+
+                        <pre>
+
+numbers = set()
+
+print(type(numbers))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+<class 'set'>
+
+  </pre>
+
+                        <h3>Duplicate Values are Removed Automatically</h3>
+
+                        <pre>
+
+numbers = {1, 1, 2, 3, 3, 4}
+
+print(numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{1, 2, 3, 4}
+
+  </pre>
+
+                        <h3>Set with Different Data Types</h3>
+
+                        <pre>
+
+data = {
+    "Akshay",
+    25,
+    True,
+    50000.50
+}
+
+print(data)
+
+  </pre>
+
+                        <h3>Finding Length of Set</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+print(len(skills))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+3
+
+  </pre>
+
+                        <h3>Adding Elements using add()</h3>
+
+                        <pre>
+
+skills = {"Python", "React"}
+
+skills.add("MongoDB")
+
+print(skills)
+
+  </pre>
+
+                        <h3>Adding Multiple Elements using update()</h3>
+
+                        <pre>
+
+skills = {"Python"}
+
+skills.update(["React", "Node", "MongoDB"])
+
+print(skills)
+
+  </pre>
+
+                        <h3>Removing Elements using remove()</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+skills.remove("React")
+
+print(skills)
+
+  </pre>
+
+                        <p>
+                                remove() throws an error if the item does not exist.
+                        </p>
+
+                        <h3>Removing Elements using discard()</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+skills.discard("Java")
+
+print(skills)
+
+  </pre>
+
+                        <p>
+                                discard() does not throw an error if the item does not exist.
+                        </p>
+
+                        <h3>Removing Random Item using pop()</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+skills.pop()
+
+print(skills)
+
+  </pre>
+
+                        <p>
+                                Since sets are unordered, pop() removes a random item.
+                        </p>
+
+                        <h3>Clearing a Set</h3>
+
+                        <pre>
+
+skills = {"Python", "React"}
+
+skills.clear()
+
+print(skills)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+set()
+
+  </pre>
+
+                        <h3>Checking Item Existence</h3>
+
+                        <pre>
+
+skills = {"Python", "React"}
+
+print("Python" in skills)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Looping Through a Set</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+for skill in skills:
+    print(skill)
+
+  </pre>
+
+                        <h3>Converting List to Set</h3>
+
+                        <p>
+                                This is one of the most common techniques used to remove duplicates.
+                        </p>
+
+                        <pre>
+
+numbers = [1, 1, 2, 2, 3, 4]
+
+unique_numbers = set(numbers)
+
+print(unique_numbers)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{1, 2, 3, 4}
+
+  </pre>
+
+                        <h3>Converting Set to List</h3>
+
+                        <pre>
+
+skills = {"Python", "React", "Node"}
+
+skills_list = list(skills)
+
+print(skills_list)
+
+  </pre>
+
+                        <h3>Set Union</h3>
+
+                        <p>
+                                Combines all unique values from both sets.
+                        </p>
+
+                        <pre>
+
+frontend = {"HTML", "CSS", "JavaScript"}
+
+backend = {"Python", "JavaScript", "MongoDB"}
+
+result = frontend.union(backend)
+
+print(result)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'HTML', 'CSS', 'JavaScript', 'Python', 'MongoDB'}
+
+  </pre>
+
+                        <h3>Union using | Operator</h3>
+
+                        <pre>
+
+frontend = {"HTML", "CSS"}
+
+backend = {"Python", "Node"}
+
+print(frontend | backend)
+
+  </pre>
+
+                        <h3>Set Intersection</h3>
+
+                        <p>
+                                Returns common elements from both sets.
+                        </p>
+
+                        <pre>
+
+frontend = {"HTML", "CSS", "JavaScript"}
+
+backend = {"Python", "JavaScript", "MongoDB"}
+
+result = frontend.intersection(backend)
+
+print(result)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'JavaScript'}
+
+  </pre>
+
+                        <h3>Intersection using & Operator</h3>
+
+                        <pre>
+
+print(frontend & backend)
+
+  </pre>
+
+                        <h3>Set Difference</h3>
+
+                        <p>
+                                Returns values present in the first set but not in the second.
+                        </p>
+
+                        <pre>
+
+frontend = {"HTML", "CSS", "JavaScript"}
+
+backend = {"JavaScript"}
+
+result = frontend.difference(backend)
+
+print(result)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'HTML', 'CSS'}
+
+  </pre>
+
+                        <h3>Difference using - Operator</h3>
+
+                        <pre>
+
+print(frontend - backend)
+
+  </pre>
+
+                        <h3>Symmetric Difference</h3>
+
+                        <p>
+                                Returns values present in either set but not both.
+                        </p>
+
+                        <pre>
+
+frontend = {"HTML", "CSS", "JavaScript"}
+
+backend = {"Python", "JavaScript"}
+
+result = frontend.symmetric_difference(backend)
+
+print(result)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'HTML', 'CSS', 'Python'}
+
+  </pre>
+
+                        <h3>Symmetric Difference using ^ Operator</h3>
+
+                        <pre>
+
+print(frontend ^ backend)
+
+  </pre>
+
+                        <h3>Subset</h3>
+
+                        <p>
+                                Checks whether all items of one set exist in another set.
+                        </p>
+
+                        <pre>
+
+a = {1, 2}
+
+b = {1, 2, 3, 4}
+
+print(a.issubset(b))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Superset</h3>
+
+                        <pre>
+
+a = {1, 2, 3, 4}
+
+b = {1, 2}
+
+print(a.issuperset(b))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Disjoint Sets</h3>
+
+                        <p>
+                                Checks whether two sets have no common elements.
+                        </p>
+
+                        <pre>
+
+a = {1, 2}
+
+b = {3, 4}
+
+print(a.isdisjoint(b))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Frozen Set</h3>
+
+                        <p>
+                                A Frozen Set is an immutable version of a set.
+                        </p>
+
+                        <pre>
+
+skills = frozenset(["Python", "React"])
+
+print(skills)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+frozenset({'Python', 'React'})
+
+  </pre>
+
+                        <h3>Real World Example - Unique Email Validation</h3>
+
+                        <pre>
+
+registered_emails = set()
+
+registered_emails.add("akshay@gmail.com")
+registered_emails.add("rahul@gmail.com")
+registered_emails.add("akshay@gmail.com")
+
+print(registered_emails)
+
+  </pre>
+
+                        <h3>Real World Example - Student Attendance</h3>
+
+                        <pre>
+
+present_students = {
+    "Akshay",
+    "Rahul",
+    "Aman"
+}
+
+print(present_students)
+
+  </pre>
+
+                        <h3>Real World Example - Skills Matching</h3>
+
+                        <pre>
+
+employee_skills = {
+    "Python",
+    "React",
+    "MongoDB"
+}
+
+project_requirements = {
+    "Python",
+    "AWS",
+    "MongoDB"
+}
+
+matching_skills = employee_skills & project_requirements
+
+print(matching_skills)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{'Python', 'MongoDB'}
+
+  </pre>
+
+                        <h3>Real World Example - Remove Duplicate Products</h3>
+
+                        <pre>
+
+products = [
+    "Laptop",
+    "Mobile",
+    "Laptop",
+    "Tablet",
+    "Mobile"
+]
+
+unique_products = list(set(products))
+
+print(unique_products)
+
+  </pre>
+
+                        <h3>Difference Between List, Tuple and Set</h3>
+
+                        <table border="1">
+                                <tr>
+                                        <th>Feature</th>
+                                        <th>List</th>
+                                        <th>Tuple</th>
+                                        <th>Set</th>
+                                </tr>
+                                <tr>
+                                        <td>Ordered</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                </tr>
+                                <tr>
+                                        <td>Mutable</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                </tr>
+                                <tr>
+                                        <td>Duplicates Allowed</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                </tr>
+                                <tr>
+                                        <td>Indexing</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                </tr>
+                        </table>
+
+                        <h3>Common Interview Questions</h3>
+
+                        <h4>Can We Access Set Elements using Index?</h4>
+
+                        <pre>
+
+skills = {"Python", "React"}
+
+print(skills[0])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+TypeError:
+'set' object is not subscriptable
+
+  </pre>
+
+                        <h4>Why are Sets Faster than Lists for Searching?</h4>
+
+                        <p>
+                                Sets use Hash Tables internally, which provide near O(1) lookup time,
+                                whereas lists require O(n) searching.
+                        </p>
+
+                        <h3>Practice Assignment</h3>
+
+                        <ul class="ul" >
+                                <li>Create a Set of Student Names</li>
+                                <li>Add New Students</li>
+                                <li>Remove Students</li>
+                                <li>Find Common Students in Two Classes</li>
+                                <li>Find Unique Students</li>
+                                <li>Remove Duplicate Products from a List</li>
+                                <li>Build Email Validation System using Sets</li>
+                                <li>Build Skill Matching System using Intersection</li>
+                        </ul>
+
+                </section>
+
+                <!-- Dictionary -->
+
+                <section class="card">
+                        <h2>4. Dictionary</h2>
+
+                        <p>
+                                A Dictionary is a collection of data stored in key-value pairs. It is one
+                                of the most important data structures in Python and is heavily used in APIs,
+                                JSON data, MongoDB documents, CRM systems, HRMS, ERP, and web development.
+                        </p>
+
+                        <p>
+                                Dictionaries allow us to store related information together and access data
+                                using keys instead of indexes.
+                        </p>
+
+                        <h3>Why Do We Need Dictionaries?</h3>
+
+                        <p>
+                                Suppose we want to store employee information.
+                        </p>
+
+                        <pre>
+
+employee_name = "Akshay"
+employee_email = "akshay@gmail.com"
+employee_salary = 50000
+
+  </pre>
+
+                        <p>
+                                Managing multiple variables becomes difficult. A dictionary provides a
+                                better structure.
+                        </p>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "email": "akshay@gmail.com",
+    "salary": 50000
+}
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Akshay',
+    'email': 'akshay@gmail.com',
+    'salary': 50000
+}
+
+  </pre>
+
+                        <h3>Characteristics of Dictionaries</h3>
+
+                        <ul class="ul" >
+                                <li>Stores Data in Key-Value Pairs</li>
+                                <li>Mutable (Can Be Modified)</li>
+                                <li>Keys Must Be Unique</li>
+                                <li>Values Can Be Duplicated</li>
+                                <li>Fast Data Lookup</li>
+                                <li>Supports Nested Structures</li>
+                        </ul>
+
+                        <h3>Creating a Dictionary</h3>
+
+                        <pre>
+
+student = {
+    "name": "Rahul",
+    "age": 20,
+    "course": "Python"
+}
 
 print(student)
 
+  </pre>
 
-</pre
-        >
+                        <h3>Accessing Dictionary Values</h3>
 
-        Output:
+                        <pre>
 
-        <pre>
-
-{
-'name':'Alex',
-'age':20,
-'course':'Python'
+student = {
+    "name": "Rahul",
+    "age": 20
 }
-
-</pre
-        >
-
-        <h3>Access Values</h3>
-
-        <pre>
-
 
 print(student["name"])
 
+  </pre>
 
+                        <p>Output:</p>
 
-</pre
-        >
+                        <pre>
 
-        Output:
+Rahul
 
-        <pre>
+  </pre>
 
-Alex
+                        <h3>Using get()</h3>
 
-</pre
-        >
-      </section>
+                        <p>
+                                get() avoids errors when a key does not exist.
+                        </p>
 
-      <!-- Comprehension -->
+                        <pre>
 
-      <section class="card">
-        <h2>5. Comprehensions</h2>
+student = {
+    "name": "Rahul"
+}
 
-        <p>Comprehension provides a shorter way to create collections.</p>
+print(student.get("email"))
 
-        <h3>List Comprehension</h3>
+  </pre>
 
-        <pre>
+                        <p>Output:</p>
 
+                        <pre>
 
-numbers = [
+None
 
-x for x in range(5)
+  </pre>
 
+                        <h3>Adding New Key-Value Pair</h3>
+
+                        <pre>
+
+student = {
+    "name": "Rahul"
+}
+
+student["email"] = "rahul@gmail.com"
+
+print(student)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Rahul',
+    'email': 'rahul@gmail.com'
+}
+
+  </pre>
+
+                        <h3>Updating Existing Values</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+employee["salary"] = 60000
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Akshay',
+    'salary': 60000
+}
+
+  </pre>
+
+                        <h3>Removing Items using pop()</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+employee.pop("salary")
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Akshay'
+}
+
+  </pre>
+
+                        <h3>Removing Items using del</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+del employee["salary"]
+
+print(employee)
+
+  </pre>
+
+                        <h3>Clearing a Dictionary</h3>
+
+                        <pre>
+
+employee.clear()
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{}
+
+  </pre>
+
+                        <h3>Length of Dictionary</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "email": "akshay@gmail.com",
+    "salary": 50000
+}
+
+print(len(employee))
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+3
+
+  </pre>
+
+                        <h3>Checking Key Existence</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay"
+}
+
+print("name" in employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+True
+
+  </pre>
+
+                        <h3>Dictionary Methods</h3>
+
+                        <h4>keys()</h4>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+print(employee.keys())
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+dict_keys(['name', 'salary'])
+
+  </pre>
+
+                        <h4>values()</h4>
+
+                        <pre>
+
+print(employee.values())
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+dict_values(['Akshay', 50000])
+
+  </pre>
+
+                        <h4>items()</h4>
+
+                        <pre>
+
+print(employee.items())
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+dict_items([
+    ('name', 'Akshay'),
+    ('salary', 50000)
+])
+
+  </pre>
+
+                        <h3>Loop Through Dictionary Keys</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+for key in employee:
+    print(key)
+
+  </pre>
+
+                        <h3>Loop Through Values</h3>
+
+                        <pre>
+
+for value in employee.values():
+    print(value)
+
+  </pre>
+
+                        <h3>Loop Through Key-Value Pairs</h3>
+
+                        <pre>
+
+for key, value in employee.items():
+    print(key, value)
+
+  </pre>
+
+                        <h3>Copy Dictionary</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "salary": 50000
+}
+
+new_employee = employee.copy()
+
+print(new_employee)
+
+  </pre>
+
+                        <h3>Merging Dictionaries</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay"
+}
+
+details = {
+    "salary": 50000
+}
+
+employee.update(details)
+
+print(employee)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Akshay',
+    'salary': 50000
+}
+
+  </pre>
+
+                        <h3>Nested Dictionary</h3>
+
+                        <pre>
+
+employee = {
+    "id": 1,
+    "name": "Akshay",
+    "address": {
+        "city": "Indore",
+        "state": "Madhya Pradesh"
+    }
+}
+
+print(employee)
+
+  </pre>
+
+                        <h3>Access Nested Dictionary Data</h3>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "address": {
+        "city": "Indore"
+    }
+}
+
+print(employee["address"]["city"])
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Indore
+
+  </pre>
+
+                        <h3>Dictionary inside List</h3>
+
+                        <p>
+                                This is one of the most commonly used structures in real projects.
+                        </p>
+
+                        <pre>
+
+employees = [
+    {
+        "id": 1,
+        "name": "Akshay",
+        "salary": 50000
+    },
+    {
+        "id": 2,
+        "name": "Rahul",
+        "salary": 60000
+    }
 ]
 
+print(employees)
+
+  </pre>
+
+                        <h3>Searching Data in Dictionary List</h3>
+
+                        <pre>
+
+employee_id = 2
+
+for employee in employees:
+    if employee["id"] == employee_id:
+        print(employee)
+
+  </pre>
+
+                        <h3>Dictionary Comprehension</h3>
+
+                        <pre>
+
+squares = {
+    x: x * x
+    for x in range(1, 6)
+}
+
+print(squares)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    1: 1,
+    2: 4,
+    3: 9,
+    4: 16,
+    5: 25
+}
+
+  </pre>
+
+                        <h3>Real World Example - API Response</h3>
+
+                        <pre>
+
+response = {
+    "success": True,
+    "message": "User Found",
+    "data": {
+        "id": 1,
+        "name": "Akshay"
+    }
+}
+
+print(response)
+
+  </pre>
+
+                        <h3>Real World Example - CRM Client</h3>
+
+                        <pre>
+
+client = {
+    "id": 101,
+    "company": "ABC Pvt Ltd",
+    "contact": "9876543210",
+    "city": "Indore"
+}
+
+  </pre>
+
+                        <h3>Real World Example - Product Data</h3>
+
+                        <pre>
+
+product = {
+    "id": 1,
+    "name": "Laptop",
+    "price": 50000,
+    "stock": 25
+}
+
+  </pre>
+
+                        <h3>Difference Between List, Tuple, Set and Dictionary</h3>
+
+                        <table border="1">
+                                <tr>
+                                        <th>Feature</th>
+                                        <th>List</th>
+                                        <th>Tuple</th>
+                                        <th>Set</th>
+                                        <th>Dictionary</th>
+                                </tr>
+
+                                <tr>
+                                        <td>Ordered</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Mutable</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Duplicates</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Keys No</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Indexing</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Using Keys</td>
+                                </tr>
+                        </table>
+
+                        <h3>Common Interview Questions</h3>
+
+                        <h4>What Happens If Duplicate Keys Exist?</h4>
+
+                        <pre>
+
+student = {
+    "name": "Akshay",
+    "name": "Rahul"
+}
+
+print(student)
+
+  </pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'name': 'Rahul'
+}
+
+  </pre>
+
+                        <p>
+                                The last value overwrites the previous value because dictionary keys must
+                                be unique.
+                        </p>
+
+                        <h4>Why Are Dictionaries Fast?</h4>
+
+                        <p>
+                                Dictionaries use Hash Tables internally, providing near O(1) lookup,
+                                insertion, and deletion operations.
+                        </p>
+
+                        <h3>Practice Assignment</h3>
+
+                        <ul class="ul" >
+                                <li>Create Student Dictionary</li>
+                                <li>Add New Fields</li>
+                                <li>Update Student Information</li>
+                                <li>Delete Fields</li>
+                                <li>Loop Through Keys and Values</li>
+                                <li>Create Nested Dictionaries</li>
+                                <li>Build Employee Management System</li>
+                                <li>Build Contact Management System</li>
+                                <li>Build Inventory Management System</li>
+                                <li>Build CRM Client Management System</li>
+                        </ul>
+
+                </section>
+
+                <!-- Comprehension -->
+                <section class="card">
+                        <h2>5. Comprehensions</h2>
+
+                        <p style="padding-top: 10px;">
+                                Comprehensions provide a shorter and more readable way to create
+                                Lists, Dictionaries, and Sets in Python.
+                        </p>
+
+                        <p>
+                                Instead of using traditional loops, comprehensions allow us to
+                                generate collections in a single line of code.
+                        </p>
+
+                        <h3>Why Use Comprehensions?</h3>
+
+                        <ul class="ul">
+                                <li>Less Code</li>
+                                <li>Better Readability</li>
+                                <li>Faster Execution</li>
+                                <li>Widely Used in Real Projects</li>
+                        </ul>
+
+                        <h2>List Comprehension</h2>
+
+                        <h3>Traditional Way</h3>
+
+                        <pre>
+
+numbers = []
+
+for i in range(1, 6):
+    numbers.append(i)
 
 print(numbers)
 
+</pre>
 
+                        <p>Output:</p>
 
-</pre
-        >
+                        <pre>
 
-        Output:
+[1, 2, 3, 4, 5]
 
-        <pre>
+</pre>
 
-[0,1,2,3,4]
+                        <h3>Using List Comprehension</h3>
 
-</pre
-        >
+                        <pre>
 
-        <h3>Condition Example</h3>
+numbers = [i for i in range(1, 6)]
 
-        <pre>
+print(numbers)
 
+</pre>
 
-even = [
+                        <p>Output:</p>
 
-x for x in range(10)
+                        <pre>
 
-if x % 2 == 0
+[1, 2, 3, 4, 5]
 
+</pre>
+
+                        <h3>Square Numbers</h3>
+
+                        <pre>
+
+squares = [x * x for x in range(1, 6)]
+
+print(squares)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 4, 9, 16, 25]
+
+</pre>
+
+                        <h3>Cube Numbers</h3>
+
+                        <pre>
+
+cubes = [x ** 3 for x in range(1, 6)]
+
+print(cubes)
+
+</pre>
+
+                        <h3>Even Numbers</h3>
+
+                        <pre>
+
+even_numbers = [
+    x
+    for x in range(1, 21)
+    if x % 2 == 0
 ]
 
+print(even_numbers)
 
-print(even)
+</pre>
 
+                        <p>Output:</p>
 
-</pre
-        >
-      </section>
+                        <pre>
 
-      <!-- Nested -->
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-      <section class="card">
-        <h2>6. Nested Data Structures</h2>
+</pre>
 
-        <p>
-          A data structure inside another data structure is called nested data
-          structure.
-        </p>
+                        <h3>Odd Numbers</h3>
 
-        <pre>
+                        <pre>
+
+odd_numbers = [
+    x
+    for x in range(1, 21)
+    if x % 2 != 0
+]
+
+print(odd_numbers)
+
+</pre>
+
+                        <h3>Convert Names to Uppercase</h3>
+
+                        <pre>
+
+names = ["akshay", "rahul", "aman"]
+
+upper_names = [
+    name.upper()
+    for name in names
+]
+
+print(upper_names)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['AKSHAY', 'RAHUL', 'AMAN']
+
+</pre>
+
+                        <h3>Conditional List Comprehension</h3>
+
+                        <pre>
+
+numbers = [10, 20, 30, 40, 50]
+
+result = [
+    "Pass"
+    if num >= 30
+    else "Fail"
+    for num in numbers
+]
+
+print(result)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+['Fail', 'Fail', 'Pass', 'Pass', 'Pass']
+
+</pre>
+
+                        <h2>Nested List Comprehension</h2>
+
+                        <pre>
+
+matrix = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+]
+
+flatten = [
+    item
+    for row in matrix
+    for item in row
+]
+
+print(flatten)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[1, 2, 3, 4, 5, 6]
+
+</pre>
+
+                        <h2>Dictionary Comprehension</h2>
+
+                        <pre>
+
+squares = {
+    x: x * x
+    for x in range(1, 6)
+}
+
+print(squares)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    1: 1,
+    2: 4,
+    3: 9,
+    4: 16,
+    5: 25
+}
+
+</pre>
+
+                        <h3>Dictionary Comprehension with Condition</h3>
+
+                        <pre>
+
+students = {
+    "Akshay": 90,
+    "Rahul": 40,
+    "Aman": 80
+}
+
+passed_students = {
+    name: marks
+    for name, marks in students.items()
+    if marks >= 50
+}
+
+print(passed_students)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    'Akshay': 90,
+    'Aman': 80
+}
+
+</pre>
+
+                        <h3>Create Employee Mapping</h3>
+
+                        <pre>
+
+employees = [
+    {
+        "id": 1,
+        "name": "Akshay"
+    },
+    {
+        "id": 2,
+        "name": "Rahul"
+    }
+]
+
+employee_map = {
+    emp["id"]: emp["name"]
+    for emp in employees
+}
+
+print(employee_map)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{
+    1: 'Akshay',
+    2: 'Rahul'
+}
+
+</pre>
+
+                        <h2>Set Comprehension</h2>
+
+                        <pre>
+
+numbers = {
+    x * x
+    for x in range(1, 6)
+}
+
+print(numbers)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+{1, 4, 9, 16, 25}
+
+</pre>
+
+                        <h3>Unique Lengths of Names</h3>
+
+                        <pre>
+
+names = [
+    "Akshay",
+    "Rahul",
+    "Aman",
+    "Rahul"
+]
+
+lengths = {
+    len(name)
+    for name in names
+}
+
+print(lengths)
+
+</pre>
+
+                        <h2>Nested Dictionary Comprehension</h2>
+
+                        <pre>
+
+table = {
+    x: {
+        y: x * y
+        for y in range(1, 6)
+    }
+    for x in range(1, 6)
+}
+
+print(table)
+
+</pre>
+
+                        <h2>Real World Example - CRM Client Filtering</h2>
+
+                        <pre>
+
+clients = [
+    {
+        "name": "ABC Ltd",
+        "status": "Active"
+    },
+    {
+        "name": "XYZ Ltd",
+        "status": "Inactive"
+    }
+]
+
+active_clients = [
+    client
+    for client in clients
+    if client["status"] == "Active"
+]
+
+print(active_clients)
+
+</pre>
+
+                        <h2>Real World Example - Employee Salary Filter</h2>
+
+                        <pre>
+
+employees = [
+    {
+        "name": "Akshay",
+        "salary": 50000
+    },
+    {
+        "name": "Rahul",
+        "salary": 80000
+    }
+]
+
+high_salary = [
+    emp
+    for emp in employees
+    if emp["salary"] > 60000
+]
+
+print(high_salary)
+
+</pre>
+
+                        <h2>Real World Example - Product Inventory Mapping</h2>
+
+                        <pre>
+
+products = [
+    {
+        "id": 1,
+        "name": "Laptop"
+    },
+    {
+        "id": 2,
+        "name": "Mobile"
+    }
+]
+
+product_map = {
+    product["id"]: product["name"]
+    for product in products
+}
+
+print(product_map)
+
+</pre>
+
+                        <h2>Time Complexity</h2>
+
+                        <table border="1">
+                                <tr>
+                                        <th>Operation</th>
+                                        <th>Complexity</th>
+                                </tr>
+
+                                <tr>
+                                        <td>List Comprehension</td>
+                                        <td>O(n)</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Dictionary Comprehension</td>
+                                        <td>O(n)</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Set Comprehension</td>
+                                        <td>O(n)</td>
+                                </tr>
+                        </table>
+
+                        <h2>Common Interview Questions</h2>
+
+                        <ul class="ul">
+                                <li>What is List Comprehension?</li>
+                                <li>What is Dictionary Comprehension?</li>
+                                <li>What is Set Comprehension?</li>
+                                <li>Why are Comprehensions Faster?</li>
+                                <li>When should Comprehensions be avoided?</li>
+                                <li>Difference between Loop and Comprehension?</li>
+                        </ul>
+
+                        <h2>Practice Assignment</h2>
+
+                        <ul class="ul">
+                                <li>Create Squares using List Comprehension</li>
+                                <li>Filter Even Numbers</li>
+                                <li>Filter Odd Numbers</li>
+                                <li>Create Student Result Dictionary</li>
+                                <li>Create Product Mapping</li>
+                                <li>Create Employee Mapping</li>
+                                <li>Create Active Client List</li>
+                                <li>Create Multiplication Table using Nested Comprehension</li>
+                        </ul>
+
+                </section>
+
+                <!-- Nested -->
+
+                <!-- <section class="card">
+                        <h2>6. Nested Data Structures</h2>
+
+                        <p>
+                                A data structure inside another data structure is called nested data
+                                structure.
+                        </p>
+
+                        <pre>
 
 
 students = [
@@ -367,7 +3073,7 @@ students = [
 
     {
 
-    "name":"Alex",
+    "name":"Akshay",
 
     "marks":[80,90,85]
 
@@ -376,7 +3082,7 @@ students = [
 
     {
 
-    "name":"John",
+    "name":"Jay",
 
     "marks":[70,75,80]
 
@@ -391,18 +3097,589 @@ print(students)
 
 
 
-</pre
-        >
-      </section>
+</pre>
+                </section> -->
+                <section class="card">
+                        <h2>6. Nested Data Structures - Complete Guide</h2>
 
-      <!-- Practical -->
+                        <p>
+                                A Nested Data Structure is a data structure that contains another
+                                data structure inside it.
+                        </p>
 
-      <section class="card">
-        <h2>Practical Activities</h2>
+                        <p>
+                                Nested structures are heavily used in APIs, JSON data,
+                                MongoDB documents, CRM systems, HRMS applications,
+                                Inventory Management Systems and E-Commerce projects.
+                        </p>
 
-        <h3>1. Contact Management System</h3>
+                        <h3>Why Do We Need Nested Data Structures?</h3>
 
-        <pre>
+                        <p>
+                                Real-world data is complex. A single employee may have
+                                multiple addresses, skills, projects and salary records.
+                        </p>
+
+                        <pre>
+
+employee = {
+    "id": 1,
+    "name": "Akshay",
+    "skills": ["Python", "React", "MongoDB"]
+}
+
+print(employee)
+
+</pre>
+
+                        <h2>List of Dictionaries</h2>
+
+                        <p>
+                                One of the most common structures used in projects.
+                        </p>
+
+                        <pre>
+
+employees = [
+
+    {
+        "id": 1,
+        "name": "Akshay",
+        "salary": 50000
+    },
+
+    {
+        "id": 2,
+        "name": "Rahul",
+        "salary": 60000
+    }
+
+]
+
+print(employees)
+
+</pre>
+
+                        <h3>Access Data from List of Dictionaries</h3>
+
+                        <pre>
+
+print(employees[0]["name"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Akshay
+
+</pre>
+
+                        <h2>Dictionary with List</h2>
+
+                        <pre>
+
+employee = {
+    "name": "Akshay",
+    "skills": [
+        "Python",
+        "React",
+        "MongoDB"
+    ]
+}
+
+print(employee)
+
+</pre>
+
+                        <h3>Access List Item Inside Dictionary</h3>
+
+                        <pre>
+
+print(employee["skills"][0])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Python
+
+</pre>
+
+                        <h2>Dictionary Inside Dictionary</h2>
+
+                        <pre>
+
+employee = {
+
+    "name": "Akshay",
+
+    "address": {
+        "city": "Indore",
+        "state": "MP",
+        "country": "India"
+    }
+
+}
+
+print(employee)
+
+</pre>
+
+                        <h3>Access Nested Dictionary Values</h3>
+
+                        <pre>
+
+print(employee["address"]["city"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Indore
+
+</pre>
+
+                        <h2>List Inside Dictionary Inside Dictionary</h2>
+
+                        <pre>
+
+employee = {
+
+    "name": "Akshay",
+
+    "address": {
+        "city": "Indore"
+    },
+
+    "skills": [
+        "Python",
+        "React",
+        "NodeJS"
+    ]
+
+}
+
+print(employee)
+
+</pre>
+
+                        <h3>Access Nested Skills</h3>
+
+                        <pre>
+
+print(employee["skills"][1])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+React
+
+</pre>
+
+                        <h2>List of Dictionaries with Nested Lists</h2>
+
+                        <pre>
+
+students = [
+
+    {
+        "name": "Akshay",
+        "marks": [80, 90, 85]
+    },
+
+    {
+        "name": "Jay",
+        "marks": [70, 75, 80]
+    }
+
+]
+
+print(students)
+
+</pre>
+
+                        <h3>Access Student Marks</h3>
+
+                        <pre>
+
+print(students[0]["marks"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+[80, 90, 85]
+
+</pre>
+
+                        <h3>Access Individual Mark</h3>
+
+                        <pre>
+
+print(students[0]["marks"][1])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+90
+
+</pre>
+
+                        <h2>Loop Through Nested Structure</h2>
+
+                        <pre>
+
+for student in students:
+
+    print(student["name"])
+
+    for mark in student["marks"]:
+
+        print(mark)
+
+</pre>
+
+                        <h2>Calculate Average Marks</h2>
+
+                        <pre>
+
+for student in students:
+
+    avg = sum(student["marks"]) / len(student["marks"])
+
+    print(student["name"], avg)
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Akshay 85.0
+Jay 75.0
+
+</pre>
+
+                        <h2>Dictionary of Dictionaries</h2>
+
+                        <pre>
+
+employees = {
+
+    101: {
+        "name": "Akshay",
+        "salary": 50000
+    },
+
+    102: {
+        "name": "Rahul",
+        "salary": 60000
+    }
+
+}
+
+print(employees)
+
+</pre>
+
+                        <h3>Access Employee Details</h3>
+
+                        <pre>
+
+print(employees[101]["name"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Akshay
+
+</pre>
+
+                        <h2>Real API Response Structure</h2>
+
+                        <pre>
+
+response = {
+
+    "success": True,
+
+    "message": "Data Found",
+
+    "data": {
+
+        "id": 1,
+
+        "name": "Akshay",
+
+        "skills": [
+            "Python",
+            "React"
+        ]
+
+    }
+
+}
+
+print(response)
+
+</pre>
+
+                        <h3>Access API Response Data</h3>
+
+                        <pre>
+
+print(response["data"]["name"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Akshay
+
+</pre>
+
+                        <h2>Real CRM Client Structure</h2>
+
+                        <pre>
+
+client = {
+
+    "clientId": 101,
+
+    "company": "ABC Pvt Ltd",
+
+    "contactPersons": [
+
+        {
+            "name": "Jay",
+            "phone": "9999999999"
+        },
+
+        {
+            "name": "Rahul",
+            "phone": "8888888888"
+        }
+
+    ]
+
+}
+
+print(client)
+
+</pre>
+
+                        <h2>Access CRM Contact Person</h2>
+
+                        <pre>
+
+print(client["contactPersons"][0]["name"])
+
+</pre>
+
+                        <p>Output:</p>
+
+                        <pre>
+
+Jay
+
+</pre>
+
+                        <h2>Real Inventory Structure</h2>
+
+                        <pre>
+
+product = {
+
+    "productId": 1,
+
+    "name": "Laptop",
+
+    "price": 50000,
+
+    "warehouse": {
+
+        "name": "Main Warehouse",
+
+        "city": "Indore"
+    }
+
+}
+
+print(product)
+
+</pre>
+
+                        <h2>Search Data in Nested Structures</h2>
+
+                        <pre>
+
+employees = [
+
+    {
+        "id": 1,
+        "name": "Akshay"
+    },
+
+    {
+        "id": 2,
+        "name": "Rahul"
+    }
+
+]
+
+search_id = 2
+
+for emp in employees:
+
+    if emp["id"] == search_id:
+
+        print(emp)
+
+</pre>
+
+                        <h2>Update Nested Data</h2>
+
+                        <pre>
+
+employee = {
+
+    "name": "Akshay",
+
+    "address": {
+        "city": "Indore"
+    }
+
+}
+
+employee["address"]["city"] = "Bhopal"
+
+print(employee)
+
+</pre>
+
+                        <h2>Add Data to Nested Structure</h2>
+
+                        <pre>
+
+employee = {
+
+    "name": "Akshay",
+
+    "skills": [
+        "Python"
+    ]
+
+}
+
+employee["skills"].append("React")
+
+print(employee)
+
+</pre>
+
+                        <h2>Delete Nested Data</h2>
+
+                        <pre>
+
+employee = {
+
+    "name": "Akshay",
+
+    "address": {
+        "city": "Indore"
+    }
+
+}
+
+del employee["address"]["city"]
+
+print(employee)
+
+</pre>
+
+                        <h2>Time Complexity</h2>
+
+                        <table border="1">
+
+                                <tr>
+                                        <th>Operation</th>
+                                        <th>Complexity</th>
+                                </tr>
+
+                                <tr>
+                                        <td>List Access</td>
+                                        <td>O(1)</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Dictionary Access</td>
+                                        <td>O(1)</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Search in List</td>
+                                        <td>O(n)</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Nested Loop</td>
+                                        <td>O(n²)</td>
+                                </tr>
+
+                        </table>
+
+                        <h2>Common Interview Questions</h2>
+
+                        <ul class="ul">
+                                <li>What is a Nested Data Structure?</li>
+                                <li>How do you access nested dictionary values?</li>
+                                <li>How do you access a list inside a dictionary?</li>
+                                <li>Difference between JSON and Nested Dictionary?</li>
+                                <li>How are Nested Structures used in APIs?</li>
+                                <li>How are Nested Structures used in MongoDB?</li>
+                        </ul>
+
+                        <h2>Practice Assignment</h2>
+
+                        <ul class="ul">
+                                <li>Create Student Records using Nested Structures</li>
+                                <li>Calculate Student Average Marks</li>
+                                <li>Create CRM Client Management Structure</li>
+                                <li>Create Inventory Product Structure</li>
+                                <li>Create Employee Management System</li>
+                                <li>Search Employee by ID</li>
+                                <li>Update Employee Address</li>
+                                <li>Add New Skills to Employee</li>
+                        </ul>
+
+                </section>
+                <!-- Practical -->
+
+                <section class="card">
+                        <h2>Practical Activities</h2>
+
+                        <h3>1. Contact Management System</h3>
+
+                        <pre>
 
 
 contacts = {}
@@ -430,12 +3707,11 @@ print(contacts)
 
 
 
-</pre
-        >
+</pre>
 
-        <h3>2. Student Record Management System</h3>
+                        <h3>2. Student Record Management System</h3>
 
-        <pre>
+                        <pre>
 
 
 students = []
@@ -445,7 +3721,7 @@ students = []
 student = {
 
 
-"name":"Alex",
+"name":"Akshay",
 
 "age":20,
 
@@ -464,33 +3740,366 @@ print(students)
 
 
 
-</pre
-        >
-      </section>
+</pre>
 
-      <!-- Practice -->
+                </section>
 
-      <section class="card">
-        <h2>Day 04 Practice Tasks</h2>
+                <!-- Practice -->
 
-        <ol>
-          <li>Create list of numbers and find maximum</li>
+                <section class="card">
 
-          <li>Remove duplicate values using set</li>
+                        <h2>7. Choosing the Right Data Structure</h2>
 
-          <li>Create dictionary of products</li>
+                        <p>
+                                One of the most important skills in Python is knowing
+                                which data structure to use in different situations.
+                        </p>
 
-          <li>Create phone book application</li>
+                        <p>
+                                Choosing the correct data structure improves performance,
+                                readability, maintainability, and scalability of applications.
+                        </p>
 
-          <li>Create student database</li>
+                        <h3>Quick Comparison</h3>
 
-          <li>Use list comprehension for squares</li>
+                        <table border="1">
+                                <tr>
+                                        <th>Feature</th>
+                                        <th>List</th>
+                                        <th>Tuple</th>
+                                        <th>Set</th>
+                                        <th>Dictionary</th>
+                                </tr>
 
-          <li>Create nested employee records</li>
-        </ol>
-      </section>
+                                <tr>
+                                        <td>Ordered</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                </tr>
 
-      <footer>Python Learning Notes 🚀</footer>
-    </div>
-  </body>
+                                <tr>
+                                        <td>Mutable</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Duplicates Allowed</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>Keys No</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Fast Search</td>
+                                        <td>No</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Key-Value Storage</td>
+                                        <td>No</td>
+                                        <td>No</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                </tr>
+                        </table>
+
+                        <h2>When to Use List</h2>
+
+                        <p>
+                                Use a List when:
+                        </p>
+
+                        <ul class="ul" >
+                                <li>Order matters</li>
+                                <li>Data changes frequently</li>
+                                <li>Need indexing</li>
+                                <li>Need sorting</li>
+                                <li>Need insertion and deletion</li>
+                        </ul>
+
+                        <pre>
+
+products = [
+    "Laptop",
+    "Mobile",
+    "Tablet"
+]
+
+</pre>
+
+                        <h4>Real World Examples</h4>
+
+                        <ul class="ul" >
+                                <li>Shopping Cart</li>
+                                <li>Product List</li>
+                                <li>Student List</li>
+                                <li>Task List</li>
+                                <li>Messages</li>
+                        </ul>
+
+                        <p>
+                                Lists are best when data changes regularly.
+                        </p>
+
+                        <h2>When to Use Tuple</h2>
+
+                        <p>
+                                Use a Tuple when data should never change.
+                        </p>
+
+                        <ul class="ul" >
+                                <li>Fixed Configuration</li>
+                                <li>GPS Coordinates</li>
+                                <li>Database Credentials</li>
+                                <li>Constant Values</li>
+                        </ul>
+
+                        <pre>
+
+location = (
+    22.7196,
+    75.8577
+)
+
+</pre>
+
+                        <h4>Real World Examples</h4>
+
+                        <ul class="ul" >
+                                <li>Latitude and Longitude</li>
+                                <li>RGB Colors</li>
+                                <li>Database Connection Settings</li>
+                                <li>System Configurations</li>
+                        </ul>
+
+                        <p>
+                                Tuples are faster and safer because data cannot be modified.
+                        </p>
+
+                        <h2>When to Use Set</h2>
+
+                        <p>
+                                Use a Set when duplicate values are not allowed.
+                        </p>
+
+                        <ul class="ul" >
+                                <li>Remove Duplicates</li>
+                                <li>Fast Search</li>
+                                <li>Unique Records</li>
+                                <li>Membership Checking</li>
+                        </ul>
+
+                        <pre>
+
+emails = {
+    "a@gmail.com",
+    "b@gmail.com"
+}
+
+</pre>
+
+                        <h4>Real World Examples</h4>
+
+                        <ul class="ul" >
+                                <li>Unique Email IDs</li>
+                                <li>Tags</li>
+                                <li>Permissions</li>
+                                <li>Attendance Systems</li>
+                                <li>Unique Product Codes</li>
+                        </ul>
+
+                        <p>
+                                Sets are extremely fast for checking whether a value exists.
+                        </p>
+
+                        <h2>When to Use Dictionary</h2>
+
+                        <p>
+                                Use a Dictionary when data has properties and relationships.
+                        </p>
+
+                        <pre>
+
+employee = {
+    "id": 1,
+    "name": "Akshay",
+    "salary": 50000
+}
+
+</pre>
+
+                        <h4>Real World Examples</h4>
+
+                        <ul class="ul" >
+                                <li>Employee Records</li>
+                                <li>Client Records</li>
+                                <li>API Responses</li>
+                                <li>JSON Data</li>
+                                <li>MongoDB Documents</li>
+                        </ul>
+
+                        <p>
+                                Dictionaries are the backbone of backend development.
+                        </p>
+
+                        <h2>Real Project Examples</h2>
+
+                        <h3>CRM Client</h3>
+
+                        <pre>
+
+client = {
+    "clientId": 101,
+    "company": "ABC Ltd",
+    "contacts": [
+        {
+            "name": "John",
+            "phone": "9999999999"
+        }
+    ]
+}
+
+</pre>
+
+                        <p>
+                                Uses Dictionary + List because a client has multiple contacts.
+                        </p>
+
+                        <h3>Student Management System</h3>
+
+                        <pre>
+
+students = [
+
+    {
+        "id": 1,
+        "name": "Alex",
+        "marks": [80, 90, 85]
+    }
+
+]
+
+</pre>
+
+                        <p>
+                                Uses List + Dictionary + Nested List.
+                        </p>
+
+                        <h3>Inventory Management System</h3>
+
+                        <pre>
+
+product = {
+    "productId": 1,
+    "name": "Laptop",
+    "price": 50000,
+    "warehouse": {
+        "city": "Indore"
+    }
+}
+
+</pre>
+
+                        <p>
+                                Uses Nested Dictionaries because products have multiple attributes.
+                        </p>
+
+                        <h2>Professional Rule</h2>
+
+                        <table border="1">
+
+                                <tr>
+                                        <th>If You Need</th>
+                                        <th>Use</th>
+                                </tr>
+
+                                <tr>
+                                        <td>Ordered Data</td>
+                                        <td>List</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Fixed Data</td>
+                                        <td>Tuple</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Unique Values</td>
+                                        <td>Set</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Key-Value Data</td>
+                                        <td>Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Database/API Objects</td>
+                                        <td>Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Collection of Records</td>
+                                        <td>List of Dictionaries</td>
+                                </tr>
+
+                        </table>
+
+                        <h2>Industry Standard Usage</h2>
+
+                        <table border="1">
+
+                                <tr>
+                                        <th>Application</th>
+                                        <th>Mostly Uses</th>
+                                </tr>
+
+                                <tr>
+                                        <td>Frontend APIs</td>
+                                        <td>Dictionary + List</td>
+                                </tr>
+
+                                <tr>
+                                        <td>MongoDB</td>
+                                        <td>Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>CRM</td>
+                                        <td>List + Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>HRMS</td>
+                                        <td>List + Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>E-Commerce</td>
+                                        <td>List + Dictionary</td>
+                                </tr>
+
+                                <tr>
+                                        <td>Configuration Files</td>
+                                        <td>Tuple + Dictionary</td>
+                                </tr>
+
+                        </table>
+
+                </section>
+
+
+                <footer>Python Learning Notes </footer>
+        </div>
+</body>
+
 </html>
