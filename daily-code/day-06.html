@@ -6,7 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Day 06 - File Handling & Exception Handling</title>
+  <title>File Handling & Exception Handling</title>
 
   <link rel="stylesheet" href="../assets/style.css" />
   <script>
@@ -21,7 +21,7 @@
     <!-- Header -->
 
     <header>
-      <h1> Day 06 - File Handling & Exception Handling</h1>
+      <h1> File Handling & Exception Handling</h1>
 
       <p>Working with Files, Data Storage and Error Management</p>
     </header>
@@ -51,13 +51,126 @@
     </section>
 
     <!-- File Handling -->
+    <section class="card">
+
+      <h2>1. What is File Handling?</h2>
+
+      <p>
+        File Handling is the process of creating, reading,
+        writing, updating and deleting files using Python.
+      </p>
+
+      <p>
+        Files allow data to be stored permanently even after
+        the program stops running.
+      </p>
+
+      <h3>Why Do We Need File Handling?</h3>
+
+      <p>
+        Variables store data temporarily in memory.
+        Once the program closes, the data is lost.
+      </p>
+
+      <pre>
+
+name = "Akshay"
+
+print(name)
+
+</pre>
+
+      <p>
+        After the program closes, the value stored in the variable
+        is removed from memory.
+      </p>
+
+      <p>
+        File handling helps us save data permanently so that it
+        can be accessed later even after the program is closed.
+      </p>
+
+      <h3>Benefits of File Handling</h3>
+
+      <ul class="ul">
+        <li>Stores Data Permanently</li>
+        <li>Allows Data Sharing Between Programs</li>
+        <li>Maintains Records for Future Use</li>
+        <li>Useful for Large Applications</li>
+        <li>Supports Data Backup and Recovery</li>
+      </ul>
+
+      <h3>Real World Examples</h3>
+
+      <ul class="ul">
+        <li>User Data Storage</li>
+        <li>Student Management Systems</li>
+        <li>Bank Transaction Records</li>
+        <li>Application Log Files</li>
+        <li>Inventory Management Systems</li>
+        <li>Configuration Files</li>
+        <li>Report Generation Systems</li>
+      </ul>
+
+      <h3>Real Project Example</h3>
+
+      <p>
+        In a Contact Management System, user information can be
+        stored inside a file instead of keeping it only in variables.
+      </p>
+
+      <pre>
+
+name = "Akshay"
+
+with open(
+"contacts.txt",
+"w"
+) as file:
+
+    file.write(name)
+
+</pre>
+
+      <p>
+        Now the contact information remains available even after
+        the program is closed.
+      </p>
+
+    </section>
+
+
 
     <section class="card">
-      <h2>1. File Handling</h2>
 
-      <p>File handling is used to create, read, update and delete files.</p>
+      <h2>2. Opening and Closing Files</h2>
 
-      <h3>Opening File</h3>
+      <p>
+        Before reading or writing a file, we must open it.
+        After completing the operation, the file should be closed.
+      </p>
+
+      <p>
+        Python provides the open() function to open files.
+      </p>
+
+      <h3>Syntax</h3>
+
+      <pre>
+
+file = open(
+"filename",
+"mode"
+)
+
+</pre>
+
+      <p>
+        The first argument is the file name and the second argument
+        specifies the file mode.
+      </p>
+
+      <h3>Opening a File</h3>
 
       <pre>
 
@@ -66,116 +179,651 @@ file = open(
 "r"
 )
 
-
-print(file.read())
-
+print(
+file.read()
+)
 
 file.close()
 
-
 </pre>
-    </section>
 
-    <!-- Modes -->
+      <h3>Why Close a File?</h3>
 
-    <section class="card">
-      <h2>2. File Modes</h2>
-
-      <table>
-        <tr>
-          <th>Mode</th>
-
-          <th>Purpose</th>
-        </tr>
-
-        <tr>
-          <td>r</td>
-
-          <td>Read file</td>
-        </tr>
-
-        <tr>
-          <td>w</td>
-
-          <td>Write file</td>
-        </tr>
-
-        <tr>
-          <td>a</td>
-
-          <td>Append data</td>
-        </tr>
-
-        <tr>
-          <td>x</td>
-
-          <td>Create file</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Read Write -->
-
-    <section class="card">
-      <h2>3. Reading and Writing Files</h2>
-
-      <h3>Write File</h3>
+      <p>
+        Closing a file releases system resources and ensures that
+        all changes are properly saved.
+      </p>
 
       <pre>
-
 
 file = open(
 "notes.txt",
 "w"
 )
 
+file.write(
+"Python"
+)
 
+file.close()
+
+</pre>
+
+      <h3>What Happens Internally?</h3>
+
+      <ol class="ol">
+        <li>Python opens the file.</li>
+        <li>Data is read or written.</li>
+        <li>File is closed.</li>
+        <li>Resources are released.</li>
+      </ol>
+
+      <h3>Real World Example</h3>
+
+      <p>
+        Opening a file is similar to opening a notebook.
+        You open it, read or write information, and then close it.
+      </p>
+
+      <h3>Interview Question</h3>
+
+      <p>
+        The open() function is used to open a file in Python.
+        The close() method is used to close the file and release
+        system resources.
+      </p>
+
+    </section>
+
+    <!-- Modes -->
+
+    <section class="card">
+
+      <h2>3. File Modes</h2>
+
+      <p>
+        File modes determine how a file will be used after opening.
+        Different modes allow reading, writing, appending or creating files.
+      </p>
+
+      <h3>Common File Modes</h3>
+
+      <table>
+
+        <tr>
+          <th>Mode</th>
+          <th>Description</th>
+        </tr>
+
+        <tr>
+          <td>r</td>
+          <td>Read File (Default Mode)</td>
+        </tr>
+
+        <tr>
+          <td>w</td>
+          <td>Write File (Creates New or Overwrites Existing File)</td>
+        </tr>
+
+        <tr>
+          <td>a</td>
+          <td>Append Data to Existing File</td>
+        </tr>
+
+        <tr>
+          <td>x</td>
+          <td>Create New File Only</td>
+        </tr>
+
+        <tr>
+          <td>rb</td>
+          <td>Read Binary Files</td>
+        </tr>
+
+        <tr>
+          <td>wb</td>
+          <td>Write Binary Files</td>
+        </tr>
+
+      </table>
+
+      <h3>Read Mode (r)</h3>
+
+      <p>
+        Used to read data from an existing file.
+      </p>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+print(
+file.read()
+)
+
+file.close()
+
+</pre>
+
+      <h3>Write Mode (w)</h3>
+
+      <p>
+        Used to write data into a file.
+        Existing data will be removed.
+      </p>
+
+      <pre>
+
+file = open(
+"notes.txt",
+"w"
+)
+
+file.write(
+"Python Learning"
+)
+
+file.close()
+
+</pre>
+
+      <h3>Append Mode (a)</h3>
+
+      <p>
+        Adds new content without deleting existing data.
+      </p>
+
+      <pre>
+
+file = open(
+"notes.txt",
+"a"
+)
+
+file.write(
+"\nNew Note"
+)
+
+file.close()
+
+</pre>
+
+      <h3>Create Mode (x)</h3>
+
+      <p>
+        Creates a new file.
+        Generates an error if the file already exists.
+      </p>
+
+      <pre>
+
+file = open(
+"newfile.txt",
+"x"
+)
+
+file.close()
+
+</pre>
+
+      <h3>Binary Modes</h3>
+
+      <p>
+        Binary modes are used for images, videos, PDFs and other
+        non-text files.
+      </p>
+
+      <pre>
+
+file = open(
+"image.jpg",
+"rb"
+)
+
+data = file.read()
+
+file.close()
+
+</pre>
+
+      <h3>When to Use Which Mode?</h3>
+
+      <table>
+
+        <tr>
+          <th>Situation</th>
+          <th>Mode</th>
+        </tr>
+
+        <tr>
+          <td>Read Existing Data</td>
+          <td>r</td>
+        </tr>
+
+        <tr>
+          <td>Create New File</td>
+          <td>w or x</td>
+        </tr>
+
+        <tr>
+          <td>Add New Data</td>
+          <td>a</td>
+        </tr>
+
+        <tr>
+          <td>Work with Images/PDFs</td>
+          <td>rb / wb</td>
+        </tr>
+
+      </table>
+
+    </section>
+
+    <!-- Read Write -->
+
+    <section class="card">
+
+      <h2>4. Reading Files</h2>
+
+      <p>
+        Reading a file means retrieving data stored inside a file.
+      </p>
+
+      <p>
+        Python provides several methods to read file contents.
+      </p>
+
+      <h3>Reading Entire File</h3>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+content = file.read()
+
+print(content)
+
+file.close()
+
+</pre>
+
+      <p>
+        Output:
+      </p>
+
+      <pre>
+
+Hello Python
+
+Welcome to File Handling
+
+</pre>
+
+      <h3>read() Method</h3>
+
+      <p>
+        The read() method reads the entire content of a file.
+      </p>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+print(
+file.read()
+)
+
+file.close()
+
+</pre>
+
+      <h3>Reading Specific Characters</h3>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+print(
+file.read(5)
+)
+
+file.close()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Hello
+
+</pre>
+
+      <h3>readline() Method</h3>
+
+      <p>
+        Reads only one line at a time.
+      </p>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+print(
+file.readline()
+)
+
+file.close()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+Hello Python
+
+</pre>
+
+      <h3>readlines() Method</h3>
+
+      <p>
+        Reads all lines and returns them as a list.
+      </p>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+lines = file.readlines()
+
+print(lines)
+
+file.close()
+
+</pre>
+
+      <p>Output:</p>
+
+      <pre>
+
+['Hello Python\n', 'Welcome to File Handling']
+
+</pre>
+
+      <h3>Reading File Using Loop</h3>
+
+      <pre>
+
+file = open(
+"data.txt",
+"r"
+)
+
+for line in file:
+
+    print(line)
+
+file.close()
+
+</pre>
+
+      <p>
+        This is useful when working with large files because
+        it reads one line at a time.
+      </p>
+
+      <h3>Real World Example</h3>
+
+      <p>
+        Reading user data from a file.
+      </p>
+
+      <pre>
+
+file = open(
+"users.txt",
+"r"
+)
+
+for user in file:
+
+    print(user)
+
+file.close()
+
+</pre>
+
+      <h3>When to Use Which Method?</h3>
+
+      <table>
+
+        <tr>
+          <th>Method</th>
+          <th>Use Case</th>
+        </tr>
+
+        <tr>
+          <td>read()</td>
+          <td>Read Entire File</td>
+        </tr>
+
+        <tr>
+          <td>read(size)</td>
+          <td>Read Limited Characters</td>
+        </tr>
+
+        <tr>
+          <td>readline()</td>
+          <td>Read One Line</td>
+        </tr>
+
+        <tr>
+          <td>readlines()</td>
+          <td>Read All Lines as List</td>
+        </tr>
+
+      </table>
+
+    </section>
+
+    <!-- Writing File -->
+
+    <section class="card">
+
+      <h2>5. Writing Files</h2>
+
+      <p>
+        Writing a file means storing data inside a file.
+      </p>
+
+      <p>
+        Python uses the write() method to add content to a file.
+      </p>
+
+      <h3>Why Do We Need Writing Files?</h3>
+
+      <p>
+        Writing files allows us to save data permanently instead
+        of storing it only in variables.
+      </p>
+
+      <h3>Basic Example</h3>
+
+      <pre>
+
+file = open(
+"notes.txt",
+"w"
+)
 
 file.write(
 "Python File Handling"
 )
 
-
-
 file.close()
-
-
 
 </pre>
 
-      <h3>Read File</h3>
+      <p>
+        The content is saved inside notes.txt.
+      </p>
 
-      <pre>
-
-
-file = open(
-"notes.txt",
-"r"
-)
-
-
-
-data = file.read()
-
-
-
-print(data)
-
-
-
-file.close()
-
-
-
-</pre>
-
-      Output:
+      <h3>Output in File</h3>
 
       <pre>
 
 Python File Handling
 
 </pre>
+
+      <h3>Writing Multiple Lines</h3>
+
+      <pre>
+
+file = open(
+"notes.txt",
+"w"
+)
+
+file.write(
+"Python\n"
+)
+
+file.write(
+"Java\n"
+)
+
+file.write(
+"JavaScript"
+)
+
+file.close()
+
+</pre>
+
+      <p>Output in File:</p>
+
+      <pre>
+
+Python
+
+Java
+
+JavaScript
+
+</pre>
+
+      <h3>Using writelines()</h3>
+
+      <p>
+        writelines() is used to write multiple lines at once.
+      </p>
+
+      <pre>
+
+languages = [
+
+"Python\n",
+
+"Java\n",
+
+"C++\n"
+
+]
+
+file = open(
+"languages.txt",
+"w"
+)
+
+file.writelines(
+languages
+)
+
+file.close()
+
+</pre>
+
+      <h3>Important Note</h3>
+
+      <p>
+        Opening a file in write mode (w) removes all existing
+        content before writing new data.
+      </p>
+
+      <pre>
+
+file = open(
+"notes.txt",
+"w"
+)
+
+file.write(
+"New Content"
+)
+
+file.close()
+
+</pre>
+
+      <p>
+        Previous data will be deleted.
+      </p>
+
+      <h3>Real World Example</h3>
+
+      <p>
+        Saving user information into a file.
+      </p>
+
+      <pre>
+
+name = "Akshay"
+
+file = open(
+"user.txt",
+"w"
+)
+
+file.write(name)
+
+file.close()
+
+</pre>
+      <h3>Common Writing Methods</h3>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>write()</td>
+          <td>Write Single String</td>
+        </tr>
+        <tr>
+          <td>writelines()</td>
+          <td>Write Multiple Strings</td>
+        </tr>
+      </table>
     </section>
 
     <!-- With -->
@@ -281,7 +929,7 @@ import json
 student = {
 
 
-"name":"Alex",
+"name":"Akshay",
 
 "age":20
 
@@ -452,7 +1100,7 @@ students = []
 student = {
 
 
-"name":"Alex",
+"name":"Akshay",
 
 "marks":90
 
@@ -566,7 +1214,7 @@ except ZeroDivisionError:
       </ol>
     </section>
 
-    <footer>Python Learning Notes 🚀</footer>
+    <footer>Python Learning Notes </footer>
   </div>
 </body>
 

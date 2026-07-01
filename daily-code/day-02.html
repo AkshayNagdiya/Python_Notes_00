@@ -2,65 +2,65 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Day 02 - Control Statements & Loops</title>
+    <title> Control Statements & Loops</title>
 
-        <link rel="stylesheet" href="../assets/style.css" />
-        <script>
-                if (sessionStorage.getItem("allowedDay") !== "2") {
-                        window.location.href = "../index.html";
-                }
-        </script>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script>
+        if (sessionStorage.getItem("allowedDay") !== "2") {
+            window.location.href = "../index.html";
+        }
+    </script>
 </head>
 
 
 <body>
-        <div class="container">
-                <!-- Header -->
+    <div class="container">
+        <!-- Header -->
 
-                <header>
-                        <h1>🔥 Day 02 - Control Statements & Loops</h1>
+        <header>
+            <h1> Control Statements & Loops</h1>
 
-                        <p>Decision Making, Conditions and Loop Logic</p>
-                </header>
+            <p>Decision Making, Conditions and Loop Logic</p>
+        </header>
 
-                <!-- Topics -->
+        <!-- Topics -->
 
-                <section class="card">
-                        <h2>Topics Covered</h2>
+        <section class="card">
+            <h2>Topics Covered</h2>
 
-                        <ul>
-                                <li>Conditional Statements</li>
+            <ul>
+                <li>Conditional Statements</li>
 
-                                <li>if Statement</li>
+                <li>if Statement</li>
 
-                                <li>if else Statement</li>
+                <li>if else Statement</li>
 
-                                <li>if elif else</li>
+                <li>if elif else</li>
 
-                                <li>Nested Conditions</li>
+                <li>Nested Conditions</li>
 
-                                <li>For Loop</li>
+                <li>For Loop</li>
 
-                                <li>Range Function</li>
+                <li>Range Function</li>
 
-                                <li>Loop Control Statements</li>
-                        </ul>
-                </section>
+                <li>Loop Control Statements</li>
+            </ul>
+        </section>
 
-                <!-- Conditional -->
+        <!-- Conditional -->
 
-                <section class="card">
-                        <h2>1. Conditional Statements</h2>
+        <section class="card">
+            <h2>1. Conditional Statements</h2>
 
-                        <p>Conditional statements are used to make decisions in a program.</p>
+            <p>Conditional statements are used to make decisions in a program.</p>
 
-                        <h3>if Statement</h3>
+            <h3>if Statement</h3>
 
-                        <pre>
+            <pre>
 
 age = 20
 
@@ -72,23 +72,23 @@ if age >= 18:
 
 </pre>
 
-                        <h3>Output</h3>
+            <h3>Output</h3>
 
-                        <pre>
+            <pre>
 
 You can vote
 
 </pre>
-                </section>
+        </section>
 
-                <!-- if else -->
+        <!-- if else -->
 
-                <section class="card">
-                        <h2>2. if else Statement</h2>
+        <section class="card">
+            <h2>2. if else Statement</h2>
 
-                        <p>if else executes different blocks based on condition.</p>
+            <p>if else executes different blocks based on condition.</p>
 
-                        <pre>
+            <pre>
 
 number = 10
 
@@ -105,23 +105,23 @@ else:
 
 </pre>
 
-                        <h3>Output</h3>
+            <h3>Output</h3>
 
-                        <pre>
+            <pre>
 
 Even Number
 
 </pre>
-                </section>
+        </section>
 
-                <!-- elif -->
+        <!-- elif -->
 
-                <section class="card">
-                        <h2>3. if elif else Statement</h2>
+        <section class="card">
+            <h2>3. if elif else Statement</h2>
 
-                        <p>Used when multiple conditions are required.</p>
+            <p>Used when multiple conditions are required.</p>
 
-                        <pre>
+            <pre>
 
 
 marks = 75
@@ -145,23 +145,23 @@ else:
 
 </pre>
 
-                        <h3>Output</h3>
+            <h3>Output</h3>
 
-                        <pre>
+            <pre>
 
 Grade B
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Nested -->
+        <!-- Nested -->
 
-                <section class="card">
-                        <h2>4. Nested Conditions</h2>
+        <section class="card">
+            <h2>4. Nested Conditions</h2>
 
-                        <p>A condition inside another condition is called nested condition.</p>
+            <p>A condition inside another condition is called nested condition.</p>
 
-                        <pre>
+            <pre>
 
 
 age = 20
@@ -178,25 +178,25 @@ if age >= 18:
 
 </pre>
 
-                        Output:
+            Output:
 
-                        <pre>
+            <pre>
 
 Eligible
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Loops -->
+        <!-- Loops -->
 
-                <section class="card">
-                        <h2>5. Loops</h2>
+        <section class="card">
+            <h2>5. Loops</h2>
 
-                        <p>Loops are used to repeat a block of code multiple times.</p>
+            <p>Loops are used to repeat a block of code multiple times.</p>
 
-                        <h3>For Loop</h3>
+            <h3>For Loop</h3>
 
-                        <pre>
+            <pre>
 
 
 for i in range(5):
@@ -207,9 +207,9 @@ for i in range(5):
 
 </pre>
 
-                        Output:
+            Output:
 
-                        <pre>
+            <pre>
 
 0
 1
@@ -218,14 +218,14 @@ for i in range(5):
 4
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Range -->
+        <!-- Range -->
 
-                <section class="card">
-                        <h2>6. Range Function</h2>
+        <section class="card">
+            <h2>6. Range Function</h2>
 
-                        <pre>
+            <pre>
 
 
 range(start, stop, step)
@@ -233,9 +233,9 @@ range(start, stop, step)
 
 </pre>
 
-                        Example:
+            Example:
 
-                        <pre>
+            <pre>
 
 
 for i in range(1,6):
@@ -245,9 +245,9 @@ for i in range(1,6):
 
 </pre>
 
-                        Output:
+            Output:
 
-                        <pre>
+            <pre>
 
 1
 2
@@ -256,16 +256,16 @@ for i in range(1,6):
 5
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Loop Control -->
+        <!-- Loop Control -->
 
-                <section class="card">
-                        <h2>7. Loop Control Statements</h2>
+        <section class="card">
+            <h2>7. Loop Control Statements</h2>
 
-                        <h3>break</h3>
+            <h3>break</h3>
 
-                        <pre>
+            <pre>
 
 
 for i in range(10):
@@ -280,9 +280,9 @@ for i in range(10):
 
 </pre>
 
-                        <h3>continue</h3>
+            <h3>continue</h3>
 
-                        <pre>
+            <pre>
 
 
 for i in range(5):
@@ -295,16 +295,16 @@ for i in range(5):
 
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Practical -->
+        <!-- Practical -->
 
-                <section class="card">
-                        <h2>Practical Activities</h2>
+        <section class="card">
+            <h2>Practical Activities</h2>
 
-                        <h3>1. Number Guessing Game</h3>
+            <h3>1. Number Guessing Game</h3>
 
-                        <pre>
+            <pre>
 
 
 secret = 7
@@ -329,9 +329,9 @@ else:
 
 </pre>
 
-                        <h3>2. Multiplication Table Generator</h3>
+            <h3>2. Multiplication Table Generator</h3>
 
-                        <pre>
+            <pre>
 
 
 number = int(
@@ -354,9 +354,9 @@ for i in range(1,11):
 
 </pre>
 
-                        <h3>3. Pattern Printing Program</h3>
+            <h3>3. Pattern Printing Program</h3>
 
-                        <pre>
+            <pre>
 
 
 for i in range(1,6):
@@ -367,9 +367,9 @@ for i in range(1,6):
 
 </pre>
 
-                        Output:
+            Output:
 
-                        <pre>
+            <pre>
 
 *
 **
@@ -378,32 +378,32 @@ for i in range(1,6):
 *****
 
 </pre>
-                </section>
+        </section>
 
-                <!-- Practice -->
+        <!-- Practice -->
 
-                <section class="card">
-                        <h2>Day 02 Practice Tasks</h2>
+        <section class="card">
+            <h2>Day 02 Practice Tasks</h2>
 
-                        <ol>
-                                <li>Create login system using if else</li>
+            <ol>
+                <li>Create login system using if else</li>
 
-                                <li>Check positive or negative number</li>
+                <li>Check positive or negative number</li>
 
-                                <li>Find largest among three numbers</li>
+                <li>Find largest among three numbers</li>
 
-                                <li>Print numbers from 1 to 100</li>
+                <li>Print numbers from 1 to 100</li>
 
-                                <li>Create multiplication table</li>
+                <li>Create multiplication table</li>
 
-                                <li>Create star patterns</li>
+                <li>Create star patterns</li>
 
-                                <li>Create simple calculator using conditions</li>
-                        </ol>
-                </section>
+                <li>Create simple calculator using conditions</li>
+            </ol>
+        </section>
 
-                <footer>Python Learning Notes 🚀</footer>
-        </div>
+        <footer>Python Learning Notes </footer>
+    </div>
 </body>
 
 </html>
