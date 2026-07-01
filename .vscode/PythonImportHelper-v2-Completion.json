@@ -1,0 +1,11 @@
+[
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "index",
+        "description": "index",
+        "peekOfCode": "a = 10\nb =20\nprint(a+b)",
+        "detail": "index",
+        "documentation": {}
+    }
+]
